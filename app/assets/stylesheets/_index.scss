@@ -7,29 +7,42 @@
 }
 
 .main-header{
+  font-family: 'Perfetto';
+  box-sizing: border-box;
+  border: solid 3px black;
   background:red;
   width: 100vw;
-  height:300px;
-  color: white;
-  &__name-over{
-    height: 200px;
-    line-height: 250px;
-    font-size: 15vw;
-    text-align: center;
+  height:100px;
+  display: flex;
+  a{
+    color: white;
   }
-  &__name-under{
-    margin-top: 20px;
-    height: 100px;
-    font-size:3vw;
-    text-align: center;
+  h1{
+    margin-left:5% ;
+    line-height: 100px;
+    width: 80%;
+    font-size:5em;
+  }
+  .main-headers{
+    font-size:5em;
+    width: 20%;
+    display: flex;
+    &__signup{
+      text-align: center;
+      width: 50%;
+    }
+    &__login{
+      text-align: center;
+      width: 50%;
+    }
   }
 }
 
 .main-body{
-  height: calc(100vh - 400px);
+  height: calc(100vh - 100px);
   width: 100vw;
-  font-family: 'Oraqle Script';
-  text-align: center;
+  background: #f5f5f5;
+  &
   &__text{
     line-height: calc(100vh - 400px);
     font-size: 18vw;
@@ -41,25 +54,7 @@
 }
 
 
-.main-footer{
-  a{
-    text-decoration: none;
-    color: white;
-  }
-  background:red;
-  width: 100vw;
-  height:100px;
-  color: white;
-  font-family: 'Perfetto';
-  font-size: 5vw;
-  &__login{
-    float: right;
-  }
-  &__signup{
-    margin:  0 1vw;
-    float: right;
-  }
-}
+
 
 .field{
   font-size: 3vw;
@@ -70,7 +65,5 @@
   margin-top: 3vh;
 }
 
-h2{
-  font-size: 5vw;
-}
+
 

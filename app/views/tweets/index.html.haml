@@ -1,24 +1,25 @@
 .wrapper
   .main-header
-    .main-header__name-over
-      HELLO
-    .main-header__name-under
-      my name is
+    %h1
+      = link_to "" do
+        HOME
+    .main-headers
+      - if user_signed_in?
+        .main-headers__signup
+          = link_to "mypage", groups_path, class: 'get'
+        .main-footers__login
+          = link_to "logout", destroy_user_session_path, method: :delete
+      - else
+        .main-headers__signup
+          = link_to "signup", new_user_registration_path, class: 'post'
+        .main-headers__login
+          = link_to "login", new_user_session_path, class: 'post'
   .main-body
+    .main-body__center
     - if user_signed_in?
       .main-body__text
         = image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTEjyCqVaVA9X8sXArjZPlmpncmYNTqdI_rjGcvY0g2scsDcTOj", size: "425x425", alt: "qrコード"
     - else
       .main-body__text
         WHO ARE YOU?
-  .main-footer
-    - if user_signed_in?
-      .main-footer__signup
-        = link_to "mypage", groups_path, class: 'get'
-      .main-footer__login
-        = link_to "logout", destroy_user_session_path, method: :delete
-    - else
-      .main-footer__signup
-        = link_to "signup", new_user_registration_path, class: 'post'
-      .main-footer__login
-        = link_to "login", new_user_session_path, class: 'post'
+  
