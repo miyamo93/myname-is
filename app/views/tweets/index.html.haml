@@ -7,7 +7,7 @@
       - if user_signed_in?
         .main-headers__signup
           = link_to "mypage", groups_path, class: 'get'
-        .main-footers__login
+        .main-headers__login
           = link_to "logout", destroy_user_session_path, method: :delete
       - else
         .main-headers__signup
@@ -25,7 +25,7 @@
         .sticker__body
           - if user_signed_in?
             .sticker__body--image
-              = image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTEjyCqVaVA9X8sXArjZPlmpncmYNTqdI_rjGcvY0g2scsDcTOj", size: "425x425", alt: "qrコード"
+              = image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTEjyCqVaVA9X8sXArjZPlmpncmYNTqdI_rjGcvY0g2scsDcTOj", size: "300x300", alt: "qrコード"
           - else
             .sticker__body--text
               WHO ARE YOU?
