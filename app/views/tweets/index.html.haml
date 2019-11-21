@@ -19,15 +19,15 @@
       .sticker
         .sticker__header
           %h1
-            hello
+            HELLO
           %p
             my name is
         .sticker__body
           - if user_signed_in?
-            .main-body__text
+            .sticker__body--image
               = image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTEjyCqVaVA9X8sXArjZPlmpncmYNTqdI_rjGcvY0g2scsDcTOj", size: "425x425", alt: "qrコード"
           - else
-            .main-body__text
+            .sticker__body--text
               WHO ARE YOU?
         .sticker__footer
         
