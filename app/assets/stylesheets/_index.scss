@@ -7,59 +7,98 @@
 }
 
 .main-header{
+  font-family: 'Oraqle Script';
+  box-sizing: border-box;
+  border: solid 3px black;
   background:red;
   width: 100vw;
-  height:300px;
-  color: white;
-  &__name-over{
-    height: 200px;
-    line-height: 250px;
-    font-size: 15vw;
-    text-align: center;
+  height:100px;
+  display: flex;
+  box-sizing: border-box;
+  a{
+    color: white;
   }
-  &__name-under{
-    margin-top: 20px;
-    height: 100px;
-    font-size:3vw;
-    text-align: center;
+  h1{
+    margin-left:5% ;
+    line-height: 100px;
+    width: 70%;
+    font-size:5em;
+    box-sizing: border-box;
+  }
+  .main-headers{
+    font-size:5em;
+    width: 30%;
+    display: flex;
+    &__signup{
+      text-align: center;
+      width: 50%;
+    }
+    &__login{
+      text-align: center;
+      width: 50%;
+    }
   }
 }
 
 .main-body{
-  height: calc(100vh - 400px);
+  height: calc(100vh - 100px);
   width: 100vw;
-  font-family: 'Oraqle Script';
-  text-align: center;
-  &__text{
-    line-height: calc(100vh - 400px);
-    font-size: 18vw;
-    font-family: 'Oraqle Script';
+  background:lightgray;
+  box-sizing: border-box;
+  padding-top: 100px;
+  &__center{
+    height: calc(100vh - 200px);
+    width: 60%;
+    margin: auto;
+  }
+  &__sub{
     text-align: center;
-    font-size: 18vw;
-    line-height: calc(100vh - 400px);
+  }
+  .sticker{
+    box-sizing: border-box;
+    text-align: center;
+    height:90%;
+    border: solid 3px black;
+    border-radius: 50px;
+    &__header{
+      position: relative;
+      color: white;
+      border-radius: 45px 45px 0 0;
+      height: 30%;
+      background: red;
+      box-sizing: border-box;
+      h1{
+        font-size: 100px;
+      }
+      p{
+        position: absolute;
+        font-size: 30px;
+        bottom: 10%;
+        left: 38%;
+      }
+    }
+    &__body{
+      position: relative;
+      font-family: 'Oraqle Script';
+      background: white;
+      height: 50%;
+      &--text{
+        top: 25%;
+        left: 1%;
+        font-size: 11em;
+        position: absolute;
+      }
+    }
+    &__footer{
+      background: red;
+      height: 20%;
+      border-radius: 0 0 45px 45px;
+    }
   }
 }
 
 
-.main-footer{
-  a{
-    text-decoration: none;
-    color: white;
-  }
-  background:red;
-  width: 100vw;
-  height:100px;
-  color: white;
-  font-family: 'Perfetto';
-  font-size: 5vw;
-  &__login{
-    float: right;
-  }
-  &__signup{
-    margin:  0 1vw;
-    float: right;
-  }
-}
+
 
 .field{
   font-size: 3vw;
@@ -70,7 +109,5 @@
   margin-top: 3vh;
 }
 
-h2{
-  font-size: 5vw;
-}
+
 
