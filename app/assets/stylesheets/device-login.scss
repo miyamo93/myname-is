@@ -1,8 +1,24 @@
+.login-body{
+  height: calc(100vh - 100px);
+  width: 100vw;
+  background:lightgray;
+  box-sizing: border-box;
+  font-family: 'Oraqle Script';
+  padding-top: 50px;
+  .field__log{
+    font-size:5vw;
+  }
+  a{
+    font-size:5vw;
+    color:black;
+    border: 1px solid;
+  }
+}
 .main-body{
   &__sub{
     h2{
       font-family: 'Oraqle Script';
-      font-size: 3em;
+      font-size: 5em;
     }
   }
 }
