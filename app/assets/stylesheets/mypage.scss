@@ -16,6 +16,23 @@
     text-align: center;
   }
   h2{
+    width: 30%;
     font-size: 5vw;
+    font-family: 'Oraqle Script';
   }
+  ul{
+    width: 50%;
+    display: flex;
+    font-size: 3vw;
+    li{
+      text-align: center;
+      font-size: 6vw;
+      width: 700%;
+    }
+  }
+}
+
+.mypage-category{
+  width: 300px;
+  background: red;
 }
