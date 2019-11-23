@@ -4,17 +4,20 @@
   background:lightgray;
   box-sizing: border-box;
   font-family: 'Oraqle Script';
-  padding-top: 50px;
+  padding-top: 1vh;
   .field__log{
     font-size:5vw;
   }
   a{
     font-size:5vw;
     color:black;
-    border: 1px solid;
+    &:hover{
+      color: blue;
+    }
   }
 }
-.main-body{
+.login-body{
+  text-align: center;
   &__sub{
     h2{
       font-family: 'Oraqle Script';
