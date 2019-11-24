@@ -51,9 +51,15 @@
     background: white;
   }
   ul{
+    box-sizing: border-box;
     margin-top:2%;
     width: 300px;
     background:white;
-    border: solid black;
+    border: solid 2px black;
+  }
+  li{
+    text-align: center;
+    height: 8vh;
+    font-size: 5vh;
   }
 }
