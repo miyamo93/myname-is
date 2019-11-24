@@ -1,6 +1,9 @@
 .mypage-header{
   a{
     color:white;
+    &:hover{
+      color: blue;
+    }
   }
   font-family: 'Oraqle Script';
   box-sizing: border-box;
@@ -16,6 +19,8 @@
     text-align: center;
   }
   h2{
+    box-sizing: border-box;
+    padding-left: 5%;
     width: 30%;
     font-size: 6vw;
     font-family: 'Oraqle Script';
@@ -35,12 +40,12 @@
   background-color:lightgray ;
   padding-top:5% ;
   &__sub{
-    
     width: 90%;
     padding: 0;
     margin: 0 auto;
   }
-  .mypage-category{
+  ul{
+    margin-top:2%;
     width: 300px;
     background:white;
     border: solid black;
