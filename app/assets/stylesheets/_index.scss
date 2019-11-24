@@ -17,16 +17,19 @@
   box-sizing: border-box;
   a{
     color: white;
+    &:hover{
+      color: blue;
+    }
   }
   h1{
     margin-left:5% ;
     line-height: 100px;
     width: 70%;
-    font-size:5em;
+    font-size:6em;
     box-sizing: border-box;
   }
   .main-headers{
-    font-size:5em;
+    font-size:6em;
     width: 30%;
     display: flex;
     &__signup{
