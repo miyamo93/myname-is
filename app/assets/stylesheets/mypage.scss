@@ -11,13 +11,13 @@
   display: flex;
   box-sizing: border-box;
   h1{
-    font-size:7vw;
+    font-size:6vw;
     width: 20%;
     text-align: center;
   }
   h2{
     width: 30%;
-    font-size: 5vw;
+    font-size: 6vw;
     font-family: 'Oraqle Script';
   }
   ul{
@@ -31,8 +31,17 @@
     }
   }
 }
-
-.mypage-category{
-  width: 300px;
-  background: red;
+.mypage-body{
+  background-color:lightgray ;
+  padding-top:5% ;
+  &__sub{
+    
+    width: 90%;
+    padding: 0;
+    margin: 0 auto;
+  }
+  .mypage-category{
+    width: 300px;
+    background: red;
+  }
 }
