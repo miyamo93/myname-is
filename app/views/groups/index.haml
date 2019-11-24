@@ -21,6 +21,9 @@
   .mypage-body
     .mypage-body__sub
       .mypage-category
+        = form_with model: @good, class: 'contents-box__form-list' do |f|
+          = f.text_field :goods_name, class:'contents-box__descript-section__name-form', placeholder: '商品名(必須40文字まで)'
+          = f.submit nil, class: 'btn btn-primary btn-red' , value: "追加"
         %ul
           %li.mypage-category__list
             music
