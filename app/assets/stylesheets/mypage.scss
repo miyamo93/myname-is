@@ -49,17 +49,12 @@
     display: block;
     color: black;
     &:hover{
-      background: cadetblue;
+      background:darkcyan;
     }
-  }
-  .mypage-main{
-    margin-left: 10%;
-    width: 60%;
-    background: white;
   }
   ul{
     box-sizing: border-box;
-    margin-top:2%;
+    margin-top:35%;
     width: 300px;
     background:white;
     border: solid 2px black;
@@ -78,5 +73,14 @@
   .hobby-btn{
     height:50px;
     width: 100%;
+  }
+  .mypage-main{
+    margin-left: 10%;
+    width: 60%;
+    background: white;
+    h1{
+      font-size: 5em;
+      text-align: center;
+    }
   }
 }
