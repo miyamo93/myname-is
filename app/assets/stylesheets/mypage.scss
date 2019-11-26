@@ -45,6 +45,13 @@
     padding: 0;
     margin: 0 auto;
   }
+  a{
+    display: block;
+    color: black;
+    &:hover{
+      background: cadetblue;
+    }
+  }
   .mypage-main{
     margin-left: 10%;
     width: 60%;
@@ -58,8 +65,8 @@
     border: solid 2px black;
   }
   li{
+    cursor: pointer;
     text-align: center;
-    height: 8vh;
     font-size: 5vh;
     border: 1px solid lightgray;
     box-sizing: border-box;
