@@ -21,31 +21,30 @@
   .mypage-body
     .mypage-body__sub
       .mypage-category
-        = form_with model: @good, class: 'contents-box__form-list' do |f|
-          = f.text_field :goods_name, class:'contents-box__descript-section__name-form', placeholder: '商品名(必須40文字まで)'
-          = f.submit nil, class: 'btn btn-primary btn-red' , value: "追加"
-        %select.select-default
-          %option{value: ""} ---
-          %option{value: "1"} 北海道
-          %option{value: "2"} 青森県
-          %option{value: "3"} 岩手県
-          %option{value: "4"} 宮城県
-          %option{value: "5"} 秋田県
-          %option{value: "6"} 山形県
-          %option{value: "7"} 福島県
-          %option{value: "8"} 茨城県
-          %option{value: "9"} 栃木県
-          %option{value: "10"} 群馬県
-          %option{value: "11"} 埼玉県
-          %option{value: "12"} 千葉県
-          %option{value: "13"} 東京都
-          %option{value: "14"} 神奈川県
-          %option{value: "15"} 新潟県
-          %option{value: "16"} 富山県
-          %option{value: "17"} 石川県
-          %option{value: "18"} 福井県
-          %option{value: "19"} 山梨県
-          %option{value: "20"} 長野県
+        = form_with model: @good, class: 'mypage-category__form-list' do |f|
+          %select.select-default
+            %option{value: ""} ---
+            %option{value: "1"} 音楽
+            %option{value: "2"} スポーツ
+            %option{value: "3"}　
+            %option{value: "4"} 宮城県
+            %option{value: "5"} 秋田県
+            %option{value: "6"} 山形県
+            %option{value: "7"} 福島県
+            %option{value: "8"} 茨城県
+            %option{value: "9"} 栃木県
+            %option{value: "10"} 群馬県
+            %option{value: "11"} 埼玉県
+            %option{value: "12"} 千葉県
+            %option{value: "13"} 東京都
+            %option{value: "14"} 神奈川県
+            %option{value: "15"} 新潟県
+            %option{value: "16"} 富山県
+            %option{value: "17"} 石川県
+            %option{value: "18"} 福井県
+            %option{value: "19"} 山梨県
+            %option{value: "20"} 長野県
+            = f.submit nil, class: 'hobby-btn' , value: "追加"
         %ul
           %li.mypage-category__list
             music

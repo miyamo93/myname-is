@@ -61,5 +61,15 @@
     text-align: center;
     height: 8vh;
     font-size: 5vh;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+  }
+  .select-default{
+    height: 30px;
+    width: 100%;
+  }
+  .hobby-btn{
+    height:50px;
+    width: 100%;
   }
 }
