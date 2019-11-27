@@ -81,6 +81,12 @@
     margin-left: 10%;
     width: 60%;
     background: white;
+    li{
+      border-bottom: 1px solid lightgray;
+    }
+    p{
+      display: inline-block;
+    }
     &__name{
       line-height: 100px;
       height: 100px;
@@ -94,6 +100,25 @@
       p{
         width: 60%;
         font-size: 3vw;
+      }
+    }
+    &__list{
+      display: flex;
+      line-height: 100px;
+      h1{
+        text-align: center;
+        font-size:4vw;
+        width: 40%;
+      }
+      h3{
+        text-align: center;
+        font-size:4vw;
+        width: 40%;
+      }
+      h4{
+        text-align: center;
+        font-size:4vw;
+        width: 50%;
       }
     }
   }
