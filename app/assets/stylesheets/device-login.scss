@@ -4,12 +4,12 @@
   background:lightgray;
   box-sizing: border-box;
   font-family: 'Oraqle Script';
-  padding-top: 1vh;
+  box-sizing: border-box;
   .field__log{
     font-size:5vw;
   }
   a{
-    font-size:5vw;
+    font-size:4vw;
     color:black;
     &:hover{
       color: blue;
