@@ -81,10 +81,20 @@
     margin-left: 10%;
     width: 60%;
     background: white;
-    h1{
+    &__name{
+      line-height: 100px;
+      height: 100px;
+      display: flex;
       border-bottom: 2px solid lightgray ;
-      font-size: 5em;
-      text-align: center;
+      h1{
+        text-align: center;
+        font-size:4vw;
+        width: 40%;
+      }
+      p{
+        width: 60%;
+        font-size: 3vw;
+      }
     }
   }
 }
