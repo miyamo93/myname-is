@@ -40,10 +40,43 @@
       .mypage-main
         .mypage-main__name
           %h1
-            Name:
+            Name :
           %p
             名前aaaaa
         %ul
-          %li.mypage-main__list
-            PHOTO
-            
+          = form_with model: @item, class: 'contents-box__form-list' do |f|
+            %li
+              .mypage-main__list
+                %h2
+                  PHOTO :
+                = f.file_field :image, name: 'product_images[image][]', id: "upload-image", class: "upload-image", 'data-image': 0
+                #image
+            %li
+              .mypage-main__list
+                %h3
+                  SEX :
+                %p
+                  men
+            %li
+              .mypage-main__list
+                %h4
+                  BirthDay :
+                %p
+                  1993/08/02
+            %li
+              .mypage-main__list
+                %h5
+                %p
+            %li
+              .mypage-main__list
+                %h6
+                %p
+            %li
+              .mypage-main__list
+                %h7
+                %p
+            %li
+              .mypage-main__list
+                %h8
+                %p
+
