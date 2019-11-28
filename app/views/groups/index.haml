@@ -24,6 +24,9 @@
         %ul
           %li.mypage-category__list
             = link_to "" do
+              mypage
+          %li.mypage-category__list
+            = link_to "" do
               music
           %li.mypage-category__list
             = link_to "" do
@@ -46,21 +49,22 @@
         %ul
           = form_with model: @item, class: 'contents-box__form-list' do |f|
             %li
-              .mypage-main__list
+              .mypage-main__list--image
                 %h2
                   PHOTO :
-                = f.file_field :image, name: 'product_images[image][]', id: "upload-image", class: "upload-image", 'data-image': 0
+                .mypage-main__list--image__box
+                  = f.file_field :image, name: 'product_images[image][]', id: "upload-image", class: "upload-image", 'data-image': 0
                 #image
             %li
               .mypage-main__list
                 %h3
-                  SEX :
+                  Gender :
                 %p
                   men
             %li
               .mypage-main__list
                 %h4
-                  BirthDay :
+                  date of birth :
                 %p
                   1993/08/02
             %li
