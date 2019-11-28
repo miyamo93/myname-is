@@ -4,7 +4,6 @@
       = link_to "/"  do
         HOME
     %h2
-      myname
     %ul
       %li
         = link_to "" do
@@ -49,38 +48,34 @@
         %ul
           = form_with model: @item, class: 'contents-box__form-list' do |f|
             %li
-              .mypage-main__list--image
+              .mypage-main__image
                 %h2
-                  PHOTO :
-                .mypage-main__list--image__box
+                  Photo :
+                .mypage-main__image--box
                   = f.file_field :image, name: 'product_images[image][]', id: "upload-image", class: "upload-image", 'data-image': 0
                 #image
             %li
-              .mypage-main__list
+              .mypage-main__gender
                 %h3
                   Gender :
                 %p
                   men
             %li
-              .mypage-main__list
+              .mypage-main__date
                 %h4
-                  date of birth :
+                  Date of birth :
                 %p
                   1993/08/02
             %li
-              .mypage-main__list
+              .mypage-main__national
                 %h5
+                  Nationality :
                 %p
+                  Japanese
             %li
-              .mypage-main__list
+              .mypage-main__place
                 %h6
+                  Birthplace :
                 %p
-            %li
-              .mypage-main__list
-                %h7
-                %p
-            %li
-              .mypage-main__list
-                %h8
-                %p
+                  osaka
 
