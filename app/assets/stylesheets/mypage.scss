@@ -1,10 +1,4 @@
 .mypage-header{
-  a{
-    color:white;
-    &:hover{
-      color: blue;
-    }
-  }
   font-family: 'Oraqle Script';
   box-sizing: border-box;
   border: solid 3px black;
@@ -13,20 +7,20 @@
   height:100px;
   display: flex;
   box-sizing: border-box;
-  h1{
-    font-size:6vw;
-    width: 20%;
-    text-align: center;
+  a{
+    color:white;
+    &:hover{
+      color: blue;
+    }
   }
-  h2{
+  h1{
     box-sizing: border-box;
     padding-left: 5%;
-    width: 30%;
-    font-size: 6vw;
-    font-family: 'Oraqle Script';
+    font-size:6vw;
+    width: 70%;
   }
   ul{
-    width: 50%;
+    width: 30%;
     display: flex;
     font-size: 3vw;
     li{
@@ -63,7 +57,7 @@
     li{
       cursor: pointer;
       text-align: center;
-      font-size: 5vh;
+      font-size: 3vw;
       border: 1px solid lightgray;
       box-sizing: border-box;
     }
