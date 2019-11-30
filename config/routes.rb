@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   root to: 'tweets#index'
   resources :users, only: [:index, :edit, :update]
   resources :groups, only: [:index, :new, :create, :edit, :update]
+
+  get  '/tweets'  =>  'tweets#chat'
 end
