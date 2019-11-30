@@ -1,0 +1,23 @@
+.wrapper
+  .mypage-header
+    %h1
+      = link_to ""  do
+        HOME
+    %ul
+      %li
+        = link_to "" do
+          %span
+            Search
+      %li
+        = link_to "" do
+          %span
+            Friend
+  .chat-body
+    .chat-body__sub
+      = render 'shared/sidebar'
+      .chat-main
+        .chat-main__body
+        = form_with model: @item, class: 'chat-main__form' do |f|
+          .chat-main__form--box
+            = f.text_field :image, name: 'message', id: "chat-input", class: "chat-input", 'data-image': 0
+            = f.submit nil, class: 'message-btn' ,id:"message-btn" ,value: "送信する"
