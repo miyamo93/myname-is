@@ -1,0 +1,26 @@
+.chat-body{
+  background-image:url(https://image.freepik.com/free-photo/_1149-1283.jpg);
+  padding-top:3% ;
+  height: calc(100vh - 100px);
+  box-sizing: border-box;
+  &__sub{
+    display: flex;
+    width: 80%;
+    padding: 0;
+    margin: 0 auto;
+  }
+  .chat-main{
+    width: 100%;
+    &__body{
+      height: 700px;
+      border: solid 2px black;
+      margin-left: 10%;
+      background: white;
+    }
+    .chat-input{
+      margin-left: 10%;
+      width: 70%;
+      height: 30px;
+    }
+  }
+}
