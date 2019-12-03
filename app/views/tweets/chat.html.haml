@@ -20,9 +20,9 @@
       .chat-main
         .chat-main__body
           .chat-box
-            .chat-box__you
-              =render 'shared/message'
             .chat-box__me
+              =render 'shared/message'
+            .chat-box__you
               =render 'shared/message'
         = form_with model: @item, class: 'chat-main__form' do |f|
           .chat-main__form--box
