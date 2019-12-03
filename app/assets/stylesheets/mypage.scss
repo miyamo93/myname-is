@@ -31,8 +31,8 @@
   }
 }
 .mypage-body{
+  height: calc(100vh - 100px);
   background-image:url(https://image.freepik.com/free-photo/_1149-1283.jpg);
-  padding-top:5% ;
   &__sub{
     display: flex;
     width: 80%;
@@ -48,8 +48,9 @@
     width: 100%;
   }
   .mypage-main{
+
     border: solid 2px black;
-    margin-left: 10%;
+    margin:5% 0  0 10% ;
     width: 70%;
     background: white;
     li{
