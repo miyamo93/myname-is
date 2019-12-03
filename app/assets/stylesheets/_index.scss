@@ -10,7 +10,7 @@
   font-family: 'Oraqle Script';
   box-sizing: border-box;
   border: solid 3px black;
-  background:red;
+  background:#EE0000;
   width: 100vw;
   height:100px;
   display: flex;
@@ -68,7 +68,7 @@
       color: white;
       border-radius: 45px 45px 0 0;
       height: 30%;
-      background: red;
+      background: #EE0000;
       box-sizing: border-box;
       h1{
         font-size: 100px;
@@ -93,7 +93,7 @@
       }
     }
     &__footer{
-      background: red;
+      background: #EE0000;
       height: 20%;
       border-radius: 0 0 45px 45px;
     }
