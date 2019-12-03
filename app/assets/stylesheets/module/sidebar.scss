@@ -1,4 +1,22 @@
 .mypage-category{
+  .user-box{
+    background:white;
+    border: solid 2px black;
+    font-size: 3vh;
+    margin-top: 2vh;
+    &__name{
+      border-bottom: 1px solid lightgray;
+    }
+    &__image{
+      height: 20vh;
+      text-align: center;
+      &--view{
+        margin-top:1.5vh ;
+        height: 150px;
+        width:150px;
+      }
+    }
+  }
   a{
     display: block;
     color: black;
@@ -8,7 +26,7 @@
   }
   ul{
     box-sizing: border-box;
-    margin-top:35%;
+    margin-top:3vh;
     width: 300px;
     background:white;
     border: solid 2px black;
