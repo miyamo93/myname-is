@@ -1,0 +1,31 @@
+.wrapper
+  /#チャットページのヘッダー
+  .mypage-header
+    %h1
+      = link_to ""  do
+        HOME
+    %ul
+      %li
+        = link_to "" do
+          %span
+            Search
+      %li
+        = link_to "" do
+          %span
+            Friend
+  /#チャットスペース
+  .chat-body
+    .chat-body__sub
+      = render 'shared/sidebar'
+      .chat-main
+        .chat-main__body
+          .chat-box
+            .chat-box__me
+              =render 'shared/message'
+            .chat-box__you
+              =render 'shared/message'
+        = form_with model: @item, class: 'chat-main__form' do |f|
+          .chat-main__form--box
+            = f.text_field :image, name: 'message', id: "chat-input", class: "chat-input", 'data-image': 0
+            .massage-send
+              = f.submit nil, class: 'message-btn' ,id:"message-btn" ,value: "Send"

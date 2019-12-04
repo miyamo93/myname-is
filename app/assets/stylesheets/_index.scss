@@ -10,23 +10,26 @@
   font-family: 'Oraqle Script';
   box-sizing: border-box;
   border: solid 3px black;
-  background:red;
+  background:#EE0000;
   width: 100vw;
   height:100px;
   display: flex;
   box-sizing: border-box;
   a{
     color: white;
+    &:hover{
+      color: blue;
+    }
   }
   h1{
     margin-left:5% ;
     line-height: 100px;
     width: 70%;
-    font-size:5em;
+    font-size:6em;
     box-sizing: border-box;
   }
   .main-headers{
-    font-size:5em;
+    font-size:6em;
     width: 30%;
     display: flex;
     &__signup{
@@ -43,7 +46,8 @@
 .main-body{
   height: calc(100vh - 100px);
   width: 100vw;
-  background:lightgray;
+  background-size: cover;
+  background-image:url(https://image.freepik.com/free-photo/_1149-1283.jpg);
   box-sizing: border-box;
   padding-top: 100px;
   &__center{
@@ -65,7 +69,7 @@
       color: white;
       border-radius: 45px 45px 0 0;
       height: 30%;
-      background: red;
+      background: #EE0000;
       box-sizing: border-box;
       h1{
         font-size: 100px;
@@ -74,7 +78,7 @@
         position: absolute;
         font-size: 30px;
         bottom: 10%;
-        left: 38%;
+        left: 24vw;
       }
     }
     &__body{
@@ -90,7 +94,7 @@
       }
     }
     &__footer{
-      background: red;
+      background: #EE0000;
       height: 20%;
       border-radius: 0 0 45px 45px;
     }

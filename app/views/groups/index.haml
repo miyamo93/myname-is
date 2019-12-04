@@ -1,39 +1,63 @@
 .wrapper
   .mypage-header
     %h1
-      = link_to "" do
-        %span
-          HOME
-    %h2
-      = link_to "" do
-        %span
-          自分の名前
+      = link_to "/"  do
+        HOME
     %ul
       %li
-        .profile__box
-          = link_to "" do
-            %span
-              friend
+        = link_to "" do
+          %span
+            Search
       %li
-        .profile__box
-          = link_to "" do
-            %span
-              category
-      %li
-        .profile__box
-          = link_to "" do
-            %span
-              toppage
-.groups
-  .group 
-    %ul
-    %li.group__name
-      music
-    %li.group__name
-      movie
-    %li.group__name
-      book
-    %li.group__name
-      game
-    %li.group__name
-      anime
+        = link_to "" do
+          %span
+            Friend
+  .mypage-body
+    .mypage-body__sub
+      = render 'shared/sidebar'
+      .mypage-main
+        .mypage-main__name
+          %h1
+            Name :
+          %p
+            名前aaaaa
+        %ul
+          = form_with model: @item, class: 'contents-box__form-list' do |f|
+            %li
+              .mypage-main__image
+                %h2
+                  Photo :
+                .mypage-main__image--box
+                  = f.file_field :image, name: 'product_images[image][]', id: "upload-image", class: "upload-image", 'data-image': 0
+                #image
+            %li
+              .mypage-main__gender
+                %h3
+                  Gender :
+                %p
+                  men
+            %li
+              .mypage-main__blood
+                %h4
+                  BloodType :
+                %p
+                  A
+            %li
+              .mypage-main__date
+                %h5
+                  Date of birth :
+                %p
+                  1993/08/02
+            %li
+              .mypage-main__national
+                %h6
+                  Nationality :
+                %p
+                  Japanese
+            %li
+              .mypage-main__place
+                %h7
+                  Birthplace :
+                %p
+                  osaka
+

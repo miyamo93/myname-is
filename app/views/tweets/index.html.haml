@@ -6,14 +6,14 @@
     .main-headers
       - if user_signed_in?
         .main-headers__signup
-          = link_to "mypage", groups_path, class: 'get'
+          = link_to "Mypage", groups_path, class: 'get'
         .main-headers__login
-          = link_to "logout", destroy_user_session_path, method: :delete
+          = link_to "Logout", destroy_user_session_path, method: :delete
       - else
         .main-headers__signup
-          = link_to "signup", new_user_registration_path, class: 'post'
+          = link_to "Signup", new_user_registration_path, class: 'post'
         .main-headers__login
-          = link_to "login", new_user_session_path, class: 'post'
+          = link_to "Login", new_user_session_path, class: 'post'
   .main-body
     .main-body__center
       .sticker
