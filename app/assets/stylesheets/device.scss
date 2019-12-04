@@ -18,6 +18,9 @@
 }
 .login-body{
   text-align: center;
+  input{
+    font-size:6vh;
+  }
   &__sub{
     h2{
       font-family: 'Oraqle Script';
@@ -30,4 +33,8 @@
   height: calc(100vh - 100px);
   text-align: center;
   background-image:url(https://image.freepik.com/free-photo/_1149-1283.jpg);
+  background-size: cover;
+  input{
+    font-size:4vh ;
+  }
 }
