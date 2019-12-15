@@ -40,6 +40,21 @@
       padding-top: 2vh;
       padding-left:1vw ;
       border-bottom: 1px solid #000033;
+      position: relative;
+      &:hover{
+        background-color: lightgray;
+        .group-icon{
+          color:red;
+          transform: translate(50%, 0);
+          transition: all ease-out .2s;
+        }
+      }
+      .group-icon{
+        position: absolute;
+        right: 1vw;
+        bottom: 4vh;
+        font-size: 2vh;
+      }
     }
   }
   .chat-main{
