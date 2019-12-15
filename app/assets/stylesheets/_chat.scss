@@ -67,7 +67,19 @@
       background: #000033;
       &--box{
         display: flex;
+        .chat-input{
+          position: relative;
+        }
       }
+    }
+    .image-icon{
+      position: absolute;
+      color:#EE0000;
+      right:18vw;
+      font-size: 5vh;
+    }
+    .input-image{
+      display: none;
     }
     .chat-input{
       margin-left: 3%;
