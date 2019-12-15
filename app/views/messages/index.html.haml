@@ -2,7 +2,7 @@
   /#チャットページのヘッダー
   .chat-header
     %h1
-      = link_to ""  do
+      = link_to root_path  do
         HOME
     %ul
       %li
@@ -20,7 +20,7 @@
         .user-box
           .user-name
             = current_user.nickname
-          = link_to "" do 
+          = link_to  new_group_path do 
             %i.far.fa-edit.user-icon
           = link_to edit_user_path(current_user) do  
             %i.fas.fa-cog.user-icon
