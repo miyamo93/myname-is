@@ -1,5 +1,5 @@
 .message{
-  border: 2px solid lightgray;
+  border: 2px solid #000033;
   width: 90%;
   margin-left: 5%;
   border-radius: 10px;
@@ -20,4 +20,8 @@
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
   }
+}
+.timestamp{
+  padding-right: 2vw;
+  text-align: right;
 }
