@@ -20,13 +20,16 @@
         .user-box
           .user-name
             miyamo
-          %i.far.fa-edit.user-icon
-          %i.fas.fa-cog.user-icon
-        .group-box
-          .group-name
-            yuzuki
-          .group-messages
-            メッセージはありません
+          = link_to "" do 
+            %i.far.fa-edit.user-icon
+          = link_to "" do 
+            %i.fas.fa-cog.user-icon
+        = link_to "" do 
+          .group-box
+            .group-name
+              yuzuki
+            .group-messages
+              メッセージはありません
       .chat-main
         .chat-main__body
           .chat-box
@@ -37,5 +40,8 @@
         = form_with model: @item, class: 'chat-main__form' do |f|
           .chat-main__form--box
             = f.text_field :image, name: 'message', id: "chat-input", class: "chat-input", 'data-image': 0
+            %label{class: "input-box__image"}
+              %i.fas.fa-image.image-icon
+              %input.input-image{type: "file"}
             .massage-send
               = f.submit nil, class: 'message-btn' ,id:"message-btn" ,value: "Send"
