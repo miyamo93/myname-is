@@ -1,6 +1,6 @@
 .wrapper
   /#チャットページのヘッダー
-  .mypage-header
+  .chat-header
     %h1
       = link_to ""  do
         HOME
@@ -16,7 +16,7 @@
   /#チャットスペース
   .chat-body
     .chat-body__sub
-      = render 'shared/sidebar'
+      .chat-sidebar
       .chat-main
         .chat-main__body
           .chat-box
