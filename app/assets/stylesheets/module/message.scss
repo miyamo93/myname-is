@@ -1,7 +1,7 @@
 .message{
   border: 2px solid lightgray;
-  width: 95%;
-  margin-left: 2%;
+  width: 90%;
+  margin-left: 5%;
   border-radius: 10px;
   &__name{
     text-align: center;
@@ -16,5 +16,8 @@
     padding: 3%;
     word-wrap: break-word;
     text-align: center;
+    background-color: white;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
   }
 }
