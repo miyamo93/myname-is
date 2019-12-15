@@ -1,5 +1,5 @@
 .chat-header{
-  background-color: red;
+  background-color: #EE0000;
   height: 10vh;
   box-sizing: border-box;
 }
@@ -17,13 +17,37 @@
     width: 25vw;
     height: 90vh;
     background-color: white;
+    overflow: auto;
+    .user-box{
+      color:white;
+      text-align: center;
+      font-size: 2vh;
+      display: flex;
+      background:#000033;
+      .user-name{
+        width: 15vw;
+        line-height: 10vh;
+      }
+      .user-icon{
+        margin-left: 0.5vw;
+        line-height: 10vh;
+      }
+    }
+    .group-box{
+      color: #000033;
+      box-sizing: border-box;
+      height: 10vh;
+      padding-top: 2vh;
+      padding-left:1vw ;
+      border-bottom: 1px solid #000033;
+    }
   }
   .chat-main{
     width: 100%;
-    overflow: auto;
     &__body{
+      overflow: auto;
       box-sizing: border-box;
-      height: 79vh;
+      height: 80vh;
     }
     .chat-box{
       box-sizing: border-box;
