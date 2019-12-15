@@ -24,13 +24,14 @@
             %i.far.fa-edit.user-icon
           = link_to edit_user_path(current_user) do  
             %i.fas.fa-cog.user-icon
-        = link_to "" do 
+        - current_user.groups.each do |group|
           .group-box
-            .group-name
-              yuzuki
-            .group-messages
-              メッセージはありません
-            %i.fas.fa-chevron-right.group-icon
+            = link_to "" do 
+              .group-name
+                = group.name
+              .group-messages
+                メッセージはありません
+              %i.fas.fa-chevron-right.group-icon
       .chat-main
         .chat-main__body
           .chat-box
