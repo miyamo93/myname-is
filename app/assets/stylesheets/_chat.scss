@@ -24,6 +24,9 @@
       font-size: 2vh;
       display: flex;
       background:#000033;
+      a{
+        color: white;
+      }
       .user-name{
         width: 15vw;
         line-height: 10vh;
@@ -41,6 +44,9 @@
       padding-left:1vw ;
       border-bottom: 1px solid #000033;
       position: relative;
+      a{
+        color: #000033;
+      }
       &:hover{
         background-color: lightgray;
         .group-icon{
