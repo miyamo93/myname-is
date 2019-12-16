@@ -6,13 +6,14 @@
         HOME
     .chat-header__box
       .chat-header__box--group
-        name
+        = @group.name
       .chat-header__box--member
         Member :
-        .chat-header__box--member__text
-          miyamo
+        - @group.group_users.each do |group_user|
+          .chat-header__box--member__text
+            = group_user.user.nickname
     .chat-header__edit
-      = link_to "" do
+      = link_to edit_group_path(@group) do
         .chat-header__edit--text
           Edit
   /#チャットスペース
