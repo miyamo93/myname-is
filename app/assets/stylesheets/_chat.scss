@@ -34,6 +34,9 @@
       width: 10vw;
       color: #000033;
       font-weight: bold;
+      &:hover{
+        opacity: 0.5;
+      }
     }
   }
 }
