@@ -1,7 +1,41 @@
 .chat-header{
-  background-color: #EE0000;
   height: 10vh;
   box-sizing: border-box;
+  display: flex;
+  h1{
+    background-color: #EE0000;
+    width: 20vw;
+  }
+  &__box{
+    width: 65vw;
+    &--group{
+      font-size: 3vh;
+      line-height: 7vh;
+      padding-left:2vw ;
+    }
+    &--member{
+      display: flex;
+      padding-left: 1vw;
+      &__text{
+        padding-left: 0.5vw;
+      }
+    }
+  }
+  &__edit{
+    position: relative;
+    width: 15vw;
+    &--text{
+      top: 2.5vh;
+      left: 1.5vw;
+      position: absolute;
+      text-align: center;
+      border: 2px solid #000033;
+      line-height: 5vh;
+      width: 10vw;
+      color: #000033;
+      font-weight: bold;
+    }
+  }
 }
 .chat-body{
   background-size: cover;
