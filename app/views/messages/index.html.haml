@@ -4,15 +4,17 @@
     %h1
       = link_to root_path  do
         HOME
-    %ul
-      %li
-        = link_to "" do
-          %span
-            Search
-      %li
-        = link_to "" do
-          %span
-            Friend
+    .chat-header__box
+      .chat-header__box--group
+        name
+      .chat-header__box--member
+        Member :
+        .chat-header__box--member__text
+          miyamo
+    .chat-header__edit
+      = link_to "" do
+        .chat-header__edit--text
+          Edit
   /#チャットスペース
   .chat-body
     .chat-body__sub
@@ -26,24 +28,25 @@
             %i.fas.fa-cog.user-icon
         - current_user.groups.each do |group|
           .group-box
-            = link_to "" do 
+            = link_to group_messages_path(group) do 
               .group-name
                 = group.name
               .group-messages
-                メッセージはありません
+                = group.show_last_message
               %i.fas.fa-chevron-right.group-icon
       .chat-main
         .chat-main__body
           .chat-box
             .chat-box__me
-              =render 'shared/message'
-            .chat-box__you
-              =render 'shared/message'
-        = form_with model: @item, class: 'chat-main__form' do |f|
-          .chat-main__form--box
-            = f.text_field :image, name: 'message', id: "chat-input", class: "chat-input", 'data-image': 0
-            %label{class: "input-box__image"}
-              %i.fas.fa-image.image-icon
-              %input.input-image{type: "file"}
-            .massage-send
-              = f.submit nil, class: 'message-btn' ,id:"message-btn" ,value: "Send"
+              = render  @messages
+            -# .chat-box__you
+            -#   = render  @messages
+        = form_for [@group, @message] do |f|
+          .chat-main__form
+            .chat-main__form--box
+              = f.text_field :content,  id: "chat-input", class: "chat-input", placeholder: 'type a message'
+              = f.label :image, class: 'input-box__image' do
+                %i.fas.fa-image.image-icon
+                = f.file_field :image, class: 'input-image'
+              .massage-send
+                = f.submit nil, class: 'message-btn' ,id:"message-btn" ,value: "Send"
