@@ -1,0 +1,63 @@
+.wrapper
+  .mypage-header
+    %h1
+      = link_to "/"  do
+        HOME
+    %ul
+      %li
+        = link_to "" do
+          %span
+            Search
+      %li
+        = link_to "" do
+          %span
+            Friend
+  .mypage-body
+    .mypage-body__sub
+      = render 'shared/sidebar'
+      .mypage-main
+        .mypage-main__name
+          %h1
+            Name :
+          %p
+            名前aaaaa
+        %ul
+          = form_with model: @item, class: 'contents-box__form-list' do |f|
+            %li
+              .mypage-main__image
+                %h2
+                  Photo :
+                .mypage-main__image--box
+                  = f.file_field :image, name: 'product_images[image][]', id: "upload-image", class: "upload-image", 'data-image': 0
+                #image
+            %li
+              .mypage-main__gender
+                %h3
+                  Gender :
+                %p
+                  men
+            %li
+              .mypage-main__blood
+                %h4
+                  BloodType :
+                %p
+                  A
+            %li
+              .mypage-main__date
+                %h5
+                  Date of birth :
+                %p
+                  1993/08/02
+            %li
+              .mypage-main__national
+                %h6
+                  Nationality :
+                %p
+                  Japanese
+            %li
+              .mypage-main__place
+                %h7
+                  Birthplace :
+                %p
+                  osaka
+
