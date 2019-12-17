@@ -1,11 +1,53 @@
+.chat-header{
+  height: 10vh;
+  box-sizing: border-box;
+  display: flex;
+  h1{
+    background-color: #EE0000;
+    width: 20vw;
+  }
+  &__box{
+    background-color: white;
+    height: 10vh;
+    position: relative;
+    &--group{
+      font-size: 3vh;
+      line-height: 7vh;
+      padding-left:2vw ;
+    }
+    &--member{
+      display: flex;
+      padding-left: 1vw;
+      &__text{
+        padding-left: 0.5vw;
+      }
+    }
+  }
+  &__edit{
+    width: 15vw;
+    &--text{
+      top: 2.5vh;
+      right: 3.5vw;
+      position: absolute;
+      text-align: center;
+      border: 2px solid #000033;
+      line-height: 5vh;
+      width: 10vw;
+      color: #000033;
+      font-weight: bold;
+      &:hover{
+        opacity: 0.5;
+      }
+    }
+  }
+}
 .chat-body{
   background-size: cover;
   background-image:url(https://image.freepik.com/free-photo/_1149-1283.jpg);
-  height: calc(100vh - 100px);
+  height: 90vh;
   box-sizing: border-box;
   &__sub{
     display: flex;
-    width: 80%;
     padding: 0;
     margin: 0 auto;
   }
@@ -13,31 +55,40 @@
     width: 100%;
     &__body{
       overflow: auto;
-      height: 75vh;
-      border: solid 2px black;
-      margin-left: 10%;
-      background: white;
-      margin-top: 2vh;
-      .chat-box{
-        &__you{
-          margin-top:1% ;
-          padding-right: 50%;
-        }
-        &__me{
-          margin-top:1% ;
-          padding-left: 50%;
-        }
+      box-sizing: border-box;
+      height: 80vh;
+    }
+    .chat-box{
+      box-sizing: border-box;
+      &__you{
+        margin-top: 1vh;
+        padding-right: 50%;
+      }
+      &__me{
+        margin-top: 1vh;
+        padding-left: 50%;
       }
     }
     &__form{
-      height: 10%;
-      margin-left: 10%;
+      box-sizing: border-box;
+      padding-top: 2.5vh;
+      height: 10vh;
       background: #000033;
-      border: 1.5px solid black;
       &--box{
-        margin-top: 2.5vh;
         display: flex;
+        .chat-input{
+          position: relative;
+        }
       }
+    }
+    .image-icon{
+      position: absolute;
+      color:#EE0000;
+      right:18vw;
+      font-size: 5vh;
+    }
+    .input-image{
+      display: none;
     }
     .chat-input{
       margin-left: 3%;
@@ -49,7 +100,7 @@
       margin-left: 2%;
     }
     .message-btn{
-      height: 100%;
+      height: 5vh;
       width: 80%;
       background:#000033;
       color: white;
@@ -57,3 +108,4 @@
     }
   } 
 }
+

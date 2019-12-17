@@ -1,0 +1,50 @@
+.chat-sidebar{
+  width: 25vw;
+  height: 100vh;
+  background-color: white;
+  overflow: auto;
+  .user-box{
+    color:white;
+    text-align: center;
+    font-size: 2vh;
+    display: flex;
+    background:#000033;
+    a{
+      color: white;
+    }
+    .user-name{
+      width: 15vw;
+      line-height: 10vh;
+    }
+    .user-icon{
+      margin-left: 0.5vw;
+      line-height: 10vh;
+    }
+  }
+  .group-box{
+    color: #000033;
+    box-sizing: border-box;
+    height: 10vh;
+    padding-top: 2vh;
+    padding-left:1vw ;
+    border-bottom: 1px solid #000033;
+    position: relative;
+    a{
+      color: #000033;
+    }
+    &:hover{
+      background-color: lightgray;
+      .group-icon{
+        color:red;
+        transform: translate(50%, 0);
+        transition: all ease-out .2s;
+      }
+    }
+    .group-icon{
+      position: absolute;
+      right: 1vw;
+      bottom: 4vh;
+      font-size: 2vh;
+    }
+  }
+}

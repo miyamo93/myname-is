@@ -1,8 +1,9 @@
 .message{
-  border: 2px solid lightgray;
-  width: 95%;
-  margin-left: 2%;
+  border: 2px solid #000033;
+  width: 90%;
+  margin-left: 5%;
   border-radius: 10px;
+  margin-top: 2vh;
   &__name{
     text-align: center;
     border-top-left-radius: 8px;
@@ -16,5 +17,12 @@
     padding: 3%;
     word-wrap: break-word;
     text-align: center;
+    background-color: white;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
   }
+}
+.timestamp{
+  padding-right: 2vw;
+  text-align: right;
 }

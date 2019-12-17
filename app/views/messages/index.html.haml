@@ -1,31 +1,51 @@
 .wrapper
   /#チャットページのヘッダー
-  .mypage-header
-    %h1
-      = link_to ""  do
-        HOME
-    %ul
-      %li
-        = link_to "" do
-          %span
-            Search
-      %li
-        = link_to "" do
-          %span
-            Friend
+  -# .chat-header
+  -#   %h1
+  -#     = link_to root_path  do
+  -#       HOME
+  -#   .chat-header__box
+  -#     .chat-header__box--group
+  -#       = @group.name
+  -#     .chat-header__box--member
+  -#       Member :
+  -#       - @group.group_users.each do |group_user|
+  -#         .chat-header__box--member__text
+  -#           = group_user.user.nickname
+  -#   .chat-header__edit
+  -#     = link_to edit_group_path(@group) do
+  -#       .chat-header__edit--text
+  -#         Edit
   /#チャットスペース
+  
   .chat-body
     .chat-body__sub
-      = render 'shared/sidebar'
+      = render 'shared/group_side'
       .chat-main
+        .chat-header__box
+          .chat-header__box--group
+            = @group.name
+          .chat-header__box--member
+            Member :
+            - @group.group_users.each do |group_user|
+              .chat-header__box--member__text
+                = group_user.user.nickname
+          .chat-header__edit
+            = link_to edit_group_path(@group) do
+              .chat-header__edit--text
+                Edit
         .chat-main__body
           .chat-box
             .chat-box__me
-              =render 'shared/message'
-            .chat-box__you
-              =render 'shared/message'
-        = form_with model: @item, class: 'chat-main__form' do |f|
-          .chat-main__form--box
-            = f.text_field :image, name: 'message', id: "chat-input", class: "chat-input", 'data-image': 0
-            .massage-send
-              = f.submit nil, class: 'message-btn' ,id:"message-btn" ,value: "Send"
+              = render  @messages
+            -# .chat-box__you
+            -#   = render  @messages
+        = form_for [@group, @message] do |f|
+          .chat-main__form
+            .chat-main__form--box
+              = f.text_field :content,  id: "chat-input", class: "chat-input", placeholder: 'type a message'
+              = f.label :image, class: 'input-box__image' do
+                %i.fas.fa-image.image-icon
+                = f.file_field :image, class: 'input-image'
+              .massage-send
+                = f.submit nil, class: 'message-btn' ,id:"message-btn" ,value: "Send"
