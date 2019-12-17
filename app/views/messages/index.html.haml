@@ -1,27 +1,39 @@
 .wrapper
   /#チャットページのヘッダー
-  .chat-header
-    %h1
-      = link_to root_path  do
-        HOME
-    .chat-header__box
-      .chat-header__box--group
-        = @group.name
-      .chat-header__box--member
-        Member :
-        - @group.group_users.each do |group_user|
-          .chat-header__box--member__text
-            = group_user.user.nickname
-    .chat-header__edit
-      = link_to edit_group_path(@group) do
-        .chat-header__edit--text
-          Edit
+  -# .chat-header
+  -#   %h1
+  -#     = link_to root_path  do
+  -#       HOME
+  -#   .chat-header__box
+  -#     .chat-header__box--group
+  -#       = @group.name
+  -#     .chat-header__box--member
+  -#       Member :
+  -#       - @group.group_users.each do |group_user|
+  -#         .chat-header__box--member__text
+  -#           = group_user.user.nickname
+  -#   .chat-header__edit
+  -#     = link_to edit_group_path(@group) do
+  -#       .chat-header__edit--text
+  -#         Edit
   /#チャットスペース
+  
   .chat-body
     .chat-body__sub
       = render 'shared/group_side'
       .chat-main
         .chat-main__body
+          .chat-header__box
+            .chat-header__box--group
+              = @group.name
+            .chat-header__box--member
+              Member :
+              - @group.group_users.each do |group_user|
+                .chat-header__box--member__text
+                  = group_user.user.nickname
+          .chat-header__edit
+            = link_to edit_group_path(@group) do
+              .chat-header__edit--text
           .chat-box
             .chat-box__me
               = render  @messages
