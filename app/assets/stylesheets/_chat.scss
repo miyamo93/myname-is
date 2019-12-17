@@ -7,7 +7,9 @@
     width: 20vw;
   }
   &__box{
-    width: 65vw;
+    background-color: white;
+    height: 10vh;
+    position: relative;
     &--group{
       font-size: 3vh;
       line-height: 7vh;
@@ -22,11 +24,10 @@
     }
   }
   &__edit{
-    position: relative;
     width: 15vw;
     &--text{
       top: 2.5vh;
-      left: 1.5vw;
+      right: 3.5vw;
       position: absolute;
       text-align: center;
       border: 2px solid #000033;
