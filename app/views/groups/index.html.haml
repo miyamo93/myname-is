@@ -1,34 +1,9 @@
 .wrapper
-  .main-header
+  /#チャットページのヘッダー
+  .chat-header
     %h1
-      = link_to "" do
+      = link_to root_path  do
         HOME
-    .main-headers
-      - if user_signed_in?
-        .main-headers__chat
-          = link_to "messages",  class: 'get'
-        .main-headers__signup
-          = link_to "Mypage", groups_path, class: 'get'
-        .main-headers__login
-          = link_to "Logout", destroy_user_session_path, method: :delete
-      - else
-        .main-headers__signup
-          = link_to "Signup", new_user_registration_path, class: 'post'
-        .main-headers__login
-          = link_to "Login", new_user_session_path, class: 'post'
-  .main-body
-    .main-body__center
-      .sticker
-        .sticker__header
-          %h1
-            HELLO
-          %p
-            my name is
-        .sticker__body
-          - if user_signed_in?
-            .sticker__body--image
-              = image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTEjyCqVaVA9X8sXArjZPlmpncmYNTqdI_rjGcvY0g2scsDcTOj", size: "300x300", alt: "qrコード"
-          - else
-            .sticker__body--text
-              WHO ARE YOU?
-        .sticker__footer    
+  .chat-body
+    .chat-body__sub
+      = render 'shared/group_side'
