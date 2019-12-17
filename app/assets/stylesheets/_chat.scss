@@ -105,7 +105,9 @@
       background:#000033;
       color: white;
       text-align: center;
+      &:hover{
+        cursor: pointer;
+      }
     }
   } 
 }
-
