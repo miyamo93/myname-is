@@ -5,8 +5,6 @@
         HOME
     .main-headers
       - if user_signed_in?
-        .main-headers__chat
-          = link_to "messages",  class: 'get'
         .main-headers__signup
           = link_to "Mypage", groups_path, class: 'get'
         .main-headers__login
