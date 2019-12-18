@@ -1,4 +1,11 @@
 .group-body{
-  height: 100vh;
-  width: 100vw;
+  &__sub{
+    display: flex;
+  }
+  .group-main{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+  background-image:url(https://image.freepik.com/free-photo/_1149-1283.jpg);
+  }
 }
