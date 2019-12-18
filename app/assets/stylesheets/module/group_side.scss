@@ -19,6 +19,9 @@
     .user-icon{
       margin-left: 0.5vw;
       line-height: 10vh;
+      &:hover{
+        color: red;
+      }
     }
   }
   .group-box{
