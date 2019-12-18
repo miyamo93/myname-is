@@ -1,12 +1,12 @@
 .chat-header{
-  height: 10vh;
-  box-sizing: border-box;
-  display: flex;
+  
   h1{
     background-color: #EE0000;
     width: 20vw;
   }
   &__box{
+    box-sizing: border-box;
+    border-bottom:1px solid #000033;
     background-color: white;
     height: 10vh;
     position: relative;
