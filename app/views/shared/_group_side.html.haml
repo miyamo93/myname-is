@@ -8,11 +8,12 @@
       %i.far.fa-edit.user-icon
     = link_to edit_user_path(current_user) do  
       %i.fas.fa-cog.user-icon
-  - current_user.groups.each do |group|
-    = link_to group_messages_path(group) do 
-      .group-box
-        .group-name
-          = group.name
-        .group-messages
-          = group.show_last_message
-        %i.fas.fa-chevron-right.group-icon
+  .group-list
+    - current_user.groups.each do |group|
+      = link_to group_messages_path(group) do 
+        .group-box
+          .group-name
+            = group.name
+          .group-messages
+            = group.show_last_message
+          %i.fas.fa-chevron-right.group-icon
