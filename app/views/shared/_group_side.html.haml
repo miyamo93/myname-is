@@ -8,6 +8,15 @@
       %i.far.fa-edit.user-icon
     = link_to edit_user_path(current_user) do  
       %i.fas.fa-cog.user-icon
+    %i.fas.fa-bars.menu
+      #hum
+        %ul
+          %li
+            HOME
+          %li
+            ユーザー編集
+          %li
+            新規グループ作成
   .group-list
     - current_user.groups.each do |group|
       = link_to group_messages_path(group) do 
