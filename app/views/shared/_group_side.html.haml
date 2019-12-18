@@ -8,15 +8,22 @@
       %i.far.fa-edit.user-icon
     = link_to edit_user_path(current_user) do  
       %i.fas.fa-cog.user-icon
-    %i.fas.fa-bars.menu
-      #hum
+    .l-drawer
+      %input#drawerCheckbox.l-drawer__checkbox{:type => "checkbox"}/
+      / ドロワーアイコン
+      %label.l-drawer__icon{:for => "drawerCheckbox"}
+        %span.l-drawer__icon-parts
+      / 背景を暗く
+      %label.l-drawer__overlay{:for => "drawerCheckbox"}
+      / ドロワーメニュー
+      %nav.l-drawer__menu
         %ul
-          %li
-            HOME
-          %li
-            ユーザー編集
-          %li
-            新規グループ作成
+          %li.l-drawer__item
+            %a.l-drawer__item-inner{:href => "/"} メニュー
+          %li.l-drawer__item
+            %a.l-drawer__item-inner{:href => "/"} メニュー
+          %li.l-drawer__item
+            %a.l-drawer__item-inner{:href => "/"} メニュー
   .group-list
     - current_user.groups.each do |group|
       = link_to group_messages_path(group) do 
