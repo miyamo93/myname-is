@@ -14,19 +14,19 @@
       %nav.l-drawer__menu
         %ul
           %li.l-drawer__item
-            = link_to groups_path, class: "l-drawer__item"  do
+            = link_to groups_path, class: "l-drawer__item--text"  do
               %i.fas.fa-home.user-icon
                 Home
           %li.l-drawer__item
-            = link_to new_group_path, class: "l-drawer__item"  do
+            = link_to new_group_path, class: "l-drawer__item--text"  do
               %i.fas.fa-edit.user-icon
                 グループ作成
           %li.l-drawer__item
-            = link_to edit_user_path(current_user), class: "l-drawer__item"  do
+            = link_to edit_user_path(current_user), class: "l-drawer__item--text"  do
               %i.fas.fa-cog.user-icon
                 ユーザ情報
           %li.l-drawer__item
-            = link_to tweets_path, class: "l-drawer__item"  do
+            = link_to tweets_path, class: "l-drawer__item--text"  do
               %i.fas.fa-undo.user-icon
                 トップページに戻る
   .group-list
