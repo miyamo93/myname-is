@@ -9,21 +9,24 @@
     = link_to edit_user_path(current_user) do  
       %i.fas.fa-cog.user-icon
     .l-drawer
-      %input#drawerCheckbox.l-drawer__checkbox{:type => "checkbox"}/
+      %input#drawerCheckbox.l-drawer__checkbox{type: "checkbox"}/
       / ドロワーアイコン
-      %label.l-drawer__icon{:for => "drawerCheckbox"}
+      %label.l-drawer__icon{for: "drawerCheckbox"}
         %span.l-drawer__icon-parts
       / 背景を暗く
-      %label.l-drawer__overlay{:for => "drawerCheckbox"}
+      %label.l-drawer__overlay{for: "drawerCheckbox"}
       / ドロワーメニュー
       %nav.l-drawer__menu
         %ul
           %li.l-drawer__item
-            %a.l-drawer__item-inner{:href => "/"} メニュー
+            = link_to "", class: "l-drawer__item"  do
+              メニュー
           %li.l-drawer__item
-            %a.l-drawer__item-inner{:href => "/"} メニュー
+            = link_to "", class: "l-drawer__item"  do
+              メニュー
           %li.l-drawer__item
-            %a.l-drawer__item-inner{:href => "/"} メニュー
+            = link_to "", class: "l-drawer__item"  do
+              メニュー
   .group-list
     - current_user.groups.each do |group|
       = link_to group_messages_path(group) do 
