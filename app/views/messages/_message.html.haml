@@ -1,13 +1,9 @@
--# - binding.pry
-- if @messages == current_user.id
-  .chat-box__me
-- else
-  .chat-box__you
-    .message
-      .message__name
-        = message.user.nickname
-      .message__text
-        = message.content
-        = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
-    .timestamp
-      = message.created_at.strftime("%Y/%m/%d %H:%M")
+
+.message
+  .message__name
+    = message.user.nickname
+  .message__text
+    = message.content
+    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+.timestamp
+  = message.created_at.strftime("%Y/%m/%d %H:%M")
