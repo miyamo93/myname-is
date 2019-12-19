@@ -20,14 +20,16 @@
         %ul
           %li.l-drawer__item
             %i.fas.fa-home.user-icon
-              = link_to "", class: "l-drawer__item"  do
+              = link_to tweets_path, class: "l-drawer__item"  do
                 メニュー
           %li.l-drawer__item
-            = link_to "", class: "l-drawer__item"  do
-              メニュー
+            %i.fas.fa-edit.user-icon
+              = link_to new_group_path, class: "l-drawer__item"  do
+                メニュー
           %li.l-drawer__item
-            = link_to "", class: "l-drawer__item"  do
-              メニュー
+            %i.fas.fa-cog.user-icon
+              = link_to edit_user_path(current_user), class: "l-drawer__item"  do
+                メニュー
   .group-list
     - current_user.groups.each do |group|
       = link_to group_messages_path(group) do 
