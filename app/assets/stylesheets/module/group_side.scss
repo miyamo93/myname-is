@@ -12,12 +12,14 @@
       color: white;
     }
     .user-name{
-      width: 14vw;
+      width: 18vw;
       line-height: 10vh;
     }
     .user-icon{
+      cursor: pointer;
+      width: 100%;
       margin-left: 0.5vw;
-      line-height: 10vh;
+      line-height: 9.5vh;
       &:hover{
         color: red;
       }
@@ -78,13 +80,13 @@
         background: #ffffff;
         color: #000;
         max-width: 100%;
-        width: 320px;
+        width: 18vw;
         height: 100vh;
         overflow-y: auto; //スクロール
         -webkit-overflow-scrolling: touch; //スクロール（SP）
         position: fixed;
         top: 0;
-        left: -320px;
+        left: -18vw;
       }
       &__item{
         color: black;
