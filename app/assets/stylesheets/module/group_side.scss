@@ -89,7 +89,10 @@
         left: -18vw;
       }
       &__item{
-        color: black;
+        border-bottom: 1px solid #000033;
+        &--text{
+          color: #000033;
+        }
       }
       // z-indexの指定（1がメインエリア）
       &__icon{
