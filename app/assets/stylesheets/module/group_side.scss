@@ -84,7 +84,10 @@
         -webkit-overflow-scrolling: touch; //スクロール（SP）
         position: fixed;
         top: 0;
-        right: -320px;
+        left: -320px;
+      }
+      &__item{
+        color: black;
       }
       // z-indexの指定（1がメインエリア）
       &__icon{
@@ -122,7 +125,7 @@
         }
         // メニューをだす
         .l-drawer__menu {
-          right: 0;
+          left: 0;
         }
       }
       // 動きをスムーズに
