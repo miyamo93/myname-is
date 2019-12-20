@@ -12,30 +12,137 @@
       color: white;
     }
     .user-name{
-      width: 14vw;
+      width: 18vw;
       line-height: 10vh;
     }
     .user-icon{
+      cursor: pointer;
+      width: 100%;
       margin-left: 0.5vw;
-      line-height: 10vh;
+      line-height: 9.5vh;
       &:hover{
         color: red;
       }
     }
-    .menu{
-      #hum{
-        background-color: #fff; /*メニュー背景色*/
-        box-sizing: border-box;
-        height: 100%;
-        padding: 10px 40px; /*メニュー内部上下左右余白*/
-        position: fixed;
-        right: -300px; /*メニュー横幅①と合わせる*/
-        top: 0;
-        transition: transform 0.3s linear 0s; /*0.3s は変化するのにかかる時間*/
-        width: 300px; /*メニュー横幅①*/
-        z-index: 1000;
+    .l-drawer {
+      position: relative;
+      // inputのcheckboxは非表示
+      &__checkbox{
+        display: none;
       }
-    }
+      // ハンバーガーアイコン
+      &__icon{
+        cursor: pointer;
+        display: block;
+        width: 56px;
+        height: 60px;
+        // ハンバーガーアイコンの中の線
+        &-parts,
+        &-parts:before,
+        &-parts:after{
+          background-color: white;   
+          display: block;
+          width: 26px;
+          height: 2px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          margin: auto;
+        }
+        &-parts:before,
+        &-parts:after{
+          content: " ";
+        }
+        &-parts:before{
+          top: 16px
+        }
+        &-parts:after{
+          top: -16px
+        }
+      }
+      
+      // ドロワーメニュー開いた時のメインエリアを暗く
+      &__overlay{
+        background: #000;
+        opacity: 0;
+        pointer-events: none; //ポインタの動作全部無効化
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+      }
+      
+      // ドロワーメニュー
+      &__menu{
+        background: #ffffff;
+        color: #000;
+        max-width: 100%;
+        width: 18vw;
+        height: 100vh;
+        overflow-y: auto; //スクロール
+        -webkit-overflow-scrolling: touch; //スクロール（SP）
+        position: fixed;
+        top: 0;
+        left: -18vw;
+      }
+      &__item{
+        border-bottom: 1px solid #000033;
+        &--text{
+          color: #000033;
+        }
+      }
+      // z-indexの指定（1がメインエリア）
+      &__icon{
+        z-index: 4;
+      }
+      &__menu{
+        z-index: 3;
+      }
+      &__overlay{
+        z-index: 2;
+      }
+      
+      // チェックが入ったら（アイコンクリックしたら）
+      &__checkbox:checked ~ {
+        // ハンバーガーアイコン
+        .l-drawer__icon{
+          .l-drawer__icon-parts{
+            background: transparent;
+          }
+          .l-drawer__icon-parts:before{
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            top: 0;
+          }
+          .l-drawer__icon-parts:after{
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            top: 0;
+          }
+        }
+        // メインエリアを暗くする
+        .l-drawer__overlay {
+          opacity: 0.3;
+          pointer-events: auto; //ポインタの動作デフォルトに戻す
+        }
+        // メニューをだす
+        .l-drawer__menu {
+          left: 0;
+        }
+      }
+      // 動きをスムーズに
+      &__icon-parts,
+      &__icon-parts:after,
+      &__icon-parts:before,
+      &__overlay,
+      &__menu{
+        -webkit-transition: all .7s ;
+        transition: all .7s ;
+      }
+    }    
   }
   .group-list{
     overflow: auto;
