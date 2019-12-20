@@ -6,8 +6,8 @@ $(document).on('turbolinks:load', function(){
                     ${message.user_name}
                   </div>
                   <div class="message__text">
-                    ${message.user_name}
-                    <%= image_tag message.image.url, class: 'lower-message__image' if message.image.present? %>
+                    ${message.content}
+                    ${img}
                   </div>
                 </div>
                 <div class="timestamp">
