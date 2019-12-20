@@ -1,19 +1,17 @@
 $(document).on('turbolinks:load', function(){
   function buildHTML(message){
     var img = message.image ? `<img src= ${ message.image }>` : "";
-    var html = `<div class="message" data-message-id="${message.id}"> 
-                <div class="message__up-info">
-                <p class="message__up-info--taker">
-                  ${message.user_name}
-                </p>
-                <p class="message__up-info--date">
-                  ${message.date}
-                </p>
+    var html = `<div class="message">
+                  <div class="message__name">
+                    <%= message.user.nickname %>
+                  </div>
+                  <div class="message__text">
+                    <%= message.content %>
+                    <%= image_tag message.image.url, class: 'lower-message__image' if message.image.present? %>
+                  </div>
                 </div>
-                <p class="message__text">
-                  ${message.content}
-                </p>
-                  ${img}
+                <div class="timestamp">
+                  <%= message.created_at.strftime("%Y/%m/%d %H:%M") %>
                 </div>`
     return html;
   }
@@ -22,7 +20,7 @@ $(document).on('turbolinks:load', function(){
     var formData = new FormData(this);
     var url = $(this).attr('action')
     $.ajax({
-      url: 取得したリクエストURL,  //同期通信でいう『パス』
+      url: url,  //同期通信でいう『パス』
       type: 'POST',  //同期通信でいう『HTTPメソッド』
       data: message,  
       dataType: 'json',
@@ -31,13 +29,13 @@ $(document).on('turbolinks:load', function(){
     })
     done(function(data){
       var html = buildHTML(data);
-      $('.messages').append(html);
+      $('.chat-box').append(html);
       $('#new_message')[0].reset();
       scrollBottom();
       function scrollBottom(){
-        var target = $('.message').last();
-        var position = target.offset().top + $('.messages').scrollTop();
-        $('.messages').animate({
+        var target = $('.chat-box').last();
+        var position = target.offset().top + $('.chat-box').scrollTop();
+        $('.chat-box').animate({
           scrollTop: position
         }, 300, 'swing');
       }
