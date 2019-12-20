@@ -11,7 +11,7 @@ $(document).on('turbolinks:load', function(){
                   </div>
                 </div>
                 <div class="timestamp">
-                  <%= message.created_at.strftime("%Y/%m/%d %H:%M") %>
+                  ${message.date}
                 </div>`
     return html;
   }
