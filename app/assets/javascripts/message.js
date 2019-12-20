@@ -3,10 +3,10 @@ $(document).on('turbolinks:load', function(){
     var img = message.image ? `<img src= ${ message.image }>` : "";
     var html = `<div class="message">
                   <div class="message__name">
-                    <%= message.user.nickname %>
+                    ${message.user_name}
                   </div>
                   <div class="message__text">
-                    <%= message.content %>
+                    ${message.user_name}
                     <%= image_tag message.image.url, class: 'lower-message__image' if message.image.present? %>
                   </div>
                 </div>
