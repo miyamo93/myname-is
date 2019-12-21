@@ -2,11 +2,12 @@
   text-align: center;
   height: 100vh;
   &__inner{
-    height: 20vh;
     margin: 0 auto;
+    height: 20vh;
     &--right{
       height: 80vh;
-      
+      border: solid 1px lightgray;
+      width: 80vw;
     }
   }
 }
