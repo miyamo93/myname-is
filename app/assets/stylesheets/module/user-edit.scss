@@ -1,6 +1,12 @@
 .account-page{
   text-align: center;
+  height: 100vh;
   &__inner{
+    height: 20vh;
     margin: 0 auto;
-      }
+    &--right{
+      height: 80vh;
+      
+    }
+  }
 }
