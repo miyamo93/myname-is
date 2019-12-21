@@ -4,12 +4,15 @@
   &__inner{
     margin: 0 auto;
     height: 20vh;
+    height: 90vh;
+    margin: 3vh auto 0;
+    border: solid 1px lightgray;
+    width: 60vw;
+    border-radius: 2vh;
+    &--left{
+      
+    }
     &--right{
-      height: 90vh;
-      margin: 0 auto;
-      border: solid 1px lightgray;
-      width: 60vw;
-      border-radius: 2vh;
     }
   }
 }
