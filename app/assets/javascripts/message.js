@@ -15,40 +15,37 @@
 //                 </div>`
 //     return html;
 //   }
-$(function(){
-  $('#new_message').on('#message-btn', function(){
-    e.preventDefault()
-    console.log("イベント")
-  })
-})
-  //   var formData = new FormData(this);
-  //   var url = $(this).attr('action')
-  //   $.ajax({
-  //     url: url,  //同期通信でいう『パス』
-  //     type: 'POST',  //同期通信でいう『HTTPメソッド』
-  //     data: message,  
-  //     dataType: 'json',
-  //     processData: false,
-  //     contentType: false
-  //   })
-  //   done(function(data){
-  //     var html = buildHTML(data);
-  //     $('.chat-box').append(html);
-  //     $('#new_message')[0].reset();
-  //     scrollBottom();
-  //     function scrollBottom(){
-  //       var target = $('.chat-box').last();
-  //       var position = target.offset().top + $('.chat-box').scrollTop();
-  //       $('.chat-box').animate({
-  //         scrollTop: position
-  //       }, 300, 'swing');
-  //     }
-  //   })
-  //   .fail(function(data){
-  //     alert('エラーが発生したためメッセージは送信できませんでした。');
-  //   })
-  //   .always(function(data){
-  //     $('#message-btn').prop('disabled', false);//ここで解除している
-  //   })
-  // })
+//   $('#new_message').on('#message-btn', function(){
+//     e.preventDefault()
+//     console.log('saljk')
+//     var formData = new FormData(this);
+//     var url = $(this).attr('action')
+//     $.ajax({
+//       url: url,  //同期通信でいう『パス』
+//       type: 'POST',  //同期通信でいう『HTTPメソッド』
+//       data: message,  
+//       dataType: 'json',
+//       processData: false,
+//       contentType: false
+//     })
+//     done(function(data){
+//       var html = buildHTML(data);
+//       $('.chat-box').append(html);
+//       $('#new_message')[0].reset();
+//       scrollBottom();
+//       function scrollBottom(){
+//         var target = $('.chat-box').last();
+//         var position = target.offset().top + $('.chat-box').scrollTop();
+//         $('.chat-box').animate({
+//           scrollTop: position
+//         }, 300, 'swing');
+//       }
+//     })
+//     .fail(function(data){
+//       alert('エラーが発生したためメッセージは送信できませんでした。');
+//     })
+//     .always(function(data){
+//       $('#message-btn').prop('disabled', false);//ここで解除している
+//     })
+//   })
 // })
