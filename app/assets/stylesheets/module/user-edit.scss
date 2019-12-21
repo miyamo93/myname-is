@@ -5,9 +5,11 @@
     margin: 0 auto;
     height: 20vh;
     &--right{
-      height: 80vh;
+      height: 90vh;
+      margin: 0 auto;
       border: solid 1px lightgray;
-      width: 80vw;
+      width: 60vw;
+      border-radius: 2vh;
     }
   }
 }
