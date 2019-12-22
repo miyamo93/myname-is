@@ -50,9 +50,8 @@
 //   })
 //   setInterval(reloadMessages, 5000);
 // })
-$(function(){
+$(document).on('turbolinks:load', function(){
   $('#new_message').on('submit', function(e){
-    console.log('hoge');
     e.preventDefault()
     var formData = new FormData(this);
     var url = $(this).attr('action')
@@ -63,6 +62,6 @@ $(function(){
       dataType: 'json',
       processData: false,
       contentType: false
-    });
-  });
+    })
+  })
 });
