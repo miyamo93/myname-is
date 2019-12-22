@@ -18,12 +18,11 @@
                 Edit
         .chat-main__body
           .chat-box
-            - binding.pry
-            - if current_user == @messages
-              .chat-box__me
-            - else
-              .chat-box__you
-                = render  @messages
+            -# - if current_user.id == @messages
+            -#   .chat-box__me
+            -# - else
+            -#   .chat-box__you
+            = render  @messages
             -# = render  @messages
         = form_for [@group, @message] do |f|
           .chat-main__form
