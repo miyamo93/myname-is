@@ -1,6 +1,15 @@
-.message
-  - if current_user.id == message.user_id
-    .chat-box__me
+- if current_user.id == message.user_id
+  .chat-box__me
+    .message
+      .message__name
+        = message.user.nickname
+      .message__text
+        = message.content
+        = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+    .timestamp
+      = message.created_at.strftime("%Y/%m/%d %H:%M")
+  - else
+    .chat-box__you
       .message
         .message__name
           = message.user.nickname
@@ -9,12 +18,3 @@
           = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
       .timestamp
         = message.created_at.strftime("%Y/%m/%d %H:%M")
-  - else
-    .chat-box__you
-      .message__name
-        = message.user.nickname
-      .message__text
-        = message.content
-        = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
-    .timestamp
-      = message.created_at.strftime("%Y/%m/%d %H:%M")
