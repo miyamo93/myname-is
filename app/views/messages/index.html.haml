@@ -18,12 +18,7 @@
                 Edit
         .chat-main__body
           .chat-box
-            -# - if current_user.id == @messages
-            -#   .chat-box__me
-            -# - else
-            -#   .chat-box__you
             = render  @messages
-            -# = render  @messages
         = form_for [@group, @message] do |f|
           .chat-main__form
             .chat-main__form--box
