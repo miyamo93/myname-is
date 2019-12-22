@@ -51,6 +51,25 @@
 //   setInterval(reloadMessages, 5000);
 // })
 $(document).on('turbolinks:load', function(){
+  function buildHTML(message){
+    if ( message.image ) {
+      var html = `<div class="message">
+                    <div class="message__name">
+                      ${message.user_name}
+                    </div>
+                    <div class="message__text">
+                      ${message.content}
+                      ${message.image}
+                    </div>
+                  </div>
+                  <div class="timestamp">
+                    ${message.date}
+                  </div>`
+        return html;
+        }
+    else
+        
+
   $('#new_message').on('submit', function(e){
     e.preventDefault()
     var formData = new FormData(this);
@@ -62,6 +81,11 @@ $(document).on('turbolinks:load', function(){
       dataType: 'json',
       processData: false,
       contentType: false
+    })
+    .done(function(data){
+      var html = buildHTML(data);
+      $('.chat-box').append(html);      
+      $('form')[0].reset();
     })
   })
 });
