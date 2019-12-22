@@ -53,23 +53,40 @@
 $(document).on('turbolinks:load', function(){
   function buildHTML(message){
     if ( message.image ) {
+      var html = `<% if  current_user.id == message.user_id %>
+                    <div class="chat-box__me">
+                      <div class="message">
+                        <div class="message__name">
+                          ${message.user_name}
+                        </div>
+                        <div class="message__text">
+                          ${message.content}
+                          ${message.image}
+                        </div>
+                      </div>
+                      <div class="timestamp">
+                        ${message.date}
+                      </div>
+                  <% else %>
+                    `
+                    
+        return html;
+        }
+    else{
       var html = `<div class="message">
                     <div class="message__name">
                       ${message.user_name}
                     </div>
                     <div class="message__text">
                       ${message.content}
-                      ${message.image}
                     </div>
                   </div>
                   <div class="timestamp">
                     ${message.date}
                   </div>`
         return html;
-        }
-    else
-        
-
+    }
+  };
   $('#new_message').on('submit', function(e){
     e.preventDefault()
     var formData = new FormData(this);
