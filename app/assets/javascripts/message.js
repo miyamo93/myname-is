@@ -52,9 +52,9 @@
 // })
 $(document).on('turbolinks:load', function(){
   function buildHTML(message){
-    if ( message.image ) {
-      var html = `<% if  current_user.id == message.user_id %>
-                    <div class="chat-box__me">
+    if ( current_user.id == message.user_id ) {
+      if ( message.image ) {
+        var html = `<div class="chat-box__me">
                       <div class="message">
                         <div class="message__name">
                           ${message.user_name}
@@ -67,24 +67,60 @@ $(document).on('turbolinks:load', function(){
                       <div class="timestamp">
                         ${message.date}
                       </div>
-                  <% else %>
-                    `
-                    
+                    </div>`
         return html;
-        }
+      }
+      else{
+        var html = `<div class="chat-box__me">
+                      <div class="message">
+                        <div class="message__name">
+                          ${message.user_name}
+                        </div>
+                        <div class="message__text">
+                          ${message.content}
+                        </div>
+                      </div>
+                      <div class="timestamp">
+                        ${message.date}
+                      </div>
+                    </div>`
+        return html;
+      }
+    }
     else{
-      var html = `<div class="message">
-                    <div class="message__name">
-                      ${message.user_name}
+      if ( message.image ) {
+      var html = `<div class="chat-box__you">
+                    <div class="message">
+                      <div class="message__name">
+                        ${message.user_name}
+                      </div>
+                      <div class="message__text">
+                        ${message.content}
+                        ${message.image}
+                      </div>
                     </div>
-                    <div class="message__text">
-                      ${message.content}
+                    <div class="timestamp">
+                      ${message.date}
                     </div>
-                  </div>
-                  <div class="timestamp">
-                    ${message.date}
                   </div>`
+      return html;
+      }
+      else{
+        var html = `<div class="chat-box__you">
+                      <div class="message">
+                        <div class="message__name">
+                          ${message.user_name}
+                        </div>
+                        <div class="message__text">
+                          ${message.content}
+                        </div>
+                      </div>
+                      <div class="timestamp">
+                        ${message.date}
+                      </div>
+                    </div>`
         return html;
+      }
     }
   };
   $('#new_message').on('submit', function(e){
