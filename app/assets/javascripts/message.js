@@ -49,3 +49,12 @@
 //     })
 //   })
 // })
+$(function(){
+  $('#new_message').on('submit', function(e){
+    e.preventDefault()
+    var todo = $('#chat-input').val();
+    console.log(todo)
+    // var formData = new FormData(this);
+    // var url = $(this).attr('action')
+  })
+})
