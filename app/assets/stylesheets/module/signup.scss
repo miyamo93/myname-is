@@ -9,6 +9,8 @@
     font-size:4vh ;
   }
   &__sub{
+    box-sizing: border-box;
+    padding-top: 1vh;
     border: 2px solid #000033;
     border-radius: 4vh;
     margin: 0 auto;
@@ -26,5 +28,20 @@
     border-radius: 1vh;
     padding: 1vh;
     cursor: pointer;
+    bottom: 3vh;
+    &:hover{
+      color: #EE0000;
+    }
+  }
+  &__login{
+    a{
+      color: #000033;
+      &:hover{
+        color: #EE0000;
+      }
+    }
+  }
+  .actions{
+    margin-top: 1vh;
   }
 }
