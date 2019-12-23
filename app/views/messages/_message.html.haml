@@ -1,6 +1,6 @@
 - if current_user.id == message.user_id
   .chat-box__me
-    .message
+    .message{"data-message-id": "#{message.id}"}
       .message__name
         = message.user.nickname
       .message__text
@@ -10,7 +10,7 @@
       = message.created_at.strftime("%Y/%m/%d %H:%M")
 - else
   .chat-box__you
-    .message
+    .message{"data-message-id": "#{message.id}"}
       .message__name
         = message.user.nickname
       .message__text
