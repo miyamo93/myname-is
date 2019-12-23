@@ -25,4 +25,5 @@
           = f.password_field :password_confirmation, autocomplete: "new-password"
         .actions
           = f.submit "Sign up", class: 'signup-btn'
-        = render "devise/shared/links"
+          .signup-body__login
+            = render "devise/shared/links"
