@@ -1,10 +1,8 @@
 .wrapper
-  .main-header
-    %h1
-      = link_to "" do
-        HOME
   .signup-body
     .signup-body__sub
+      .signup-body__signup
+        Sign up
       = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
         = render "devise/shared/error_messages", resource: resource
         .signup-body__text
