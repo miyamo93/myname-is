@@ -107,24 +107,22 @@ $(document).on('turbolinks:load', function(){
     })
   })
   var reloadMessages = function() {
-    if (window.location.href.match(/\/groups\/\d+\/messages/)){
     //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
-      last_message_id = $('message:last').data("message-id");
-    $.ajax({//ルーティングで設定した通り/groups/id番号/api/messagesとなるよう文字列を書く
-      url: "api/messages",//ルーティングで設定した通りhttpメソッドをgetに指定
+    last_message_id = $('.message:last').data("message-id");
+    $.ajax({
+      //ルーティングで設定した通り/groups/id番号/api/messagesとなるよう文字列を書く
+      url: "api/messages",
+      //ルーティングで設定した通りhttpメソッドをgetに指定
       type: 'get',
-      dataType: 'json',//dataオプションでリクエストに値を含める
+      dataType: 'json',
+      //dataオプションでリクエストに値を含める
       data: {id: last_message_id}
     })
     .done(function(messages) {
-      var insertHTML = '';//追加するHTMLの入れ物を作る
-      messages.forEach(function (message) {//配列messagesの中身一つ一つを取り出し、HTMLに変換したものを入れ物に足し合わせる
-        insertHTML = buildHTML(message); //メッセージが入ったHTMLを取得
-        $('.chat-main__body').append(insertHTML);//メッセージを追加
-        $('.chat-main__body').animate({scrollTop: $('.chat-main__body')[0].scrollHeight}, 'fast');//最新のメッセージが一番下に表示されようにスクロールする。
-        })
-      })
-    }
+      console.log('success');
+    })
+    .fail(function() {
+      console.log('error');
+    });
   };
-  setInterval(reloadMessages, 5000);
 });
