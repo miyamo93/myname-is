@@ -98,7 +98,7 @@ $(document).on('turbolinks:load', function(){
       var html = buildHTML(data);
       $('.chat-box').append(html);      
       $('#new_message')[0].reset();
-      $('.chat-box').animate({ scrollTop: $('.chat-box')[0].scrollHeight});
+      $('.chat-main__body').animate({ scrollTop: $('.chat-main__body')[0].scrollHeight});
     })
   })
 });
