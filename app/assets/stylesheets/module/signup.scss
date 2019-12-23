@@ -16,4 +16,15 @@
     background-color: white;
     height: 85vh;
   }
+  &__text{
+    font-size: 3vh;
+  }
+  .signup-btn{
+    background-color: #000033;
+    color: white;
+    font-size: 2vh;
+    border-radius: 1vh;
+    padding: 1vh;
+    cursor: pointer;
+  }
 }
