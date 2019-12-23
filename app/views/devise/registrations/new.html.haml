@@ -11,18 +11,18 @@
           = f.label :nickname
           %br/
           = f.text_field :nickname, autofocus: true, maxlength: "6"
-        .field
+        .signup-body__text
           = f.label :email
           %br/
           = f.email_field :email, autofocus: true, autocomplete: "email"
-        .field
+        .signup-body__text
           = f.label :password
           %br/
           = f.password_field :password, autocomplete: "new-password"
-        .field
+        .signup-body__text
           = f.label :password_confirmation
           %br/
           = f.password_field :password_confirmation, autocomplete: "new-password"
         .actions
-          = f.submit "Sign up"
+          = f.submit "Sign up", class: 'signup-btn'
         = render "devise/shared/links"
