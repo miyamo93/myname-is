@@ -1,9 +1,7 @@
 .wrapper
-  .main-header
-    %h1
-      = link_to "" do
-        HOME
   .login-body
+    .login-body__header
+      login
     .login-body__sub
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
         .field__log
