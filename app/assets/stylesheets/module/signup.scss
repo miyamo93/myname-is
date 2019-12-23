@@ -6,7 +6,7 @@
   padding-top: 2vh;
   box-sizing: border-box;
   input{
-    font-size:4vh ;
+    font-size:3vh ;
   }
   &__sub{
     box-sizing: border-box;
@@ -19,6 +19,7 @@
     height: 85vh;
   }
   &__text{
+    margin-bottom: 2vh;
     font-size: 3vh;
   }
   .signup-btn{
@@ -40,8 +41,5 @@
         color: #EE0000;
       }
     }
-  }
-  .actions{
-    margin-top: 1vh;
   }
 }
