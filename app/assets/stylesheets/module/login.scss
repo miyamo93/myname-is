@@ -4,10 +4,20 @@
   background-size: cover;
   background-image:url(https://image.freepik.com/free-photo/_1149-1283.jpg);
   box-sizing: border-box;
-  font-family: 'Oraqle Script';
-  box-sizing: border-box;
   text-align: center;
   padding-top: 2vh;
+  .main-footer{
+    height: 3vh;
+    background-color: #EE0000;
+  }
+  &__header{
+    font-family: 'Oraqle Script';
+    background-color: #EE0000;
+    line-height: 10vh;
+    font-size: 7vh;
+    border-radius: 1.8vh 1.8vh 0 0;
+    color: white;
+  }
   &__btn{
     background-color: #000033;
     color: white;
@@ -15,19 +25,22 @@
     border-radius: 1vh;
     padding: 1vh;
     cursor: pointer;
+    font-family: 'Oraqle Script';
     &:hover{
       color: #EE0000;
     }
   }
   &__sub{
     box-sizing: border-box;
-    padding-top: 1vh;
     border: 2px solid #000033;
-    border-radius: 4vh;
+    border-radius: 2vh;
     margin: 0 auto;
     width: 60vw;
     background-color: white;
-    height: 85vh;
+    height: 95vh;
+    label{
+      font-family: 'Oraqle Script';
+    }
   }
   .field__log{
     font-size:5vh;
@@ -36,6 +49,7 @@
     }
   }
   a{
+    font-family: 'Oraqle Script';
     font-size:4vh;
     color:black;
     &:hover{
