@@ -1,12 +1,12 @@
 .chat-header{
   
   h1{
-    background-color: #EE0000;
+    background-color: $red1;
     width: 20vw;
   }
   &__box{
     box-sizing: border-box;
-    border-bottom:1px solid #000033;
+    border-bottom:1px solid $navy1;
     background-color: white;
     height: 10vh;
     position: relative;
@@ -30,10 +30,10 @@
       right: 3.5vw;
       position: absolute;
       text-align: center;
-      border: 2px solid #000033;
+      border: 2px solid $navy1;
       line-height: 5vh;
       width: 10vw;
-      color: #000033;
+      color: $navy1;
       font-weight: bold;
       &:hover{
         opacity: 0.5;
@@ -73,7 +73,7 @@
       box-sizing: border-box;
       padding-top: 2.5vh;
       height: 10vh;
-      background: #000033;
+      background: $navy1;
       &--box{
         display: flex;
         .chat-input{
@@ -83,7 +83,7 @@
     }
     .image-icon{
       position: absolute;
-      color:#EE0000;
+      color:$red1;
       right:18vw;
       font-size: 5vh;
     }
@@ -102,7 +102,7 @@
     .message-btn{
       height: 5vh;
       width: 80%;
-      background:#000033;
+      background:$navy1;
       color: white;
       text-align: center;
       &:hover{
