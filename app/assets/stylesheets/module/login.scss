@@ -8,18 +8,18 @@
   padding-top: 2vh;
   .main-footer{
     height: 3vh;
-    background-color: #EE0000;
+    background-color: $red1;
   }
   &__header{
     font-family: 'Oraqle Script';
-    background-color: #EE0000;
+    background-color: $red1;
     line-height: 10vh;
     font-size: 7vh;
     border-radius: 1.8vh 1.8vh 0 0;
     color: white;
   }
   &__btn{
-    background-color: #000033;
+    background-color: $navy1;
     color: white;
     font-size: 3vh;
     border-radius: 1vh;
@@ -27,12 +27,12 @@
     cursor: pointer;
     font-family: 'Oraqle Script';
     &:hover{
-      color: #EE0000;
+      color: $red1;
     }
   }
   &__sub{
     box-sizing: border-box;
-    border: 2px solid #000033;
+    border: 2px solid $navy1;
     border-radius: 2vh;
     margin: 0 auto;
     width: 60vw;
