@@ -23,9 +23,10 @@
     color: white;
     font-size: 3vh;
     border-radius: 1vh;
-    padding: 1vh;
+    padding: 1vh 2vh;
     cursor: pointer;
     font-family: 'Oraqle Script';
+    margin: 4vh 0;
     &:hover{
       color: $red1;
     }
@@ -45,7 +46,13 @@
   .field__log{
     font-size:5vh;
     input{
+      font-size: 3vh;
       height: 4vh;
+      width: 30vw;
+    }
+    &--member{
+      margin-top: 3vh;
+      font-size: 3vh;
     }
   }
   a{
