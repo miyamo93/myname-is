@@ -9,7 +9,7 @@
     font-size:3vh ;
   }
   &__signup{
-    background-color: #EE0000;
+    background-color: $red1;
     line-height: 10vh;
     font-size: 7vh;
     border-radius: 1.8vh 1.8vh 0 0;
@@ -17,7 +17,7 @@
   }
   &__sub{
     box-sizing: border-box;
-    border: 2px solid #000033;
+    border: 2px solid $navy1;
     border-radius: 2vh;
     margin: 0 auto;
     width: 60vw;
@@ -29,7 +29,7 @@
     font-size: 3vh;
   }
   .signup-btn{
-    background-color: #000033;
+    background-color: $navy1;
     color: white;
     font-size: 2vh;
     border-radius: 1vh;
@@ -37,14 +37,14 @@
     cursor: pointer;
     bottom: 3vh;
     &:hover{
-      color: #EE0000;
+      color: $red1;
     }
   }
   &__login{
     a{
-      color: #000033;
+      color: $navy1;
       &:hover{
-        color: #EE0000;
+        color: $red1;
       }
     }
   }
