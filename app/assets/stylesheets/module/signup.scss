@@ -5,13 +5,14 @@
   background-size: cover;
   padding-top: 2vh;
   box-sizing: border-box;
-  input{
-    font-size:3vh ;
+  .actions{
+    margin: 4vh 0;
   }
   &__signup{
+    font-family: 'Oraqle Script';
     background-color: $red1;
     line-height: 10vh;
-    font-size: 7vh;
+    font-size: 8vh;
     border-radius: 1.8vh 1.8vh 0 0;
     color: white;
   }
@@ -23,17 +24,26 @@
     width: 60vw;
     background-color: white;
     height: 95vh;
+    label{
+      font-family: 'Oraqle Script';
+      font-size: 5vh;
+    }
   }
   &__text{
-    margin-bottom: 2vh;
-    font-size: 3vh;
+    margin-top: 4vh;
+    input{
+      font-size:3vh ;
+      height: 4vh;
+      width: 30vw;
+    }
   }
   .signup-btn{
+    font-family: 'Oraqle Script';
     background-color: $navy1;
     color: white;
-    font-size: 2vh;
+    font-size: 3vh;
     border-radius: 1vh;
-    padding: 1vh;
+    padding: 1vh 4vh;
     cursor: pointer;
     bottom: 3vh;
     &:hover{
@@ -41,11 +51,17 @@
     }
   }
   &__login{
+    margin-top: 2vh;
+    font-size: 4vh;
     a{
+      font-family: 'Oraqle Script';
       color: $navy1;
       &:hover{
         color: $red1;
       }
     }
+  }
+  #user_nickname{
+    width: 10vw;
   }
 }
