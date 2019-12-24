@@ -1,8 +1,8 @@
 .wrapper
   .login-body
-    .login-body__header
-      login
     .login-body__sub
+      .login-body__header
+        Login
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
         .field__log
           = f.label :email
@@ -17,6 +17,6 @@
             = f.check_box :remember_me
             = f.label :remember_me
         .actions
-          = f.submit "Log in", class: 'login-body__btn'
+          = f.submit "Login", class: 'login-body__btn'
       = render "devise/shared/links"
   .main-footer
