@@ -52,15 +52,15 @@
 // })
 $(document).on('turbolinks:load', function(){
   function buildHTML(message){
-    if ( message.image ) {
+      var img = message.image ? `<img src= ${ message.image }>` : "";
       var html = `<div class="chat-box__me">
-                    <div class="message">
+                    <div class="message" data-message-id=${message.id}>
                       <div class="message__name">
                         ${message.user_name}
                       </div>
                       <div class="message__text">
                         ${message.content}
-                        ${message.image}
+                        ${img}
                       </div>
                     </div>
                     <div class="timestamp">
@@ -68,23 +68,6 @@ $(document).on('turbolinks:load', function(){
                     </div>
                   </div>`
       return html;
-    }
-    else{
-      var html = `<div class="chat-box__me">
-                    <div class="message">
-                      <div class="message__name">
-                        ${message.user_name}
-                      </div>
-                      <div class="message__text">
-                        ${message.content}
-                      </div>
-                    </div>
-                    <div class="timestamp">
-                      ${message.date}
-                    </div>
-                  </div>`
-        return html;
-    }
   };
   $('#new_message').on('submit', function(e){
     e.preventDefault()
@@ -119,10 +102,24 @@ $(document).on('turbolinks:load', function(){
       data: {id: last_message_id}
     })
     .done(function(messages) {
-      console.log('success');
+      if (messages.length !== 0) {
+        //追加するHTMLの入れ物を作る
+        var insertHTML = '';
+        //配列messagesの中身一つ一つを取り出し、HTMLに変換したものを入れ物に足し合わせる
+        $.each(messages, function(i, message) {
+          insertHTML += buildHTML(message)
+        });
+        //メッセージが入ったHTMLに、入れ物ごと追加
+        $('.chat-box').append(insertHTML);
+        $('.chat-main__body').animate({ scrollTop: $('.chat-main__body')[0].scrollHeight});
+        $('#new_message')[0].reset();
+        $('#message-btn').prop("disabled", false);
+      }
     })
     .fail(function() {
-      console.log('error');
+      alert('自動更新に失敗しました');//ダメだったらアラートを出す
     });
   };
+
+  setInterval(reloadMessages, 5000);
 });
