@@ -2,4 +2,4 @@ json.content @message.content
 json.date    @message.created_at.strftime("%Y/%m/%d %H:%M")
 json.user_name @message.user.nickname
 json.image   @message.image.url
-json.id      @message.user_id
+json.id      @message.id
