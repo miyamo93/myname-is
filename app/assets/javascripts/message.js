@@ -68,6 +68,7 @@ $(document).on('turbolinks:load', function(){
       alert('自動更新に失敗しました');//ダメだったらアラートを出す
     });
   };
-
-  setInterval(reloadMessages, 5000);
+  if (document.location.href.match(/\/groups\/\d+\/messages/)) {
+    setInterval(reloadMessages, 7000);
+  }
 });
