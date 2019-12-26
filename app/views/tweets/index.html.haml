@@ -3,6 +3,8 @@
     .tweets-body__sub
       .tweets-sidebar
         = render 'shared/menu'
+        = link_to new_tweet_path do
+          post
       .tweets-main
         .tweets-main__body
           = render  @tweets
