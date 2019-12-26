@@ -29,12 +29,31 @@
       font-size: 5vh;
     }
   }
+  &__box{
+    display: flex;
+  }
   &__text{
     margin-top: 4vh;
     input{
       font-size:3vh ;
       height: 4vh;
       width: 30vw;
+    }
+  }
+  &__image{
+    width: 35vw;
+    font-size: 5vh;
+    font-family: 'Oraqle Script';
+    p{
+      margin: 0 auto;
+      width: 10vw;
+      line-height: 15vh;
+      background-image:url(https://image.freepik.com/free-photo/_1149-1283.jpg);
+      background-size: cover;
+      border: dashed 1px $navy1 ;
+    }
+    .input-image{
+      display: none;
     }
   }
   .signup-btn{
