@@ -1,0 +1,25 @@
+.post-body{
+  height: 100vh;
+  text-align: center;
+  background-image:url(https://image.freepik.com/free-photo/_1149-1283.jpg);
+  background-size: cover;
+  padding-top: 2vh;
+  box-sizing: border-box;
+  &__sub{
+    box-sizing: border-box;
+    border: 2px solid $navy1;
+    border-radius: 2vh;
+    margin: 0 auto;
+    width: 60vw;
+    background-color: white;
+    height: 95vh;
+  }
+  &__post{
+    font-family: 'Oraqle Script';
+    background-color: $red1;
+    line-height: 10vh;
+    font-size: 8vh;
+    border-radius: 1.8vh 1.8vh 0 0;
+    color: white;
+  }
+}
