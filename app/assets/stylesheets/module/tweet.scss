@@ -1,19 +1,23 @@
 .tweet{
   box-sizing: border-box;
   background: white;
-  border: solid 2px lightgray;
+  border: solid 1px $navy1;
   &__up{
-    height: 5vh;
-    border-bottom: solid 2px lightgray;
+    height: 7vh;
+    border-bottom: solid 1px $navy1;
     &--name{
-      line-height: 5vh;
+      line-height: 7vh;
+      font-size: 2.5vh;
     }
   }
   &__image{
     height: 45vh;
-    border-bottom: solid 2px lightgray;
+    border-bottom: solid 1px $navy1;
   }
-  .tweet__down{
+  &__down{
     height: 8vh;
+    &--name{
+      font-weight: bold;
+    }
   }
 }
