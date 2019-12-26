@@ -1,0 +1,8 @@
+.wrapper
+  .post-body
+    .post-body__sub
+      .post-body__post
+        Post
+      = form_with model: @tweet, class: 'post-form' do |f|
+        = f.text_field :text, id: 'post_text', class:'post-form'
+        = f.file_field :image, id: 'post_text', class:'post-form'
