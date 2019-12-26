@@ -7,14 +7,18 @@
         = render "devise/shared/error_messages", resource: resource
         .signup-body__box
           .signup-body__image
-            Image
             = f.label :image do
-              %p  Upload
+              .signup-body__image--box
+                %p
+                  Image
+                  Upload
               = f.file_field :image, autofocus: true ,class: 'input-image'
+              %img#preview
           .signup-body__name
             = f.label :nickname
             %br/
             = f.text_field :nickname, autofocus: true, maxlength: "10"
+        #preview
         .signup-body__text
           = f.label :email
           %br/
