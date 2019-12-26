@@ -47,15 +47,12 @@
       height: 16vh;
     }
     &--box{
-      margin: 0 auto;
       width: 10vw;
       height: 16vh;
+      margin: 0 auto;
       background-image:url(https://image.freepik.com/free-photo/_1149-1283.jpg);
       background-size: cover;
       border: dashed 1px $navy1 ;
-    }
-    p{
-      margin-top: 3vh;
     }
     .input-image{
       display: none;
