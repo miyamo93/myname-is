@@ -1,0 +1,11 @@
+.tweet{
+  box-sizing: border-box;
+  background: white;
+  border: solid 1px $navy1;
+  &__up{
+    border-bottom: solid 1px $navy1;
+  }
+  &__image{
+    border-bottom: solid 1px $navy1;
+  }
+}
