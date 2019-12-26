@@ -31,6 +31,7 @@
   }
   &__box{
     display: flex;
+    margin:3vh 0 0 16vw  ;
   }
   &__text{
     margin-top: 4vh;
@@ -41,20 +42,23 @@
     }
   }
   &__image{
-    width: 35vw;
-    font-size: 5vh;
-    font-family: 'Oraqle Script';
-    p{
+    &--box{
       margin: 0 auto;
       width: 10vw;
-      line-height: 15vh;
+      height: 16vh;
       background-image:url(https://image.freepik.com/free-photo/_1149-1283.jpg);
       background-size: cover;
       border: dashed 1px $navy1 ;
     }
+    p{
+      margin-top: 3vh;
+    }
     .input-image{
       display: none;
     }
+  }
+  &__name{
+    width: 20vw;
   }
   .signup-btn{
     font-family: 'Oraqle Script';
