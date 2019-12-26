@@ -1,13 +1,16 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
+@import "config/colors";
 @import "module/sidebar";
 @import "module/message";
 @import "module/setting";
 @import "module/group_side";
 @import "module/group_new";
+@import "module/user-edit";
+@import "module/signup";
+@import "module/login";
 @import "reset";
 @import "groups";
 @import "mypage";
-@import "device";
 @import "chat";
 @import "index";

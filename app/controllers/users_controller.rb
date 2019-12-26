@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def update
     if current_user.update(user_params)
-      redirect_to messages_path
+      redirect_to groups_path
     else
       render :edit
     end

@@ -1,0 +1,53 @@
+.account-page{
+  padding-top: 2vh;
+  text-align: center;
+  height: 100vh;
+  background-size: cover;
+  background-image:url(https://image.freepik.com/free-photo/_1149-1283.jpg);
+  &__inner{
+    margin: 0 auto;
+    height: 20vh;
+    height: 95vh;
+    margin: 0 auto ;
+    border: solid 1px $navy1;
+    width: 60vw;
+    border-radius: 2vh;
+    background-color: white;
+    &--left{
+      color: white;
+      font-size: 3vh;
+      line-height: 8vh;
+      background-color: $red1;
+      border-radius: 2vh 2vh 0 0;
+      h2{
+        font-size: 8vh;
+        font-family: 'Oraqle Script';
+      }
+    }
+    &--right{
+    }
+  }
+  .field-label{
+    font-family: 'Oraqle Script';
+  } 
+  a{
+    color: $navy1;
+    font-size: 5vh;
+    font-family: 'Oraqle Script';
+    &:hover{
+      color:$red1 ;
+    }
+  }
+  .update-btn{
+    background-color: $navy1;
+    color: white;
+    font-size: 3vh;
+    border-radius: 1vh;
+    padding: 1vh;
+    cursor: pointer;
+    font-family: 'Oraqle Script';
+    &:hover{
+      color: $red1;
+    }
+  }
+}

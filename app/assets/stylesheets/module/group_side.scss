@@ -19,7 +19,7 @@
       cursor: pointer;
       width: 100%;
       margin-left: 0.5vw;
-      line-height: 9.5vh;
+      line-height: 9.9vh;
       &:hover{
         color: red;
       }
@@ -89,6 +89,7 @@
         left: -18vw;
       }
       &__item{
+        box-sizing: border-box;
         border-bottom: 1px solid #000033;
         &--text{
           color: #000033;

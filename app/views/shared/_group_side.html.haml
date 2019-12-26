@@ -26,9 +26,9 @@
               %i.fas.fa-cog.user-icon
                 ユーザ情報
           %li.l-drawer__item
-            = link_to tweets_path, class: "l-drawer__item--text"  do
+            = link_to destroy_user_session_path,class: "l-drawer__item--text", method: :delete do
               %i.fas.fa-undo.user-icon
-                トップページに戻る
+                ログアウト
   .group-list
     - current_user.groups.each do |group|
       = link_to group_messages_path(group) do 

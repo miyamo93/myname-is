@@ -18,12 +18,7 @@
                 Edit
         .chat-main__body
           .chat-box
-            - if current_user == @messages
-              .chat-box__me
-            - else
-              .chat-box__you
-                = render  @messages
-            -# = render  @messages
+            = render  @messages
         = form_for [@group, @message] do |f|
           .chat-main__form
             .chat-main__form--box
@@ -32,4 +27,4 @@
                 %i.fas.fa-image.image-icon
                 = f.file_field :image, class: 'input-image'
               .massage-send
-                = f.submit nil, class: 'message-btn' ,id:"message-btn" ,value: "Send"
+                = f.submit "Send", class: 'message-btn' ,id:"message-btn"
