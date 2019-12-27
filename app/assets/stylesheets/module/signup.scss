@@ -5,6 +5,11 @@
   background-size: cover;
   padding-top: 2vh;
   box-sizing: border-box;
+  &__image{
+    box-sizing: border-box;
+    height: 160px;
+    width: 160px;
+  }
   .actions{
     margin: 4vh 0;
   }
@@ -46,8 +51,9 @@
       width: 160px;
       height: 160px;
     }
-    p{
-      margin-top: 3vh;
+    pre{
+      margin-top: 1vh;
+      font-family: 'Oraqle Script';
     }
     &--box{
       box-sizing: border-box;
