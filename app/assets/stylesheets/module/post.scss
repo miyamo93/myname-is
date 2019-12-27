@@ -36,16 +36,27 @@
       }
     }
     &__image{
+      label{
+        font-size: 5vh;
+        font-family: 'Oraqle Script';
+      }
       &--file{
+        box-sizing: border-box;
+        border-radius: 1vh;
+        color: white;
+        background-color: $navy1;
+        padding: 1vh 0 ;
+        margin: 0 auto;
+        width: 20vw;
       }
       &--box{
-        // display: none;
+        display: none;
       }
     }
   }
   .post-btn{
     cursor: pointer;
-    border-radius: 2vh;
+    border-radius: 1vh;
     color: white;
     font-family: 'Oraqle Script' ;
     font-size: 5vh;
