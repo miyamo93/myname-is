@@ -35,6 +35,13 @@
         width: 30vw;
       }
     }
+    &__image{
+      &--file{
+      }
+      &--box{
+        // display: none;
+      }
+    }
   }
   .post-btn{
     cursor: pointer;
