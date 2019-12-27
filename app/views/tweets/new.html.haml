@@ -4,5 +4,13 @@
       .post-body__post
         Post
       = form_with model: @tweet, class: 'post-form' do |f|
-        = f.text_field :text, id: 'post_text', class:'post-form'
-        = f.file_field :image, id: 'post_text', class:'post-form'
+        .post-form__image
+          %h1  Image
+          .post-form__image--preview
+            %img#postpreview
+          = f.file_field :image, id: 'post_image', class:'post-form__image--box'
+        .post-form__text
+          %h1  Content
+          = f.text_area :text, id: 'post_text', class:'post-form__text--box'
+        .post-form__btn
+          = f.submit "Post", class: 'post-btn'
