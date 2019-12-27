@@ -22,4 +22,34 @@
     border-radius: 1.8vh 1.8vh 0 0;
     color: white;
   }
+  h1{
+    color: $navy1;
+    font-size: 8vh;
+    font-family: 'Oraqle Script';
+  }
+  .post-form{
+    &__text{
+      &--box{
+        line-height: 1.5;
+        height: 15vh;
+        width: 30vw;
+      }
+    }
+  }
+  .post-btn{
+    cursor: pointer;
+    border-radius: 2vh;
+    color: white;
+    font-family: 'Oraqle Script' ;
+    font-size: 5vh;
+    padding: 1vh 8vw;
+    background-color: $navy1;
+    &:hover{
+      color: $red1;
+    }
+  }
+  #postpreview{
+    height: 10vh;
+    width: 10vw;
+  }
 }
