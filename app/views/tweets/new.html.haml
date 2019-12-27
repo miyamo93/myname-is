@@ -8,7 +8,11 @@
           %h1  Image
           .post-form__image--preview
             %img#postpreview
-          = f.file_field :image, id: 'post_image', class:'post-form__image--box'
+          = f.label :image do
+            .post-form__image--file
+              %p
+                Upload
+            = f.file_field :image, autofocus: true , id: 'post_image', class:'post-form__image--box'
         .post-form__text
           %h1  Content
           = f.text_area :text, id: 'post_text', class:'post-form__text--box'
