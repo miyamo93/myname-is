@@ -5,7 +5,7 @@ $(document).on('turbolinks:load', function () {
     reader.onload = function (e) {
       $(preview).attr('src', e.target.result);
       $('.post-form__image--preview').append(preview);
-      $('.signup-body__image--box').remove()
+      $('.post-form__image--file').remove()
     }
     reader.readAsDataURL(e.target.files[0]);
   });
