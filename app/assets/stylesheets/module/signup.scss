@@ -43,12 +43,16 @@
   }
   &__image{
     img{
-      width: 10vw;
-      height: 16vh;
+      width: 160px;
+      height: 160px;
+    }
+    p{
+      margin-top: 3vh;
     }
     &--box{
-      width: 10vw;
-      height: 16vh;
+      box-sizing: border-box;
+      width: 160px;
+      height: 160px;
       margin: 0 auto;
       background-image:url(https://image.freepik.com/free-photo/_1149-1283.jpg);
       background-size: cover;
