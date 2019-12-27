@@ -38,7 +38,7 @@
     }
     &__image{
       pre{
-        margin-top: 9vh;
+        margin-top: 7vh;
         font-family: 'Oraqle Script';
         color: $navy1;
       }
@@ -49,6 +49,11 @@
         &:hover{
           color: $red1;
         }
+      }
+      &--preview{
+        margin: 0 auto;
+        height: 300px;
+        width: 300px;
       }
       &--file{
         border: $navy1 2px dashed;
@@ -79,7 +84,7 @@
     }
   }
   #postpreview{
-    height: 250px;
-    width: 250px;
+    height: 300px;
+    width: 300px;
   }
 }
