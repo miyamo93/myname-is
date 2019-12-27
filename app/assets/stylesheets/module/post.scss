@@ -41,6 +41,10 @@
         margin-top: 7vh;
         font-family: 'Oraqle Script';
         color: $navy1;
+        transition: 0.5s ;
+        &:hover{
+          color: $red1;
+        }
       }
       label{
         cursor: pointer;
@@ -79,6 +83,7 @@
     font-size: 5vh;
     padding: 1vh 13.5vw;
     background-color: $navy1;
+    transition: 0.5s ;
     &:hover{
       color: $red1;
     }
