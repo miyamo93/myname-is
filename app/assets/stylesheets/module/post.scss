@@ -31,27 +31,35 @@
     &__text{
       &--box{
         line-height: 1.5;
-        height: 20vh;
+        height: 25vh;
         width: 30vw;
+        font-size: 3vh;
       }
     }
     &__image{
+      pre{
+        margin-top: 9vh;
+        font-family: 'Oraqle Script';
+        color: $navy1;
+      }
       label{
         cursor: pointer;
-        font-size: 5vh;
+        font-size: 6vh;
         font-family: 'Oraqle Script';
         &:hover{
-          color: red;
+          color: $red1;
         }
       }
       &--file{
+        border: $navy1 2px dashed;
         box-sizing: border-box;
         border-radius: 1vh;
         color: white;
-        background-color: $navy1;
-        padding: 1vh 0 ;
+        background-image:url(https://image.freepik.com/free-photo/_1149-1283.jpg);
+        background-size: cover;
         margin: 0 auto;
-        width: 15.5vw;
+        height: 300px;
+        width: 300px;
       }
       &--box{
         display: none;
@@ -74,4 +82,5 @@
     height: 250px;
     width: 250px;
   }
+  .post-x
 }
