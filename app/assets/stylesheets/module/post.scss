@@ -94,4 +94,13 @@
     height: 250px;
     width: 250px;
   }
+  a{
+    color: $navy1;
+    font-family: 'Oraqle Script';
+    font-size: 5vh;
+    transition: 0.5s;
+    &:hover{
+      color: blue;
+    }
+  }
 }
