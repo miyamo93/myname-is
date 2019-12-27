@@ -31,14 +31,18 @@
     &__text{
       &--box{
         line-height: 1.5;
-        height: 15vh;
+        height: 20vh;
         width: 30vw;
       }
     }
     &__image{
       label{
+        cursor: pointer;
         font-size: 5vh;
         font-family: 'Oraqle Script';
+        &:hover{
+          color: red;
+        }
       }
       &--file{
         box-sizing: border-box;
@@ -47,7 +51,7 @@
         background-color: $navy1;
         padding: 1vh 0 ;
         margin: 0 auto;
-        width: 20vw;
+        width: 15.5vw;
       }
       &--box{
         display: none;
@@ -60,14 +64,14 @@
     color: white;
     font-family: 'Oraqle Script' ;
     font-size: 5vh;
-    padding: 1vh 8vw;
+    padding: 1vh 13.5vw;
     background-color: $navy1;
     &:hover{
       color: $red1;
     }
   }
   #postpreview{
-    height: 10vh;
-    width: 10vw;
+    height: 250px;
+    width: 250px;
   }
 }
