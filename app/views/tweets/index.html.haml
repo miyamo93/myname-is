@@ -2,12 +2,15 @@
   .tweets-body
     .tweets-body__sub
       .tweets-sidebar
-        .tweets-sidebar__up
-          .tweets-sidebar__up--name
-          .tweets-sidebar__up--icon
-            = render 'shared/menu'
-          = link_to new_tweet_path do
-            post
+        .user-box
+          .user-name
+            = current_user.nickname
+          = render 'shared/menu'
+        .tweets-sidebar__image
+          = image_tag ("#{current_user.image}"), class: 'lower-message__image'
+        .tweets-sidebar__menu
+        = link_to new_tweet_path do
+          post
       .tweets-main
         .tweets-main__body
           = render  @tweets
