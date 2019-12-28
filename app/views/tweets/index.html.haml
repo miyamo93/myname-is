@@ -9,8 +9,8 @@
         .tweets-sidebar__image
           = image_tag ("#{current_user.image}"), class: 'lower-message__image'
         .tweets-sidebar__menu
-        = link_to new_tweet_path do
-          post
+          %i.far.fa-comment
+            = link_to new_tweet_path
       .tweets-main
         .tweets-main__body
           = render  @tweets
