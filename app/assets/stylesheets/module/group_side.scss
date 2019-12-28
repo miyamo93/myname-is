@@ -162,19 +162,19 @@
   a{
     color: white;
   }
-  .user-name{
-    width: 18vw;
-    line-height: 10vh;
-  }
-  .user-icon{
-    color: $navy1;
-    cursor: pointer;
-    width: 100%;
-    margin-left: 0.5vw;
-    line-height: 9.9vh;
-    transition: 0.5s ;
-    &:hover{
-      color: $red1;
-    }
+}
+.user-name{
+  width: 18vw;
+  line-height: 10vh;
+}
+.user-icon{
+  color: $navy1;
+  cursor: pointer;
+  width: 100%;
+  margin-left: 0.5vw;
+  line-height: 9.9vh;
+  transition: 0.5s ;
+  &:hover{
+    color: $red1;
   }
 }
