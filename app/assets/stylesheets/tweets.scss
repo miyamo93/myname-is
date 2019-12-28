@@ -35,11 +35,23 @@
         }
       }
     }
+    &__box{
+      display: flex;
+    }
     &__image{
-      height: 10vh;
+      width: 18vw;
+      height: 20vh;
       background-color: $navy1;
+      &--box{
+        margin-left:4vw;
+        width: 10vw;
+        height: 10vw;
+        border-radius: 1vh;
+      }
     }
     &__menu{
+      width:56px;
+      font-size: 3vh;
       background-color: $navy1;
       a{
         transition: 0.5s;
