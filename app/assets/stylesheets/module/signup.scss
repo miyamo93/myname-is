@@ -48,8 +48,10 @@
   }
   &__image{
     img{
+      border-radius: 1vh;
       width: 160px;
       height: 160px;
+      border: 1px solid $navy1;
     }
     pre{
       margin-top: 1vh;
@@ -63,6 +65,11 @@
       background-image:url(https://image.freepik.com/free-photo/_1149-1283.jpg);
       background-size: cover;
       border: dashed 1px $navy1 ;
+      border-radius: 1vh;
+      
+      &:hover{
+        color: $red1;
+      }
     }
     .input-image{
       display: none;
@@ -80,6 +87,7 @@
     padding: 1vh 4vh;
     cursor: pointer;
     bottom: 3vh;
+    transition: 0.5s;
     &:hover{
       color: $red1;
     }
@@ -88,6 +96,7 @@
     margin-top: 2vh;
     font-size: 4vh;
     a{
+      transition: 0.5s;
       font-family: 'Oraqle Script';
       color: $navy1;
       &:hover{
