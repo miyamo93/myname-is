@@ -9,13 +9,18 @@ class TweetsController < ApplicationController
   end
 
   def create
-    Tweet.create( image: params[:image], text: params[:text])
+    @tweet = Tweet.new(tweet_params)
+    if @tweet.save
+      redirect_to root_path
+    else
+      render new, alert: '必須項目を埋めてください。'
+    end
   end
 
   private
-  
+
   def tweet_params
-    params.permit(:name, :image, :text)
+    params.require(:tweet).permit(:image, :text)
   end
 
 end
