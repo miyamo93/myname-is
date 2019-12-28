@@ -88,12 +88,6 @@
       color: $red1;
     }
   }
-  #postpreview{
-    border: 1px solid $navy1;
-    border-radius: 1vh;
-    height: 250px;
-    width: 250px;
-  }
   a{
     color: $navy1;
     font-family: 'Oraqle Script';
@@ -103,4 +97,10 @@
       color: blue;
     }
   }
+}
+#postpreview{
+  border: 1px solid $navy1;
+  border-radius: 1vh;
+  height: 250px;
+  width: 250px;
 }
