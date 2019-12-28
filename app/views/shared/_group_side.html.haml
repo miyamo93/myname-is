@@ -1,5 +1,7 @@
 .chat-sidebar
   .user-box
+    .user-image
+      = image_tag ("#{current_user.image}")
     .user-name
       = current_user.nickname
     = render 'shared/menu'
