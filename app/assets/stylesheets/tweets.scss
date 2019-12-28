@@ -16,5 +16,24 @@
   }
   .tweets-sidebar{
     width: 25vw;
+    &__up{
+      width: 18vw;
+      background:$navy1;
+      &--name{
+        width: 18vw;
+        line-height: 10vh;
+      }
+      &--icon{
+        color: $navy1;
+        cursor: pointer;
+        width: 100%;
+        margin-left: 0.5vw;
+        line-height: 9.9vh;
+        transition: 0.5s ;
+        &:hover{
+          color: $red1;
+        }
+      }
+    }
   }
 }
