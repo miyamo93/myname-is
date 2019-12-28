@@ -9,6 +9,13 @@ class TweetsController < ApplicationController
   end
 
   def create
-    Tweet.create( image: "", text: "")
+    Tweet.create( image: params[:image], text: params[:text])
   end
+
+  private
+  
+  def tweet_params
+    params.permit(:name, :image, :text)
+  end
+
 end
