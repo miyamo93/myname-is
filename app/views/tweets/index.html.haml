@@ -7,7 +7,7 @@
             = current_user.nickname
           = render 'shared/menu'
         .tweets-sidebar__image
-          = image_tag ("#{current_user.image}"), class: 'lower-message__image'
+          = image_tag ("#{current_user.image}"), class: 'tweets-sidebar__image--box'
         .tweets-sidebar__menu
           = link_to new_tweet_path do
             %i.fas.fa-comment
