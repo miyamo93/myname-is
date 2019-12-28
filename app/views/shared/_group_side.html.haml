@@ -1,5 +1,8 @@
 .chat-sidebar
-  = render 'shared/menu'
+  .user-box
+    .user-name
+      = current_user.nickname
+    = render 'shared/menu'
   .group-list
     - current_user.groups.each do |group|
       = link_to group_messages_path(group) do 
