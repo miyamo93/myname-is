@@ -1,9 +1,10 @@
 .tweet
   .tweet__up
     .tweet__up--name
-      nama
+      = current_user.nickname
   .tweet__center
     .tweet__image
+      = image_tag ("#{tweet.image}"), class: 'lower-message__image'
   .tweet__down
     .tweet__down--name
       name
