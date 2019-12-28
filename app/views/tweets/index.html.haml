@@ -2,9 +2,12 @@
   .tweets-body
     .tweets-body__sub
       .tweets-sidebar
-        = render 'shared/menu'
-        = link_to new_tweet_path do
-          post
+        .tweets-sidebar__up
+          .tweets-sidebar__up--name
+          .tweets-sidebar__up--icon
+            = render 'shared/menu'
+          = link_to new_tweet_path do
+            post
       .tweets-main
         .tweets-main__body
           = render  @tweets
