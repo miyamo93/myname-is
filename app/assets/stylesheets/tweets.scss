@@ -9,13 +9,16 @@
     &__body{
       margin: 0 auto;
       width: 35vw;
-      height: 100vh;
       box-sizing: border-box;
       padding-top: 3vh;
     }
   }
+  .tweets-name{
+    width: 17.5vw;
+    line-height: 10vh;
+  }
   .tweets-sidebar{
-    width: 25vw;
+    position: fixed; 
     &__up{
       width: 18vw;
       background:$navy1;
@@ -50,9 +53,14 @@
       }
     }
     &__menu{
-      width:56px;
+      width: 100%;
       font-size: 3vh;
       background-color: $navy1;
+      position: relative;
+      &--comment{
+        position: absolute;
+        right: 15%;
+      }
       a{
         transition: 0.5s;
         color: white;
