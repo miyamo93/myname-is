@@ -4,11 +4,20 @@
       %h2 Edit Account
     .account-page__inner--right.user-form
       = form_for(current_user) do |f|
-        .field
-          .field-label
-            = f.label :name
-          .field-input
-            = f.text_field :nickname, autofocus: true
+        .signup-body__box
+          .signup-body__image
+            = f.label :image do
+              .signup-body__image--box
+                %pre
+                  Click
+                  Image
+                  Upload
+            = f.file_field :image, autofocus: true ,class: 'input-image'
+          .signup-body__name
+            = f.label :nickname
+            %br/
+            = f.text_field :nickname, autofocus: true, maxlength: "10"
+        #preview
         .field
           .field-label
             = f.label :email
