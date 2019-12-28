@@ -27,6 +27,7 @@
     cursor: pointer;
     font-family: 'Oraqle Script';
     margin: 4vh 0;
+    transition: 0.5s;
     &:hover{
       color: $red1;
     }
@@ -59,6 +60,7 @@
     font-family: 'Oraqle Script';
     font-size:4vh;
     color:black;
+    transition: 0.5s;
     &:hover{
       color: blue;
     }
