@@ -11,7 +11,7 @@ class TweetsController < ApplicationController
   def create
     @tweet = Tweet.new(tweet_params)
     if @tweet.save
-      redirect_to root_path
+      redirect_to tweets_path(current_user)
     else
       render new, alert: '必須項目を埋めてください。'
     end
