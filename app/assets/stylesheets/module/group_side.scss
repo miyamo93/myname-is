@@ -159,12 +159,19 @@
   font-size: 2vh;
   display: flex;
   background:$navy1;
+  .user-image{
+    img{
+      margin: 0.6vw 0 0 0.6vw;
+      height: 4vw;
+      width: 4vw;
+    }
+  }
   a{
     color: white;
   }
 }
 .user-name{
-  width: 18vw;
+  width: 12vw;
   line-height: 10vh;
 }
 .user-icon{
