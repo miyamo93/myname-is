@@ -24,6 +24,11 @@
     }
   }
   .chat-group-form{
+    &__field{
+      &--left{
+        margin-top: 3vh;
+      }
+    }
     &__label{
       font-size: 5vh;
       font-family: 'Oraqle Script';
