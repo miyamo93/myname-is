@@ -10,3 +10,5 @@
       name
     .tweet__down--content
       =  tweet.text
+    .tweet__down--date
+      = tweet.created_at.strftime("%Y/%m/%d %H:%M")
