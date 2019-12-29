@@ -16,10 +16,12 @@
   }
   &__down{
     word-break: break-word;
+    padding-left: 1vw;
     &--name{
       font-weight: bold;
     }
-    &__content{
+    &--date{
+      text-align: right;
     }
   }
 }
