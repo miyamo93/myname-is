@@ -1,13 +1,13 @@
 .tweet
   .tweet__up
     .tweet__up--name
-      = current_user.nickname
+      = tweet.user.nickname
   .tweet__center
     .tweet__image
       = image_tag ("#{tweet.image}"), class: 'lower-message__image'
   .tweet__down
     .tweet__down--name
-      name
+      = tweet.user.nickname
     .tweet__down--content
       =  tweet.text
     .tweet__down--date
