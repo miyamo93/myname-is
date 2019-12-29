@@ -23,4 +23,13 @@
       font-family: 'Oraqle Script';
     }
   }
+  .chat-group-form{
+    &__label{
+      font-size: 5vh;
+      font-family: 'Oraqle Script';
+    }
+    &__input{
+      width: 20vw;
+    }
+  }
 }
