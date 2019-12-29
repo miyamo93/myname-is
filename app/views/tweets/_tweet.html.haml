@@ -1,5 +1,7 @@
 .tweet
   .tweet__up
+    .tweet__up--image
+      = image_tag ("#{tweet.user.image}")
     .tweet__up--name
       = tweet.user.nickname
   .tweet__center
