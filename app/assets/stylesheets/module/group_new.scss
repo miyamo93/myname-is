@@ -16,7 +16,7 @@
     background-color: white;
     h1{
       color: white;
-      font-size: 8vh;
+      font-size: 5rem;
       line-height: 8vh;
       background-color: #EE0000;
       border-radius: 2vh 2vh 0 0;
@@ -30,7 +30,7 @@
       }
     }
     &__label{
-      font-size: 5vh;
+      font-size: 3rem;
       font-family: 'Oraqle Script';
     }
     &__input{
@@ -39,6 +39,10 @@
     &__action-btn{
       color: white;
       background-color: $navy1;
+      padding: 1vh 1vw;
+      border-radius: 1vh;
+      font-size: 2rem;
+      font-family: 'Oraqle Script';
     }
   }
 }
