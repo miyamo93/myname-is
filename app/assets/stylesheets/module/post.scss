@@ -1,4 +1,7 @@
 .post-body{
+  textarea{
+    word-wrap: "hard";
+  }
   height: 100vh;
   text-align: center;
   background-image:url(https://image.freepik.com/free-photo/_1149-1283.jpg);
@@ -34,6 +37,7 @@
         height: 25vh;
         width: 30vw;
         font-size: 3vh;
+        word-wrap: "hard";
       }
     }
     &__image{
