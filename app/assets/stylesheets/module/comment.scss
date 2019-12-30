@@ -12,7 +12,8 @@
   }
   &__center{
     &--box{
-      padding: 1vh;
+      padding: 1vh 1vw;
+      display: flex;
     }
   }
   &__form{
