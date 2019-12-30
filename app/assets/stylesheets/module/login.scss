@@ -11,7 +11,7 @@
     background-color: $red1;
   }
   &__header{
-    font-family: 'Oraqle Script';
+    font-family: $font1;
     background-color: $red1;
     line-height: 10vh;
     font-size: 7vh;
@@ -25,7 +25,7 @@
     border-radius: 1vh;
     padding: 1vh 4vh;
     cursor: pointer;
-    font-family: 'Oraqle Script';
+    font-family: $font1;
     margin: 4vh 0;
     transition: 0.5s;
     &:hover{
@@ -41,7 +41,7 @@
     background-color: white;
     height: 95vh;
     label{
-      font-family: 'Oraqle Script';
+      font-family: $font1;
     }
   }
   .field__log{
@@ -57,7 +57,7 @@
     }
   }
   a{
-    font-family: 'Oraqle Script';
+    font-family: $font1;
     font-size:4vh;
     color:black;
     transition: 0.5s;
