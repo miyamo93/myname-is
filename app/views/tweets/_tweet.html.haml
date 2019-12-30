@@ -2,8 +2,9 @@
   .tweet__up
     .tweet__up--image
       = image_tag ("#{tweet.user.image}")
-    .tweet__up--name
-      = tweet.user.nickname
+    = link_to tweet_path(tweet)  do
+      .tweet__up--name
+        = tweet.user.nickname
   .tweet__center
     .tweet__image
       = image_tag ("#{tweet.image}"), class: 'lower-message__image'
