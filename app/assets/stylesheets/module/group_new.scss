@@ -20,7 +20,7 @@
       line-height: 8vh;
       background-color: #EE0000;
       border-radius: 2vh 2vh 0 0;
-      font-family: 'Oraqle Script';
+      font-family: $font1;
     }
   }
   .chat-group-form{
@@ -31,7 +31,7 @@
     }
     &__label{
       font-size: 3rem;
-      font-family: 'Oraqle Script';
+      font-family: $font1;
     }
     &__input{
       width: 20vw;
@@ -42,10 +42,12 @@
       padding: 1vh 1vw;
       border-radius: 1vh;
       font-size: 2rem;
-      font-family: 'Oraqle Script';
+      font-family: $font1;
       cursor: pointer;
       transition: 0.5s;
-      &
+      &:hover{
+        color: $red1;
+      }
     }
   }
 }
