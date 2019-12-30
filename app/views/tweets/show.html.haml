@@ -1,0 +1,34 @@
+.wrapper
+  .tweets-body
+    .tweets-body__sub
+      .tweets-sidebar
+        .user-box
+          .tweets-name
+            = current_user.nickname
+          = render 'shared/menu'
+        .tweets-sidebar__box
+          .tweets-sidebar__image
+            = image_tag ("#{current_user.image}"), class: 'tweets-sidebar__image--box'
+          .tweets-sidebar__menu
+            = link_to new_tweet_path , class:"tweets-sidebar__menu--comment" do
+              %i.fas.fa-comment
+            = link_to new_tweet_path , class:"tweets-sidebar__menu--user" do
+              %i.fas.fa-user
+      .tweets-main
+        .tweets-main__body
+          .tweet
+            .tweet__up
+              .tweet__up--image
+                = image_tag ("#{@tweet.user.image}")
+              .tweet__up--name
+                = @tweet.user.nickname
+            .tweet__center
+              .tweet__image
+                = image_tag ("#{@tweet.image}"), class: 'lower-message__image'
+            .tweet__down
+              .tweet__down--name
+                = @tweet.user.nickname
+              .tweet__down--content
+                =  @tweet.text
+              .tweet__down--date
+                = @tweet.created_at.strftime("%Y/%m/%d %H:%M")
