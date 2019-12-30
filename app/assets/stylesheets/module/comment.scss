@@ -11,7 +11,9 @@
     border-bottom: 1px solid $navy1;
   }
   &__center{
-    padding: 1vh;
+    &--box{
+      padding: 1vh;
+    }
   }
   &__form{
     &--box{
