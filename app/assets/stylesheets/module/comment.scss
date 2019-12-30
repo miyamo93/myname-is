@@ -3,14 +3,20 @@
   background: white;
   border: solid 1px $navy1;
   margin-bottom: 3vh;
+  color: $navy1;
   &__up{
     font-family: 'Oraqle Script';
     font-size: 5vh;
+    padding-left: 1vw;
   }
   &__center{
     padding: 1vh;
   }
   &__form{
-
+    &--box{
+      display: flex;
+      padding: 2vh;
+      background-color: $navy1;
+    }
   }
 }
