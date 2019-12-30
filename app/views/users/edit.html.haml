@@ -19,11 +19,12 @@
             = f.text_field :nickname, autofocus: true, maxlength: "10"
         #preview
         .field
-          .field-label
+          .signup-body__text
             = f.label :email
           .field-input
             = f.email_field :email
         .actions
           = f.submit "Update", class: 'signup-btn'
-        = link_to "Logout", destroy_user_session_path, method: :delete, class: 'btn'
-        = link_to "HOME", :back, class: 'btn'
+        .signup-body__login
+          = link_to "Logout", destroy_user_session_path, method: :delete, class: 'btn'
+          = link_to "HOME", :back, class: 'btn'
