@@ -39,6 +39,6 @@
             .comment__form
               = form_with model: @comment ,local: true do |f|
                 .comment__form--box
-                  = f.text_field :text ,placeholder:'type a message'
+                  = f.text_field :text ,placeholder:'type a message',class: 'comment-text' ,id:"comment-text"
                   .comment-send
                     = f.submit "Send", class: 'comment-btn' ,id:"comment-btn"
