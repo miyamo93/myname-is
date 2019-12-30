@@ -1,9 +1,13 @@
+.tweet-link{
+ 
+}
 .tweet{
   box-sizing: border-box;
   background: white;
   border: solid 1px $navy1;
   margin-bottom: 3vh;
   border-radius: 1vh;
+  
   &__up{
     display: flex;
     border-radius: 1vh 1vh 0 0;
@@ -34,7 +38,7 @@
     }
   }
   &__down{
-    word-break: break-word;
+    color: $navy1;
     padding: 0.5vh  1vw;
     &--name{
       font-weight: bold;
