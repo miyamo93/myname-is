@@ -1,0 +1,110 @@
+.post-body{
+  textarea{
+    word-wrap: "hard";
+  }
+  height: 100vh;
+  text-align: center;
+  background-image:url(https://image.freepik.com/free-photo/_1149-1283.jpg);
+  background-size: cover;
+  padding-top: 2vh;
+  box-sizing: border-box;
+  &__sub{
+    box-sizing: border-box;
+    border: 2px solid $navy1;
+    border-radius: 2vh;
+    margin: 0 auto;
+    width: 60vw;
+    background-color: white;
+    height: 95vh;
+  }
+  &__post{
+    font-family: 'Oraqle Script';
+    background-color: $red1;
+    line-height: 10vh;
+    font-size: 8vh;
+    border-radius: 1.8vh 1.8vh 0 0;
+    color: white;
+  }
+  h1{
+    color: $navy1;
+    font-size: 8vh;
+    font-family: 'Oraqle Script';
+  }
+  .post-form{
+    &__text{
+      &--box{
+        line-height: 1.5;
+        height: 25vh;
+        width: 30vw;
+        font-size: 3vh;
+        word-wrap: "hard";
+      }
+    }
+    &__image{
+      pre{
+        margin-top: 5vh;
+        font-family: 'Oraqle Script';
+        color: $navy1;
+        transition: 0.5s ;
+        &:hover{
+          color: $red1;
+        }
+      }
+      label{
+        cursor: pointer;
+        font-size: 6vh;
+        font-family: 'Oraqle Script';
+        &:hover{
+          color: $red1;
+        }
+      }
+      &--preview{
+        margin: 0 auto;
+        height: 250px;
+        width: 250px;
+      }
+      &--file{
+        border: $navy1 2px dashed;
+        box-sizing: border-box;
+        border-radius: 1vh;
+        color: white;
+        background-image:url(https://image.freepik.com/free-photo/_1149-1283.jpg);
+        background-size: cover;
+        margin: 0 auto;
+        height: 250px;
+        width: 250px;
+      }
+      &--box{
+        display: none;
+      }
+    }
+  }
+  .post-btn{
+    cursor: pointer;
+    border-radius: 1vh;
+    color: white;
+    font-family: 'Oraqle Script' ;
+    font-size: 5vh;
+    padding: 1vh 13.5vw;
+    background-color: $navy1;
+    transition: 0.5s ;
+    &:hover{
+      color: $red1;
+    }
+  }
+  a{
+    color: $navy1;
+    font-family: 'Oraqle Script';
+    font-size: 5vh;
+    transition: 0.5s;
+    &:hover{
+      color: blue;
+    }
+  }
+}
+#postpreview{
+  border: 1px solid $navy1;
+  border-radius: 1vh;
+  height: 250px;
+  width: 250px;
+}

@@ -1,0 +1,78 @@
+.tweets-body{
+    background-image: url(https://image.freepik.com/free-photo/_1149-1283.jpg);
+  &__sub{
+    display: flex;
+  }
+  .tweets-main{
+    width: 100%;
+    &__body{
+      margin: 0 auto;
+      width: 35.1vw;
+      box-sizing: border-box;
+      padding-top: 3vh;
+    }
+  }
+  .tweets-name{
+    width: 17.5vw;
+    line-height: 10vh;
+  }
+  .tweets-sidebar{
+    position: fixed; 
+    &__up{
+      width: 18vw;
+      background:$navy1;
+      &--name{
+        width: 18vw;
+        line-height: 10vh;
+      }
+      &--icon{
+        color: $navy1;
+        cursor: pointer;
+        width: 100%;
+        margin-left: 0.5vw;
+        line-height: 9.9vh;
+        transition: 0.5s ;
+        &:hover{
+          color: $red1;
+        }
+      }
+    }
+    &__box{
+      display: flex;
+    }
+    &__image{
+      width: 18vw;
+      height: 20vh;
+      background-color: $navy1;
+      &--box{
+        object-fit: cover;
+        margin-left:4vw;
+        width: 10vw;
+        height: 10vw;
+        border-radius: 1vh;
+      }
+    }
+    &__menu{
+      width: 100%;
+      font-size: 3vh;
+      background-color: $navy1;
+      position: relative;
+      &--comment{
+        position: absolute;
+        right: 13%;
+      }
+      &--user{
+        position: absolute;
+        top:25%;
+        right: 14%;
+      }
+      a{
+        transition: 0.5s;
+        color: white;
+        &:hover{
+          color: $red1;
+        }
+      }
+    }
+  }
+}

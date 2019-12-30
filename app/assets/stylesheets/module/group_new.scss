@@ -1,104 +1,40 @@
-.chat-group-form {
-  width: 980px;
-  margin: 60px auto;
-  padding: 40px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+.chat-group-body{
+  padding-top: 2vh;
+  text-align: center;
+  height: 100vh;
+  background-size: cover;
+  background-image:url(https://image.freepik.com/free-photo/_1149-1283.jpg);
   box-sizing: border-box;
-  h1 {
-    letter-spacing: 2px;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-  }
-  h2 {
-    margin-bottom: 10px;
-    color: #f05050;
-    font-size: 14px;
-  }
-  
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  
-  li {
-    margin: 0;
-    padding: 0;
-    font-size: 13px;
-  }
-  &__errors {
-    margin: 30px 0;
-    padding: 20px 40px;
-    border: 1px solid #ddd;
-    border-radius: 2px;
-    text-align: center;
-  }
-  &__label {
-    display: block;
-    line-height: 50px;
-    font-weight: bold;
-    text-align: right;
-  }
-  &__input {
-    float: left;
-    width: 100%;
-    line-height: 30px;
-    padding: 10px 15px;
-    box-sizing: border-box;
-  }
-  &__action-btn {
-    display: inline-block;
-    padding: 12px 20px;
-    color: #fff;
-    background-color: #38aef0;
-    border: 0;
-  }
-  &__field {
-    margin-top: 30px;
-    &:after {
-      content: "";
-      clear: both;
-      display: block;
-    }
-    &--left {
-      float: left;
-      width: 30%;
-      padding-right: 20px;
-      padding-left: 20px;
-      box-sizing: border-box;
-    }
-    &--right {
-      float: right;
-      width: 70%;
+  &__box{
+    margin: 0 auto;
+    height: 20vh;
+    height: 95vh;
+    margin: 0 auto ;
+    border: solid 1px $navy1;
+    width: 60vw;
+    border-radius: 2vh;
+    background-color: white;
+    h1{
+      color: white;
+      font-size: 8vh;
+      line-height: 8vh;
+      background-color: #EE0000;
+      border-radius: 2vh 2vh 0 0;
+      font-family: 'Oraqle Script';
     }
   }
-}
-
-.chat-group-user {
-  padding: 0 15px;
-  line-height: 50px;
-  font-size: 14px;
-  border-bottom: 1px solid #ddd;
-  &:after {
-    content: "";
-    clear: both;
-    display: block;
-  }
-  &__name {
-    float: left;
-  }
-  &__btn {
-    float: right;
-    display: inline-block;
-    cursor: pointer;
-    &--add {
-      color: #38aef0;
+  .chat-group-form{
+    &__field{
+      &--left{
+        margin-top: 3vh;
+      }
     }
-    &--remove {
-      color: #f05050;
+    &__label{
+      font-size: 5vh;
+      font-family: 'Oraqle Script';
+    }
+    &__input{
+      width: 20vw;
     }
   }
 }

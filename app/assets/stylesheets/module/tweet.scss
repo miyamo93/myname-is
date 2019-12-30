@@ -1,0 +1,48 @@
+
+.tweet{
+  box-sizing: border-box;
+  background: white;
+  border: solid 1px $navy1;
+  margin-bottom: 3vh;
+  border-radius: 1vh;
+  
+  &__up{
+    display: flex;
+    border-radius: 1vh 1vh 0 0;
+    color: white;
+    background-color: $red1;
+    &--image{
+      padding: 1vh 0 0 1vw  ;
+      img{
+        border-radius: 1vh;
+        width: 3vw;
+        height:3vw;
+      }
+    }
+    &--name{
+      text-align: center;
+      line-height: 7vh;
+      font-size: 2.5vh;
+      width: 25vw;
+    }
+  }
+  &__image{
+    height: 66vh;
+    border-bottom: solid 1px $navy1;
+    img{
+      object-fit: cover;
+      width: 35vw;
+      height: 35vw;
+    }
+  }
+  &__down{
+    color: $navy1;
+    padding: 0.5vh  1vw;
+    &--name{
+      font-weight: bold;
+    }
+    &--date{
+      text-align: right;
+    }
+  }
+}

@@ -5,10 +5,20 @@
         Signup
       = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
         = render "devise/shared/error_messages", resource: resource
-        .signup-body__text
-          = f.label :nickname
-          %br/
-          = f.text_field :nickname, autofocus: true, maxlength: "10"
+        .signup-body__box
+          .signup-body__image
+            = f.label :image do
+              .signup-body__image--box
+                %pre
+                  Click
+                  Image
+                  Upload
+            = f.file_field :image, autofocus: true ,class: 'input-image'
+          .signup-body__name
+            = f.label :nickname
+            %br/
+            = f.text_field :nickname, autofocus: true, maxlength: "10"
+        #preview
         .signup-body__text
           = f.label :email
           %br/

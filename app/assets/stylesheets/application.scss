@@ -2,6 +2,7 @@
 @import 'font-awesome';
 @import "config/colors";
 @import "module/sidebar";
+@import "module/tweet";
 @import "module/message";
 @import "module/setting";
 @import "module/group_side";
@@ -9,7 +10,10 @@
 @import "module/user-edit";
 @import "module/signup";
 @import "module/login";
+@import "module/post";
+@import "module/comment";
 @import "reset";
+@import "tweets";
 @import "groups";
 @import "mypage";
 @import "chat";

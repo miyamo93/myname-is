@@ -1,34 +1,10 @@
 .chat-sidebar
   .user-box
+    .user-image
+      = image_tag ("#{current_user.image}")
     .user-name
       = current_user.nickname
-    / サイドバーハンバーガーメニュー
-    .l-drawer
-      %input#drawerCheckbox.l-drawer__checkbox{type: "checkbox"}/
-      / ドロワーアイコン
-      %label.l-drawer__icon{for: "drawerCheckbox"}
-        %span.l-drawer__icon-parts
-      / 背景を暗く
-      %label.l-drawer__overlay{for: "drawerCheckbox"}
-      / ドロワーメニュー
-      %nav.l-drawer__menu
-        %ul
-          %li.l-drawer__item
-            = link_to groups_path, class: "l-drawer__item--text"  do
-              %i.fas.fa-home.user-icon
-                Home
-          %li.l-drawer__item
-            = link_to new_group_path, class: "l-drawer__item--text"  do
-              %i.fas.fa-edit.user-icon
-                グループ作成
-          %li.l-drawer__item
-            = link_to edit_user_path(current_user), class: "l-drawer__item--text"  do
-              %i.fas.fa-cog.user-icon
-                ユーザ情報
-          %li.l-drawer__item
-            = link_to destroy_user_session_path,class: "l-drawer__item--text", method: :delete do
-              %i.fas.fa-undo.user-icon
-                ログアウト
+    = render 'shared/menu'
   .group-list
     - current_user.groups.each do |group|
       = link_to group_messages_path(group) do 

@@ -1,0 +1,23 @@
+.wrapper
+  .post-body
+    .post-body__sub
+      .post-body__post
+        Post
+      = form_with model: @tweet ,local: true, class: 'post-form' do |f|
+        .post-form__image
+          %h1  Image
+          .post-form__image--preview
+            = f.label :image do
+              .post-form__image--file
+                %pre
+                  Click
+                  Image
+                  Upload
+              = f.file_field :image, autofocus: true , class:'post-form__image--box','data-image': 0
+        .post-form__text
+          %h1  Content
+          = f.text_area :text, id: 'post_text', class:'post-form__text--box'
+        .post-form__btn
+          = f.submit "Post", class: 'post-btn'
+        = link_to tweets_path do
+          Home

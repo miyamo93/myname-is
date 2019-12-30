@@ -1,0 +1,16 @@
+.comment{
+  box-sizing: border-box;
+  background: white;
+  border: solid 1px $navy1;
+  margin-bottom: 3vh;
+  &__up{
+    font-family: 'Oraqle Script';
+    font-size: 5vh;
+  }
+  &__center{
+    padding: 1vh;
+  }
+  &__form{
+
+  }
+}

@@ -2,168 +2,26 @@
   width: 25vw;
   height: 100vh;
   background-color: white;
-  .user-box{
-    color:white;
-    text-align: center;
-    font-size: 2vh;
-    display: flex;
-    background:#000033;
-    a{
-      color: white;
-    }
-    .user-name{
-      width: 18vw;
-      line-height: 10vh;
-    }
-    .user-icon{
-      cursor: pointer;
-      width: 100%;
-      margin-left: 0.5vw;
-      line-height: 9.9vh;
-      &:hover{
-        color: red;
-      }
-    }
-    .l-drawer {
-      position: relative;
-      // inputのcheckboxは非表示
-      &__checkbox{
-        display: none;
-      }
-      // ハンバーガーアイコン
-      &__icon{
-        cursor: pointer;
-        display: block;
-        width: 56px;
-        height: 60px;
-        // ハンバーガーアイコンの中の線
-        &-parts,
-        &-parts:before,
-        &-parts:after{
-          background-color: white;   
-          display: block;
-          width: 26px;
-          height: 2px;
-          position: absolute;
-          top: 0;
-          right: 0;
-          left: 0;
-          bottom: 0;
-          margin: auto;
-        }
-        &-parts:before,
-        &-parts:after{
-          content: " ";
-        }
-        &-parts:before{
-          top: 16px
-        }
-        &-parts:after{
-          top: -16px
-        }
-      }
-      
-      // ドロワーメニュー開いた時のメインエリアを暗く
-      &__overlay{
-        background: #000;
-        opacity: 0;
-        pointer-events: none; //ポインタの動作全部無効化
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        top: 0;
-        right: 0;
-      }
-      
-      // ドロワーメニュー
-      &__menu{
-        background: #ffffff;
-        color: #000;
-        max-width: 100%;
-        width: 18vw;
-        height: 100vh;
-        overflow-y: auto; //スクロール
-        -webkit-overflow-scrolling: touch; //スクロール（SP）
-        position: fixed;
-        top: 0;
-        left: -18vw;
-      }
-      &__item{
-        box-sizing: border-box;
-        border-bottom: 1px solid #000033;
-        &--text{
-          color: #000033;
-        }
-      }
-      // z-indexの指定（1がメインエリア）
-      &__icon{
-        z-index: 4;
-      }
-      &__menu{
-        z-index: 3;
-      }
-      &__overlay{
-        z-index: 2;
-      }
-      
-      // チェックが入ったら（アイコンクリックしたら）
-      &__checkbox:checked ~ {
-        // ハンバーガーアイコン
-        .l-drawer__icon{
-          .l-drawer__icon-parts{
-            background: transparent;
-          }
-          .l-drawer__icon-parts:before{
-            -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-            top: 0;
-          }
-          .l-drawer__icon-parts:after{
-            -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-            top: 0;
-          }
-        }
-        // メインエリアを暗くする
-        .l-drawer__overlay {
-          opacity: 0.3;
-          pointer-events: auto; //ポインタの動作デフォルトに戻す
-        }
-        // メニューをだす
-        .l-drawer__menu {
-          left: 0;
-        }
-      }
-      // 動きをスムーズに
-      &__icon-parts,
-      &__icon-parts:after,
-      &__icon-parts:before,
-      &__overlay,
-      &__menu{
-        -webkit-transition: all .7s ;
-        transition: all .7s ;
-      }
-    }    
-  }
   .group-list{
     overflow: auto;
     height: 90vh;
   }
   .group-box{
-    color: #000033;
+    color: $navy1;
     box-sizing: border-box;
     height: 10vh;
     padding-top: 2vh;
     padding-left:1vw ;
-    border-bottom: 1px solid #000033;
+    border-bottom: 1px solid $navy1;
     position: relative;
+    transition: 0.5s ;
     a{
-      color: #000033;
+      color: $navy1;
     }
     &:hover{
       background-color: lightgray;
       .group-icon{
-        color:red;
+        color:$red1;
         transform: translate(50%, 0);
         transition: all ease-out .2s;
       }
@@ -174,5 +32,156 @@
       bottom: 4vh;
       font-size: 2vh;
     }
+  }
+}
+.l-drawer {
+  position: relative;
+  // inputのcheckboxは非表示
+  &__checkbox{
+    display: none;
+  }
+  // ハンバーガーアイコン
+  &__icon{
+    cursor: pointer;
+    display: block;
+    width: 56px;
+    height: 60px;
+    // ハンバーガーアイコンの中の線
+    &-parts,
+    &-parts:before,
+    &-parts:after{
+      background-color: white;   
+      display: block;
+      width: 26px;
+      height: 2px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    &-parts:before,
+    &-parts:after{
+      content: " ";
+    }
+    &-parts:before{
+      top: 16px
+    }
+    &-parts:after{
+      top: -16px
+    }
+  }
+  
+  // ドロワーメニュー開いた時のメインエリアを暗く
+  &__overlay{
+    background: #000;
+    opacity: 0;
+    pointer-events: none; //ポインタの動作全部無効化
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+  
+  // ドロワーメニュー
+  &__menu{
+    background: #ffffff;
+    color: #000;
+    max-width: 100%;
+    width: 18vw;
+    overflow-y: auto; //スクロール
+    -webkit-overflow-scrolling: touch; //スクロール（SP）
+    position: fixed;
+    top: 0;
+    left: -18vw;
+  }
+  &__item{
+    box-sizing: border-box;
+    border-bottom: 1px solid $navy1;
+    &--text{
+      color: $navy1;
+    }
+  }
+  // z-indexの指定（1がメインエリア）
+  &__icon{
+    z-index: 4;
+  }
+  &__menu{
+    z-index: 3;
+  }
+  &__overlay{
+    z-index: 2;
+  }
+  
+  // チェックが入ったら（アイコンクリックしたら）
+  &__checkbox:checked ~ {
+    // ハンバーガーアイコン
+    .l-drawer__icon{
+      .l-drawer__icon-parts{
+        background: transparent;
+      }
+      .l-drawer__icon-parts:before{
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        top: 0;
+      }
+      .l-drawer__icon-parts:after{
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        top: 0;
+      }
+    }
+    // メインエリアを暗くする
+    .l-drawer__overlay {
+      opacity: 0.3;
+      pointer-events: auto; //ポインタの動作デフォルトに戻す
+    }
+    // メニューをだす
+    .l-drawer__menu {
+      left: 0;
+    }
+  }
+  // 動きをスムーズに
+  &__icon-parts,
+  &__icon-parts:after,
+  &__icon-parts:before,
+  &__overlay,
+  &__menu{
+    -webkit-transition: all .7s ;
+    transition: all .7s ;
+  }
+}    
+.user-box{
+  color:white;
+  text-align: center;
+  font-size: 2vh;
+  display: flex;
+  background:$navy1;
+  .user-image{
+    img{
+      margin: 0.6vw 0 0 0.6vw;
+      height: 4vw;
+      width: 4vw;
+    }
+  }
+  a{
+    color: white;
+  }
+}
+.user-name{
+  width: 13vw;
+  line-height: 10vh;
+}
+.user-icon{
+  color: $navy1;
+  cursor: pointer;
+  width: 100%;
+  margin-left: 0.5vw;
+  line-height: 9.9vh;
+  transition: 0.5s ;
+  &:hover{
+    color: $red1;
   }
 }

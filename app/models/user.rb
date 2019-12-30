@@ -5,6 +5,9 @@ class User < ApplicationRecord
           :recoverable, :rememberable, :validatable
 
         has_many :messages
+        has_many :tweets
         has_many :group_users
         has_many :groups, through: :group_users
+        validates :nickname, presence: true, unless: :image?
+        mount_uploader :image, ImageUploader
 end

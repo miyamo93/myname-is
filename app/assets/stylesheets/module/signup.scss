@@ -5,6 +5,11 @@
   background-size: cover;
   padding-top: 2vh;
   box-sizing: border-box;
+  &__image{
+    box-sizing: border-box;
+    height: 160px;
+    width: 160px;
+  }
   .actions{
     margin: 4vh 0;
   }
@@ -29,6 +34,10 @@
       font-size: 5vh;
     }
   }
+  &__box{
+    display: flex;
+    margin:3vh 0 0 16vw  ;
+  }
   &__text{
     margin-top: 4vh;
     input{
@@ -36,6 +45,38 @@
       height: 4vh;
       width: 30vw;
     }
+  }
+  &__image{
+    img{
+      border-radius: 1vh;
+      width: 160px;
+      height: 160px;
+      border: 1px solid $navy1;
+    }
+    pre{
+      margin-top: 1vh;
+      font-family: 'Oraqle Script';
+    }
+    &--box{
+      box-sizing: border-box;
+      width: 160px;
+      height: 160px;
+      margin: 0 auto;
+      background-image:url(https://image.freepik.com/free-photo/_1149-1283.jpg);
+      background-size: cover;
+      border: dashed 1px $navy1 ;
+      border-radius: 1vh;
+      transition: 0.5s;
+      &:hover{
+        color: $red1;
+      }
+    }
+    .input-image{
+      display: none;
+    }
+  }
+  &__name{
+    width: 20vw;
   }
   .signup-btn{
     font-family: 'Oraqle Script';
@@ -46,6 +87,7 @@
     padding: 1vh 4vh;
     cursor: pointer;
     bottom: 3vh;
+    transition: 0.5s;
     &:hover{
       color: $red1;
     }
@@ -54,10 +96,11 @@
     margin-top: 2vh;
     font-size: 4vh;
     a{
+      transition: 0.5s;
       font-family: 'Oraqle Script';
       color: $navy1;
       &:hover{
-        color: $red1;
+        color: blue;
       }
     }
   }

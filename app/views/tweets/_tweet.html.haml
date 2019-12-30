@@ -1,0 +1,17 @@
+= link_to tweet_path(tweet) ,class:"tweet-link"  do
+  .tweet
+    .tweet__up
+      .tweet__up--image
+        = image_tag ("#{tweet.user.image}")
+      .tweet__up--name
+        = tweet.user.nickname
+    .tweet__center
+      .tweet__image
+        = image_tag ("#{tweet.image}"), class: 'lower-message__image'
+    .tweet__down
+      .tweet__down--name
+        = tweet.user.nickname
+      %pre.tweet__down--content
+        =  tweet.text
+      .tweet__down--date
+        = tweet.created_at.strftime("%Y/%m/%d %H:%M")
