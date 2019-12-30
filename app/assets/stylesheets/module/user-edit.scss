@@ -21,19 +21,19 @@
       border-radius: 2vh 2vh 0 0;
       h2{
         font-size: 8vh;
-        font-family: 'Oraqle Script';
+        font-family: $font1;
       }
     }
     &--right{
     }
   }
   .field-label{
-    font-family: 'Oraqle Script';
+    font-family: $font1;
   } 
   a{
     color: $navy1;
     font-size: 5vh;
-    font-family: 'Oraqle Script';
+    font-family: $font1;
     &:hover{
       color:$red1 ;
     }
@@ -45,7 +45,7 @@
     border-radius: 1vh;
     padding: 1vh;
     cursor: pointer;
-    font-family: 'Oraqle Script';
+    font-family: $font1;
     &:hover{
       color: $red1;
     }
