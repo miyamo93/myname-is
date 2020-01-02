@@ -3,6 +3,7 @@ class CommentsController < ApplicationController
 
   def create
     @comment = @tweet.comments.new(set_tweet)
+    redirect_to  tweet_path(set_tweet)
   end
 
   private
