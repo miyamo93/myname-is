@@ -1,6 +1,8 @@
 class CommentsController < ApplicationController
+  before_action :set_tweet
 
   def create
+    @comment = @tweet.comments.new(set_tweet)
   end
 
   private
