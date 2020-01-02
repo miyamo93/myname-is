@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
     params.require(:comment).permit(:text, :tweet_id).merge(user_id: current_user.id)
   end
 
-  def set_comment
-    
+  def set_tweet
+    @tweet = Tweet.find(params[:id])
   end
 end
