@@ -6,7 +6,7 @@
   color: $navy1;
   &__up{
     font-family: $font1;
-    font-size: 5vh;
+    font-size: 4rem;
     padding-left: 1vw;
     border-bottom: 1px solid $navy1;
   }
@@ -14,6 +14,10 @@
     &--box{
       padding: 1vh 1vw;
       display: flex;
+      &__name{
+        font-weight: bold;
+        padding-right: 1vw;
+      }
     }
   }
   &__form{
