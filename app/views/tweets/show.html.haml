@@ -28,7 +28,7 @@
             .tweet__down
               .tweet__down--name
                 = @tweet.user.nickname
-              .tweet__down--content
+              %pre.tweet__down--content
                 =  @tweet.text
               .tweet__down--date
                 = @tweet.created_at.strftime("%Y/%m/%d %H:%M")
