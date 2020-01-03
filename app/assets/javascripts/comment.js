@@ -29,8 +29,8 @@ $(document).on('turbolinks:load', function(){
       $('.comment-text').val('');
       $('#comment-btn').prop('disabled', false);
     })
-  })
-  .fail(function(){
-    alert('error');
+    .fail(function(){
+      alert('error');
+    })
   })
 })
