@@ -21,7 +21,6 @@ class TweetsController < ApplicationController
     @tweet = Tweet.find(params[:id])
     @comments = @tweet.comments.includes(:user)
     @comment = Comment.new
-    @commentview = Comment.all
   end
 
   private
