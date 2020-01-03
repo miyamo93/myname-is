@@ -12,5 +12,11 @@ $(document).on('turbolinks:load', function(){
       processData: false,
       contentType: false
     })
+    .done(function(data){
+      var html = buildHTML(data);
+      $('.comments').append(html);
+      $('.textbox').val('');
+      $('.form__submit').prop('disabled', false);
+    })
   })
 })
