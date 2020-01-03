@@ -11,7 +11,7 @@
     .tweet__down
       .tweet__down--name
         = tweet.user.nickname
-      %pre.tweet__down--content
+      %p.tweet__down--content
         =  tweet.text
       .tweet__down--date
         = tweet.created_at.strftime("%Y/%m/%d %H:%M")
