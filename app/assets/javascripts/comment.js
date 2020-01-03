@@ -14,8 +14,8 @@ $(document).on('turbolinks:load', function(){
     })
     .done(function(data){
       var html = buildHTML(data);
-      $('.comments').append(html);
-      $('.textbox').val('');
+      $('.comment__center').append(html);
+      $('.comment-text').val('');
       $('.form__submit').prop('disabled', false);
     })
   })
