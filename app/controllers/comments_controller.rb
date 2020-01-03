@@ -2,9 +2,9 @@ class CommentsController < ApplicationController
   before_action :set_tweet
 
   def create
-    @comment = @tweet.comments.new(set_tweet)
+    @comment = @tweet.comments.new(comment_params)
     if @comment.save
-      redirect_to  tweet_comments_path(set_tweet)
+      redirect_to  tweet_comments_path
     else
       @messages = @group.messages.includes(:user)
       flash.now[:alert] = 'メッセージを入力してください。'
@@ -19,6 +19,6 @@ class CommentsController < ApplicationController
   end
 
   def set_tweet
-    @tweet = Tweet.find(params[:id])
+    @tweet = Tweet.find(params[:tweet_id])
   end
 end
