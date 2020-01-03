@@ -27,7 +27,10 @@ $(document).on('turbolinks:load', function(){
       var html = buildHTML(data);
       $('.comment__center').append(html);
       $('.comment-text').val('');
-      $('.form__submit').prop('disabled', false);
+      $('#comment-btn').prop('disabled', false);
     })
+  })
+  .fail(function(){
+    alert('error');
   })
 })
