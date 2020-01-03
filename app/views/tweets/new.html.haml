@@ -16,7 +16,7 @@
               = f.file_field :image, autofocus: true , class:'post-form__image--box','data-image': 0
         .post-form__text
           %h1  Content
-          = f.text_area :text, id: 'post_text', class:'post-form__text--box'
+          = f.text_area :text, id: 'post_text', class:'post-form__text--box', wrap: "hard" ,col: 10
         .post-form__btn
           = f.submit "Post", class: 'post-btn'
         = link_to tweets_path do
