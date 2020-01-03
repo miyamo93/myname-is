@@ -36,11 +36,12 @@
             .comment__up
               Comment
             .comment__center
-              .comment__center--box
-                .comment__center--box__name
-                  aa:
-                .comment__center--boxx__text
-                  aa
+              - @commentview.each do |comment|
+                .comment__center--box
+                  .comment__center--box__name
+                    = comment.user.nickname
+                  .comment__center--boxx__text
+                    = comment.text
             .comment__form
               = form_with  model: [@tweet ,@comment], local: true do |f|
                 .comment__form--box
