@@ -42,7 +42,7 @@
                 .comment__center--boxx__text
                   aa
             .comment__form
-              = form_with url:tweet_comments_path(@tweet) ,local: true do |f|
+              = form_with url:tweet_comments_path(@tweet) do |f|
                 .comment__form--box
                   = f.text_field :text ,placeholder:'type a message',class: 'comment-text' ,id:"comment-text"
                   .comment-send
