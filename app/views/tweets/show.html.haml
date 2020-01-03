@@ -37,7 +37,7 @@
               Comment
             .comment__center
               - @comments.each do |comment|
-                .comment__center--box
+                .comment__center--box{data: {comment: {id: comment.id}}}
                   .comment__center--box__name
                     = comment.user.nickname
                   .comment__center--boxx__text
