@@ -36,7 +36,7 @@
             .comment__up
               Comment
             .comment__center
-              - @commentview.each do |comment|
+              - @comments.each do |comment|
                 .comment__center--box
                   .comment__center--box__name
                     = comment.user.nickname
