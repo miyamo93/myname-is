@@ -4,7 +4,10 @@ class CommentsController < ApplicationController
   def create
     @comment = @tweet.comments.new(comment_params)
     if @comment.save
-      redirect_to  tweet_path(@tweet)
+      respond_to do |format|
+        format.html { redirect_to tweet_path(@tweet)  }
+        format.json
+      end
     else
       @messages = @group.messages.includes(:user)
       flash.now[:alert] = 'メッセージを入力してください。'
