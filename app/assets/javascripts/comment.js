@@ -51,7 +51,6 @@ $(document).on('turbolinks:load', function(){
         });
         //メッセージが入ったHTMLに、入れ物ごと追加
         $('.comment__center').append(insertHTML);
-        $('.comment__center').animate({ scrollTop: $('.comment')[0].scrollHeight});
         $('#new_comment')[0].reset();
         $('#comment-btn').prop("disabled", false);
       }
@@ -60,7 +59,5 @@ $(document).on('turbolinks:load', function(){
       console.log('error')
     });
   };
-  if (document.location.href.match(/\/groups\/\d+\/messages/)) {
     setInterval(reloadMessages, 7000);
-  }
 });
