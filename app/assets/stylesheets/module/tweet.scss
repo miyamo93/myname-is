@@ -39,14 +39,15 @@
     color: $navy1;
     padding: 0.5vh  1vw;
     &--name{
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       font-weight: bold;
     }
     &--date{
       text-align: right;
     }
     &--content{
-      font-size: 1.8rem;
+      letter-spacing:0.2em;
+      font-size: 1.5rem;
     }
   }
 }
