@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :tweets, only: [:index ,:new ,:create,:show] do
     resources :comments ,only: [:create]
     namespace :api do
-      resources :comment, only: :show, defaults: { format: 'json' }
+      resources :tweets, only: :show, defaults: { format: 'json' }
     end
   end
   resources :groups, only: [:index, :new, :create, :edit, :update]do
