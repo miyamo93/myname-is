@@ -4,5 +4,6 @@ $(document).on('turbolinks:load', function(){
     console.log(input);
     $.ajax({
       type: "GET",
+      url: "/users",
   });
 });
