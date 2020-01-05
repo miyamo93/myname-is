@@ -3,5 +3,6 @@ $(document).on('turbolinks:load', function(){
     let input = $("#user-search-field").val();
     console.log(input);
     $.ajax({
+      type: "GET",
   });
 });
