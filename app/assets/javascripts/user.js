@@ -6,5 +6,7 @@ $(document).on('turbolinks:load', function(){
       type: "GET",
       url: "/users",
       data: { keyword: input },
+      dataType: "json"
+    })
   });
 });
