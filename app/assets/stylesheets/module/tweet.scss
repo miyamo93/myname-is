@@ -22,13 +22,11 @@
     &--name{
       text-align: center;
       line-height: 7vh;
-      font-size: 2.5vh;
+      font-size: 2rem;
       width: 25vw;
     }
   }
   &__image{
-    height: 66vh;
-    border-bottom: solid 1px $navy1;
     img{
       object-fit: cover;
       width: 35vw;
@@ -39,10 +37,15 @@
     color: $navy1;
     padding: 0.5vh  1vw;
     &--name{
+      font-size: 1.4rem;
       font-weight: bold;
     }
     &--date{
       text-align: right;
+    }
+    &--content{
+      letter-spacing:0.2em;
+      font-size: 1.2rem;
     }
   }
 }

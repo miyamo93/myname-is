@@ -3,14 +3,41 @@
   background: white;
   border: solid 1px $navy1;
   margin-bottom: 3vh;
+  color: $navy1;
   &__up{
-    font-family: 'Oraqle Script';
-    font-size: 5vh;
+    font-family: $font1;
+    font-size: 4rem;
+    padding-left: 1vw;
+    border-bottom: 1px solid $navy1;
   }
   &__center{
-    padding: 1vh;
+    &--box{
+      padding: 1vh 1vw;
+      display: flex;
+      &__name{
+        font-weight: bold;
+        padding-right: 1vw;
+      }
+    }
   }
   &__form{
-
+    &--box{
+      display: flex;
+      padding: 2vh;
+      background-color: $navy1;
+    }
+  }
+  .comment-btn{
+    color: white;
+    background-color: $navy1;
+    height: 100%;
+    width: 5vw;
+    margin-left: 1vw;
+    cursor: pointer;
+  }
+  .comment-text{
+    font-size: 2vh;
+    width: 80%;
+    cursor: pointer;
   }
 }

@@ -1,0 +1,16 @@
+.wrapper
+  .tweets-body
+    .tweets-body__sub
+      .tweets-sidebar
+        .user-box
+          .tweets-name
+            = current_user.nickname
+          = render 'shared/menu'
+        .tweets-sidebar__box
+          .tweets-sidebar__image
+            = image_tag ("#{current_user.image}"), class: 'tweets-sidebar__image--box'
+          .tweets-sidebar__menu
+            = link_to new_tweet_path , class:"tweets-sidebar__menu--comment" do
+              %i.fas.fa-comment
+            = link_to user_path , class:"tweets-sidebar__menu--user" do
+              %i.fas.fa-user

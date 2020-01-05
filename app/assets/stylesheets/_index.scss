@@ -7,7 +7,7 @@
 }
 
 .main-header{
-  font-family: 'Oraqle Script';
+  font-family: $font1;
   box-sizing: border-box;
   border: solid 3px black;
   background:$red1;
@@ -83,7 +83,7 @@
     }
     &__body{
       position: relative;
-      font-family: 'Oraqle Script';
+      font-family: $font1;
       background: white;
       height: 50%;
       &--text{

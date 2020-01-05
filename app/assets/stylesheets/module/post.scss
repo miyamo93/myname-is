@@ -18,7 +18,7 @@
     height: 95vh;
   }
   &__post{
-    font-family: 'Oraqle Script';
+    font-family: $font1;
     background-color: $red1;
     line-height: 10vh;
     font-size: 8vh;
@@ -28,7 +28,7 @@
   h1{
     color: $navy1;
     font-size: 8vh;
-    font-family: 'Oraqle Script';
+    font-family: $font1;
   }
   .post-form{
     &__text{
@@ -43,7 +43,7 @@
     &__image{
       pre{
         margin-top: 5vh;
-        font-family: 'Oraqle Script';
+        font-family: $font1;
         color: $navy1;
         transition: 0.5s ;
         &:hover{
@@ -53,7 +53,7 @@
       label{
         cursor: pointer;
         font-size: 6vh;
-        font-family: 'Oraqle Script';
+        font-family: $font1;
         &:hover{
           color: $red1;
         }
@@ -83,7 +83,7 @@
     cursor: pointer;
     border-radius: 1vh;
     color: white;
-    font-family: 'Oraqle Script' ;
+    font-family: $font1 ;
     font-size: 5vh;
     padding: 1vh 13.5vw;
     background-color: $navy1;
@@ -94,7 +94,7 @@
   }
   a{
     color: $navy1;
-    font-family: 'Oraqle Script';
+    font-family: $font1;
     font-size: 5vh;
     transition: 0.5s;
     &:hover{

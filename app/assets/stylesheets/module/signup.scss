@@ -14,7 +14,7 @@
     margin: 4vh 0;
   }
   &__signup{
-    font-family: 'Oraqle Script';
+    font-family: $font1;
     background-color: $red1;
     line-height: 10vh;
     font-size: 8vh;
@@ -30,7 +30,7 @@
     background-color: white;
     height: 95vh;
     label{
-      font-family: 'Oraqle Script';
+      font-family: $font1;
       font-size: 5vh;
     }
   }
@@ -41,7 +41,7 @@
   &__text{
     margin-top: 4vh;
     input{
-      font-size:3vh ;
+      font-size:2vh ;
       height: 4vh;
       width: 30vw;
     }
@@ -55,7 +55,7 @@
     }
     pre{
       margin-top: 1vh;
-      font-family: 'Oraqle Script';
+      font-family: $font1;
     }
     &--box{
       box-sizing: border-box;
@@ -79,7 +79,7 @@
     width: 20vw;
   }
   .signup-btn{
-    font-family: 'Oraqle Script';
+    font-family: $font1;
     background-color: $navy1;
     color: white;
     font-size: 3vh;
@@ -97,7 +97,7 @@
     font-size: 4vh;
     a{
       transition: 0.5s;
-      font-family: 'Oraqle Script';
+      font-family: $font1;
       color: $navy1;
       &:hover{
         color: blue;
@@ -106,5 +106,9 @@
   }
   #user_nickname{
     width: 10vw;
+  }
+  #user_email{
+    font-size: 2rem;
+    width: 40vw;
   }
 }

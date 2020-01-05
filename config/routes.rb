@@ -3,7 +3,12 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'toppage#index'
   resources :users, only: [:index, :edit, :update, :show]
-  resources :tweets, only: [:index ,:new ,:create,:show]
+  resources :tweets, only: [:index ,:new ,:create,:show] do
+    resources :comments ,only: [:create]
+    namespace :api do
+      resources :tweets, only: :show, defaults: { format: 'json' }
+    end
+  end
   resources :groups, only: [:index, :new, :create, :edit, :update]do
     resources :messages, only: [:index, :create]
 

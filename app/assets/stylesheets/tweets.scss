@@ -1,5 +1,6 @@
 .tweets-body{
-    background-image: url(https://image.freepik.com/free-photo/_1149-1283.jpg);
+  
+  background-image: url(https://image.freepik.com/free-photo/_1149-1283.jpg);
   &__sub{
     display: flex;
   }
@@ -54,7 +55,7 @@
     }
     &__menu{
       width: 100%;
-      font-size: 3vh;
+      font-size: 2rem;
       background-color: $navy1;
       position: relative;
       &--comment{
