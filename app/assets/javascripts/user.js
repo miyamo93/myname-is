@@ -10,6 +10,9 @@ $(document).on('turbolinks:load', function(){
       .done(function(users) {
         console.log("成功です");
       })
+      .fail(function() {
+        console.log("失敗です");
+      })
     })
   });
 });
