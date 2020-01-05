@@ -7,6 +7,8 @@ $(document).on('turbolinks:load', function(){
       url: "/users",
       data: { keyword: input },
       dataType: "json"
+      .done(function(users) {
+        console.log("成功です");
     })
   });
 });
