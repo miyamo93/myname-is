@@ -49,5 +49,27 @@
         color: $red1;
       }
     }
+    .chat-group-user{
+      display: flex;
+      margin: 0 auto;
+      width: 20vw;
+      border-bottom: 1px solid $navy1;
+      height: 5vh;
+      &__image{
+        box-sizing: border-box;
+        padding: 0.5vh;
+      }
+      &__box{
+        display: flex;
+        line-height:5vh ;
+      }
+      &__btn{
+        transition: 0.5s;
+        cursor: pointer;
+        &:hover{
+          color: blue;
+        }
+      }
+    }
   }
 }
