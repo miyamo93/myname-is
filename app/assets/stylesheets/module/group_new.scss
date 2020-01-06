@@ -57,13 +57,24 @@
       height: 5vh;
       &__image{
         box-sizing: border-box;
-        padding: 0.5vh;
+        padding: 0.8vh;
+        img{
+          width: 2vw;
+          height: 2vw;
+          border-radius: 1vh;
+        }
       }
       &__box{
         display: flex;
         line-height:5vh ;
       }
+      &__name{
+        text-align: left;
+        width: 14vw;
+      }
       &__btn{
+        font-family: "Oraqle Script";
+        font-size: 2rem;
         transition: 0.5s;
         cursor: pointer;
         &:hover{
