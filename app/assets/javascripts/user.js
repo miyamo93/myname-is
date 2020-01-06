@@ -7,7 +7,7 @@ $(document).on('turbolinks:load', function(){
       </div>
       <div class="chat-group-user__box">
         <p class="chat-group-user__name">${user.name}</p>
-        <div class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${user.id}" data-user-name="${user.name}"data-user-image="${user.image}">Add</div>
+        <div class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${user.id}" data-user-name="${user.name}">Add</div>
       </div>
     </div>
     `;
@@ -65,11 +65,10 @@ $(document).on('turbolinks:load', function(){
       console.log
       const userName = $(this).attr("data-user-name");
       const userId = $(this).attr("data-user-id");
-      const userImage = $(this).attr("data-user-image");
       $(this)
         .parent()
         .remove();
-      addDeleteUser(userName, userId ,userImage);
+      addDeleteUser(userName, userId);
       addMember(userId);
     });
     $(document).on("click", ".chat-group-user__btn--remove", function() {
