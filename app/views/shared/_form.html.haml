@@ -18,18 +18,29 @@
         .chat-group-form__search.clearfix
           %input#user-search-field.chat-group-form__input{placeholder: "追加したいユーザー名を入力してください", type: "text"}/
         #user-search-result
-          -# .chat-group-user.clearfix
-          -#   .chat-group-user__image
-          -#     = image_tag "https://pbs.twimg.com/profile_images/581025665727655936/9CnwZZ6j.jpg"
-          -#   .chat-group-user__box
-          -#     %p.chat-group-user__name  name
-          -#     .user-search-add.chat-group-user__btn.chat-group-user__btn--add Add
+          
 
     .chat-group-form__field.clearfix
       .chat-group-form__field--left
         %label.chat-group-form__label{for: "chat_group_チャットメンバー"} Member
       .chat-group-form__field--right
         #chat-group-users.js-add-user
+          .chat-group-user.clearfix.js-chat-member
+            %input{name: "group[user_ids][]", type: "hidden", value: current_user.id}
+            .chat-group-user__box
+              .chat-group-user__image
+                = image_tag ("#{current_user.image}")
+              %p.chat-group-user__name= current_user.nickname
+
+        - group.users.each do |user|
+          - if current_user.nickname != user.nickname
+            .chat-group-user.clearfix.js-chat-member
+              %input{name: "group[user_ids][]", type: "hidden", value: user.id}
+              .chat-group-user__box
+                %p.chat-group-user__name
+                  = user.nickname 
+                %a.user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn
+                  削除
     .chat-group-form__field.clearfix
       .chat-group-form__field--left
       .chat-group-form__field--right
