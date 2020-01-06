@@ -2,16 +2,17 @@ $(document).on('turbolinks:load', function(){
   function addUser(user) {
     let html = `
     <div class="chat-group-user clearfix">
-      
+      <div class="chat-group-user__image">
+        <img src= ${ user.image }>
+      </div>
       <div class="chat-group-user__box">
         <p class="chat-group-user__name">${user.name}</p>
-        <div class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${user.id}" data-user-name="${user.name}">Add</div>
+        <div class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${user.id}" data-user-name="${user.name}"data-user-image="${user.image}">Add</div>
       </div>
     </div>
     `;
     $("#user-search-result").append(html);
   }
-
   function addNoUser() {
     let html = `
       <div class="chat-group-user clearfix">
@@ -64,10 +65,11 @@ $(document).on('turbolinks:load', function(){
       console.log
       const userName = $(this).attr("data-user-name");
       const userId = $(this).attr("data-user-id");
+      const userImage = $(this).attr("data-user-image");
       $(this)
         .parent()
         .remove();
-      addDeleteUser(userName, userId);
+      addDeleteUser(userName, userId ,userImage);
       addMember(userId);
     });
     $(document).on("click", ".chat-group-user__btn--remove", function() {
