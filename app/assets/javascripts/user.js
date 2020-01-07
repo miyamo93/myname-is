@@ -23,10 +23,10 @@ $(document).on('turbolinks:load', function(){
   function addDeleteUser(name, id) {
     let html = `
     <div class="chat-group-user clearfix" id="${id}">
-      <div class="chat-group-user__box">
+
         <p class="chat-group-user__name">${name}</p>
         <a class="user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn" data-user-id="${id}" data-user-name="${name}">Delete</div>
-      </div>
+
     </div>`;
     $(".js-add-user").append(html);
   }
