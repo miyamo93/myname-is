@@ -2,10 +2,10 @@ $(document).on('turbolinks:load', function(){
   function addUser(user) {
     let html = `
     <div class="chat-group-user clearfix">
-      <div class="chat-group-user__box">
+
         <p class="chat-group-user__name">${user.name}</p>
-        <div class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${user.id}" data-user-name="${user.name}">Add</div>
-      </div>
+        <a class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${user.id}" data-user-name="${user.name}">Add</div>
+
     </div>
     `;
     $("#user-search-result").append(html);
@@ -25,7 +25,7 @@ $(document).on('turbolinks:load', function(){
     <div class="chat-group-user clearfix" id="${id}">
       <div class="chat-group-user__box">
         <p class="chat-group-user__name">${name}</p>
-        <div class="user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn" data-user-id="${id}" data-user-name="${name}">削除</div>
+        <a class="user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn" data-user-id="${id}" data-user-name="${name}">Delete</div>
       </div>
     </div>`;
     $(".js-add-user").append(html);
@@ -36,7 +36,6 @@ $(document).on('turbolinks:load', function(){
   }
   $("#user-search-field").on("keyup", function() {
     let input = $("#user-search-field").val();
-    console.log(input);
     $.ajax({
       type: "GET",
       url: "/users",
@@ -56,7 +55,7 @@ $(document).on('turbolinks:load', function(){
         }
       })
       .fail(function() {
-        console.log("失敗です");
+        alert("通信エラーです。ユーザーが表示できません。");
       })
     });
     $(document).on("click", ".chat-group-user__btn--add", function() {
