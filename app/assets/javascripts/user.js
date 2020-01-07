@@ -2,9 +2,6 @@ $(document).on('turbolinks:load', function(){
   function addUser(user) {
     let html = `
     <div class="chat-group-user clearfix">
-      <div class="chat-group-user__image">
-        <img src= ${ user.image }>
-      </div>
       <div class="chat-group-user__box">
         <p class="chat-group-user__name">${user.name}</p>
         <div class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${user.id}" data-user-name="${user.name}">Add</div>
@@ -60,9 +57,9 @@ $(document).on('turbolinks:load', function(){
       })
       .fail(function() {
         console.log("失敗です");
-    })
+      })
+    });
     $(document).on("click", ".chat-group-user__btn--add", function() {
-      console.log
       const userName = $(this).attr("data-user-name");
       const userId = $(this).attr("data-user-id");
       $(this)
@@ -76,6 +73,5 @@ $(document).on('turbolinks:load', function(){
         .parent()
         .remove();
     });
-  });
 });
 
