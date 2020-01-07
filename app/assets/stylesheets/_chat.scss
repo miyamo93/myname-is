@@ -37,7 +37,9 @@
       font-weight: bold;
       transition: 0.5s;
       &:hover{
-        background-color: $red1;
+        background-color: $navy1;
+        color: $red1;
+
       }
     }
   }
