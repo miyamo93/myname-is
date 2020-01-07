@@ -35,8 +35,10 @@
       width: 10vw;
       color: $navy1;
       font-weight: bold;
+      transition: 0.5s;
       &:hover{
-        opacity: 0.5;
+        background-color: $navy1;
+        color: $red1;
       }
     }
   }
@@ -86,6 +88,11 @@
       color:$red1;
       right:18vw;
       font-size: 5vh;
+      cursor: pointer;
+      transition: 0.5s;
+      &:hover{
+        opacity: 0.5;
+      }
     }
     .input-image{
       display: none;
@@ -105,8 +112,10 @@
       background:$navy1;
       color: white;
       text-align: center;
+      cursor: pointer;
+      transition: 0.5s;
       &:hover{
-        cursor: pointer;
+        color: $red1;
       }
     }
   } 

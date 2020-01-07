@@ -6,6 +6,7 @@
   background-image:url(https://image.freepik.com/free-photo/_1149-1283.jpg);
   box-sizing: border-box;
   &__box{
+    overflow: auto;
     margin: 0 auto;
     height: 20vh;
     height: 95vh;
@@ -49,5 +50,41 @@
         color: $red1;
       }
     }
+    .chat-group-user{
+      display: flex;
+      margin: 0 auto;
+      width: 20vw;
+      border-bottom: 1px solid $navy1;
+      height: 5vh;
+      &__image{
+        box-sizing: border-box;
+        padding: 0.8vh;
+        img{
+          width: 2vw;
+          height: 2vw;
+          border-radius: 1vh;
+        }
+      }
+      &__box{
+        display: flex;
+        line-height:5vh ;
+      }
+      &__name{
+        text-align: left;
+        width: 14vw;
+      }
+      &__btn{
+        font-family: "Oraqle Script";
+        font-size: 2rem;
+        transition: 0.5s;
+        cursor: pointer;
+        &:hover{
+          color: blue;
+        }
+      }
+    }
+  }
+  .edit_group{
+    padding-bottom: 4vh;
   }
 }
