@@ -39,7 +39,6 @@
       &:hover{
         background-color: $navy1;
         color: $red1;
-
       }
     }
   }
@@ -108,8 +107,9 @@
       background:$navy1;
       color: white;
       text-align: center;
+      cursor: pointer;
       &:hover{
-        cursor: pointer;
+        color: $red1;
       }
     }
   } 
