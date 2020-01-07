@@ -36,13 +36,13 @@
           - if current_user.nickname != user.nickname
             .chat-group-user.clearfix.js-chat-member
               %input{name: "group[user_ids][]", type: "hidden", value: user.id}
-              .chat-group-user__image
-                = image_tag ("#{user.image}")
-              .chat-group-user__box
-                %p.chat-group-user__name
-                  = user.nickname 
-                %a.user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn
-                  Delete
+              -# .chat-group-user__image
+              -#   = image_tag ("#{user.image}")
+              -# .chat-group-user__box
+              %p.chat-group-user__name
+                = user.nickname 
+              %a.user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn
+                Delete
     .chat-group-form__field.clearfix
       .chat-group-form__field--left
       .chat-group-form__field--right
