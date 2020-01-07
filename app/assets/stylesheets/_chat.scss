@@ -108,7 +108,9 @@
       color: white;
       text-align: center;
       cursor: pointer;
+      transition: 0.5s;
       &:hover{
+        background-color: white;
         color: $red1;
       }
     }
