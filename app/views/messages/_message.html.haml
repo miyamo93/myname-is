@@ -5,7 +5,7 @@
         = message.user.nickname
       .message__text
         = message.content
-        = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+      = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
     .timestamp
       = message.created_at.strftime("%Y/%m/%d %H:%M")
 - else
@@ -15,6 +15,7 @@
         = message.user.nickname
       .message__text
         = message.content
+      .message__image
         = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
     .timestamp
       = message.created_at.strftime("%Y/%m/%d %H:%M")
