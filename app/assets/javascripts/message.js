@@ -6,8 +6,10 @@ $(document).on('turbolinks:load', function(){
                       <div class="message__name">
                         ${message.user_name}
                       </div>
-                      <div class="message__text">
-                        ${message.content}
+                      <div class="message__under">
+                        <p class="message__text">
+                          ${message.content}
+                        </p>
                         ${img}
                       </div>
                     </div>
