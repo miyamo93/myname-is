@@ -34,7 +34,7 @@
       color: $navy1;
     }
     &:hover{
-      background-color: lightgray;
+      opacity: 0.5;
       .group-icon{
         color:$red1;
         transform: translate(50%, 0);
