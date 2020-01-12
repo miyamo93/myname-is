@@ -12,7 +12,7 @@
           .tweets-sidebar__menu
             = link_to new_tweet_path , class:"tweets-sidebar__menu--comment" do
               %i.fas.fa-comment
-            = link_to new_tweet_path , class:"tweets-sidebar__menu--user" do
+            = link_to user_path(@tweets) , class:"tweets-sidebar__menu--user" do
               %i.fas.fa-user
       .tweets-main
         .tweets-main__body
