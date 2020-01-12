@@ -16,10 +16,13 @@
     }
     &__user{
       margin-left: 30vw;
+      margin-right: 10vw;
+      padding-top: 5vh;
+      box-sizing: border-box;
     }
     &__bigbox{
       display: flex;
-      
+
     }
   }
   .tweets-name{
