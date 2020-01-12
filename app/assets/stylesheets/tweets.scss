@@ -19,10 +19,10 @@
       margin-right: 10vw;
       padding-top: 5vh;
       box-sizing: border-box;
-    }
-    &__bigbox{
+      ul{
+        flex-wrap: wrap;
       display: flex;
-
+      }
     }
   }
   .tweets-name{
