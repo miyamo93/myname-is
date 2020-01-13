@@ -55,7 +55,7 @@ $(document).on('turbolinks:load', function(){
         }
       })
       .fail(function() {
-        alert("通信エラーです。ユーザーが表示できません。");
+        console.log(error);
       })
     });
     $(document).on("click", ".chat-group-user__btn--add", function() {
