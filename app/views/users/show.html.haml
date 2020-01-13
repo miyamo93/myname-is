@@ -19,6 +19,7 @@
           %ul
             - @tweets.each do |tweet|
               %li
-                .tweets-main__user--name
-                .tweets-main__user--image
-                  = image_tag "#{tweet.image}"
+                = link_to '' do
+                  .tweets-main__user--name
+                  .tweets-main__user--image
+                    = image_tag "#{tweet.image}"
