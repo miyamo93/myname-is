@@ -17,6 +17,7 @@
       .tweets-main
         .tweets-main__user
           %ul
+            - @tweets.each do |tweet|
             %li
               .tweets-main__user--name
 
