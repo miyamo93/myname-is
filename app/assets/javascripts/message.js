@@ -67,7 +67,7 @@ $(document).on('turbolinks:load', function(){
       }
     })
     .fail(function() {
-      alert('自動更新に失敗しました');//ダメだったらアラートを出す
+      console.log(error);
     });
   };
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
