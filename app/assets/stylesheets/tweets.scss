@@ -16,7 +16,6 @@
     }
     &__user{
       margin-left: 30vw;
-      margin-right: 10vw;
       padding-top: 5vh;
       box-sizing: border-box;
       ul{
@@ -28,6 +27,7 @@
         padding: 3%;
       }
       &--image{
+        border: solid 1px transparent;
         border-radius: 1vw;
         background: gray;
         padding-bottom: 100%;
