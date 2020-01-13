@@ -19,7 +19,12 @@
           %ul
             - @tweets.each do |tweet|
               %li
-                = link_to '' do
+                = link_to tweet_path(tweet) do
                   .tweets-main__user--name
                   .tweets-main__user--image
                     = image_tag "#{tweet.image}"
+                  .tweets-main__user--box
+                    .tweets-main__user--edit
+                      = link_to ''
+                    .tweets-main__user--delete
+                      = link_to ''
