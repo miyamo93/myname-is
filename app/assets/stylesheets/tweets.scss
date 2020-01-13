@@ -19,6 +19,9 @@
       margin-right: 10vw;
       padding-top: 5vh;
       box-sizing: border-box;
+      ul{
+        display: flex;
+      }
     }
     &__bigbox{
       flex-wrap: wrap;
