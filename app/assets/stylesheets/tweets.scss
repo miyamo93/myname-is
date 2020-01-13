@@ -33,10 +33,6 @@
         padding-bottom: 100%;
         height: 0;
         overflow: hidden;
-        &::after{
-          box-sizing: border-box;
-          border: 1px solid red;
-        }
         img{
           max-width: 100%;
         }
