@@ -18,7 +18,7 @@
           %i.fas.fa-comment.user-icon
             チャット
       %li.l-drawer__item
-        = link_to new_group_path, class: "l-drawer__item--text"  do
+        = link_to new_group_path,data: {"turbolinks" => false}, class: "l-drawer__item--text"  do
           %i.fas.fa-edit.user-icon
             グループ作成
       %li.l-drawer__item
