@@ -27,6 +27,7 @@
         padding: 3%;
       }
       &--image{
+        position: relative;
         border-radius: 1vw;
         background: gray;
         padding-bottom: 100%;
@@ -38,6 +39,9 @@
         }
         img{
           max-width: 100%;
+          position: absolute;
+          top: 0;
+          bottom: 0;
         }
       }
     }
