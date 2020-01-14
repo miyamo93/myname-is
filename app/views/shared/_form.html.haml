@@ -28,8 +28,8 @@
           .chat-group-user.clearfix.js-chat-member
             %input{name: "group[user_ids][]", type: "hidden", value: current_user.id}
             .chat-group-user__box
-              .chat-group-user__image
-                = image_tag ("#{current_user.image}")
+              -# .chat-group-user__image
+              -#   = image_tag ("#{current_user.image}")
               %p.chat-group-user__name= current_user.nickname
 
         - @group.users.each do |user|
