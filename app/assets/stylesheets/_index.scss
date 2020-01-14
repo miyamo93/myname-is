@@ -62,23 +62,25 @@
   .sticker{
     box-sizing: border-box;
     text-align: center;
-    height:90%;
     border: solid 3px $navy1;
     border-radius: 50px;
     &__header{
       position: relative;
       color: white;
       border-radius: 45px 45px 0 0;
-      height: 30%;
+      height: 20vh;
       background: $red1;
       box-sizing: border-box;
       &--up{
+        position:absolute;
         font-size: 7vw;
+        top:-1vh;
+        left: 30%;
       }
       &--down{
         font-size: 2vw;
         position: absolute;
-        bottom: 0;
+        bottom: 5%;
         left: 40%;
       }
     }
@@ -86,7 +88,7 @@
       position: relative;
       font-family: $font1;
       background: white;
-      height: 50%;
+      height: 43vh;
       &--text{
         color: $navy1;
         top: 25%;
@@ -97,7 +99,7 @@
     }
     &__footer{
       background: $red1;
-      height: 20%;
+      height: 10vh;
       border-radius: 0 0 45px 45px;
     }
   }
