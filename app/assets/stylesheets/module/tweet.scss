@@ -24,7 +24,13 @@
       line-height: 7vh;
       text-align: right;
       width: 5vw;
-      color: white;
+      a{
+        
+        color: white;
+        &:hover{
+          color: $navy1;
+        }
+      }
     }
     &--name{
       text-align: center;
