@@ -19,6 +19,13 @@
         height:3vw;
       }
     }
+    &--delete{
+      font-size: 2vw;
+      line-height: 7vh;
+      text-align: right;
+      width: 5vw;
+      color: white;
+    }
     &--name{
       text-align: center;
       line-height: 7vh;
@@ -33,7 +40,6 @@
       height: 35vw;
     }
   }
-  __dele
   &__down{
     color: $navy1;
     padding: 0.5vh  1vw;
