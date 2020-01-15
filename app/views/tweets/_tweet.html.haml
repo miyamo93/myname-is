@@ -5,6 +5,10 @@
         = image_tag ("#{tweet.user.image}")
       .tweet__up--name
         = tweet.user.nickname
+      - if user_signed_in? && current_user.id == tweet.user_id
+        .tweet__up--delete
+          = link_to '' do
+            %i.fas.fa-trash-alt
     .tweet__center
       .tweet__image
         = image_tag ("#{tweet.image}"), class: 'lower-message__image'
