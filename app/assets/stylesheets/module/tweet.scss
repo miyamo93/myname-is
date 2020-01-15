@@ -25,7 +25,7 @@
       text-align: right;
       width: 5vw;
       a{
-        
+        transition: 0.5s;
         color: white;
         &:hover{
           color: $navy1;
