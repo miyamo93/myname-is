@@ -20,6 +20,15 @@ class TweetsController < ApplicationController
   def destroy
     tweet = Tweet.find(params[:id])
     tweet.destroy if tweet.user_id == current_user.id
+    if user_signed_in? && current_user.id == tweet.user_id
+      if tweet.destroy
+        redirect_to(root_path)
+      else
+        redirect_to action: :edit, notice: "削除できません"
+      end
+    else
+      redirect_to root_path
+    end
   end
 
   def show
