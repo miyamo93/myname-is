@@ -9,6 +9,7 @@
   padding-top: 2vh;
   box-sizing: border-box;
   &__sub{
+    overflow: auto;
     box-sizing: border-box;
     border: 2px solid $navy1;
     border-radius: 2vh;
@@ -97,6 +98,7 @@
     font-family: $font1;
     font-size: 3vw;
     transition: 0.5s;
+    padding-bottom: 0.7vw;
     &:hover{
       color: blue;
     }
