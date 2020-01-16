@@ -40,13 +40,18 @@
     }
   }
   &__image{
+    padding-bottom: 100%;
+    position: relative;
     img{
+      position: absolute;
+      top: 0;
       object-fit: cover;
       width: 35vw;
       height: 35vw;
     }
   }
   &__down{
+    border-top:1px solid $navy1;
     color: $navy1;
     padding: 0.5vh  1vw;
     &--name{
