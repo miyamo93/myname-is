@@ -92,12 +92,12 @@
     }
     &__menu{
       width: 100%;
-      font-size: 2rem;
+      font-size: 2vw;
       background-color: $navy1;
       position: relative;
       &--comment{
         position: absolute;
-        right: 13%;
+        right: 12%;
       }
       &--user{
         position: absolute;
