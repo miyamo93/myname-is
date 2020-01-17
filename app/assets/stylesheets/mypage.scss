@@ -1,14 +1,14 @@
 .mypage-header{
-  font-family: 'Oraqle Script';
+  font-family: 'OraqleScript';
   box-sizing: border-box;
-  border: solid 3px black;
+  border: solid 3px $navy1;
   background:$red1;
   width: 100vw;
   height:100px;
   display: flex;
   box-sizing: border-box;
   a{
-    color:white;
+    color:$white1;
     &:hover{
       color: blue;
     }
@@ -51,7 +51,7 @@
   .mypage-main{
     margin:5% 0  0 10% ;
     width: 70%;
-    background: white;
+    background: $white1;
     li{
       border-bottom: 1px solid lightgray;
     }
