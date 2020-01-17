@@ -19,7 +19,7 @@
     line-height: 10vh;
     font-size: 8vh;
     border-radius: 1.8vh 1.8vh 0 0;
-    color: white;
+    color: $white1;
   }
   &__sub{
     overflow: auto;
@@ -28,7 +28,7 @@
     border-radius: 2vh;
     margin: 0 auto;
     width: 60vw;
-    background-color: white;
+    background-color: $white1;
     height: 95vh;
     label{
       font-family: $font1;
@@ -82,7 +82,7 @@
   .signup-btn{
     font-family: $font1;
     background-color: $navy1;
-    color: white;
+    color: $white1;
     font-size: 3vh;
     border-radius: 1vh;
     padding: 1vh 4vh;
