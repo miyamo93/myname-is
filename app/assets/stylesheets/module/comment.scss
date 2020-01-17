@@ -1,6 +1,6 @@
 .comment{
   box-sizing: border-box;
-  background: white;
+  background: $white1;
   border: solid 1px $navy1;
   margin-bottom: 3vh;
   color: $navy1;
@@ -28,7 +28,7 @@
     }
   }
   .comment-btn{
-    color: white;
+    color: $white1;
     background-color: $navy1;
     height: 100%;
     width: 5vw;
