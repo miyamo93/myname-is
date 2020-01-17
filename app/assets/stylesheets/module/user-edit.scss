@@ -12,9 +12,9 @@
     border: solid 1px $navy1;
     width: 60vw;
     border-radius: 2vh;
-    background-color: white;
+    background-color: $white1;
     &--left{
-      color: white;
+      color: $white1;
       font-size: 3vh;
       line-height: 8vh;
       background-color: $red1;
@@ -40,7 +40,7 @@
   }
   .update-btn{
     background-color: $navy1;
-    color: white;
+    color: $white1;
     font-size: 3vh;
     border-radius: 1vh;
     padding: 1vh;
