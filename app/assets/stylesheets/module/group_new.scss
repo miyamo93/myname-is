@@ -14,9 +14,9 @@
     border: solid 1px $navy1;
     width: 60vw;
     border-radius: 2vh;
-    background-color: white;
+    background-color: $white1;
     h1{
-      color: white;
+      color: $white1;
       font-size: 5vw;
       line-height: 8vh;
       background-color: $red1;
@@ -38,7 +38,7 @@
       width: 20vw;
     }
     &__action-btn{
-      color: white;
+      color: $white1;
       background-color: $navy1;
       padding: 1vh 1vw;
       border-radius: 1vh;
