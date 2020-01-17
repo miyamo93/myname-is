@@ -7,7 +7,7 @@
   &__box{
     box-sizing: border-box;
     border-bottom:1px solid $navy1;
-    background-color: white;
+    background-color: $white1;
     height: 10vh;
     position: relative;
     &--group{
@@ -110,7 +110,7 @@
       height: 5vh;
       width: 80%;
       background:$navy1;
-      color: white;
+      color: $white1;
       text-align: center;
       cursor: pointer;
       transition: 0.5s;
