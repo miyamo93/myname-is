@@ -3,7 +3,7 @@
   text-align: center;
   height: 100vh;
   background-size: cover;
-  background-image:url(https://image.freepik.com/free-photo/_1149-1283.jpg);
+  background-image:$back1;
   box-sizing: border-box;
   &__box{
     overflow: auto;
@@ -80,7 +80,7 @@
         transition: 0.5s;
         cursor: pointer;
         &:hover{
-          color: blue;
+          color: $blue1;
         }
       }
     }
