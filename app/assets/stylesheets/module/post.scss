@@ -4,7 +4,7 @@
   }
   height: 100vh;
   text-align: center;
-  background-image:url(https://image.freepik.com/free-photo/_1149-1283.jpg);
+  background-image:$back1;
   background-size: cover;
   padding-top: 2vh;
   box-sizing: border-box;
@@ -69,7 +69,7 @@
         box-sizing: border-box;
         border-radius: 1vh;
         color: $white1;
-        background-image:url(https://image.freepik.com/free-photo/_1149-1283.jpg);
+        background-image:$back1;
         background-size: cover;
         margin: 0 auto;
         height: 15vw;
