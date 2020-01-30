@@ -6,14 +6,18 @@ $(document).on('turbolinks:load', function(){
                       ${message.user_name}
                     </div>
                     <div class="message__under">
-                      <p class="message__text">
-                        ${message.content}
-                      </p>
+                      <div class="message__under--text">
+                        <p>
+                          ${message.content}
+                        </p>
+                      </div>
                       ${img}
                     </div>
-                  </div>
-                  <div class="timestamp">
-                    ${message.date}
+                    <div class="timestamp">
+                      <p>
+                        ${message.date}
+                      </p>
+                    </div>
                   </div>`
       return html;
   };
