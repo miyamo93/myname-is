@@ -1,12 +1,14 @@
 .message{
   border-bottom: 1px $navy1 solid;
-  &__name{
-
-  }
+  padding: 1vw;
+  color: $navy1;
+  font-weight: bold;
+  font-size: 15px;
   &__under{
-
+    padding: 1vw;
+    img{
+      width: 20vw;
+      max-width: 100%;
+    }
   }
-}
-.timestamp{
-  
 }
