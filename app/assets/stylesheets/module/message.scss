@@ -1,28 +1,12 @@
 .message{
-  border: 2px solid $navy1;
-  width: 90%;
-  margin-left: 5%;
-  border-radius: 10px;
-  margin-top: 2vh;
+  border-bottom: 1px $navy1 solid;
   &__name{
-    text-align: center;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    background: $red1;
-    font-size: 2vh;
-    color: $white1;
+
   }
   &__under{
-    box-sizing: border-box;
-    padding: 3%;
-    word-wrap: break-word;
-    text-align: center;
-    background-color: $white1;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+
   }
 }
 .timestamp{
-  padding-right: 2vw;
-  text-align: right;
+  
 }
