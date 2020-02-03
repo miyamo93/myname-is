@@ -1,4 +1,5 @@
 class TweetsController < ApplicationController
+  before_action :confirmation
   
   def index
     @tweets = Tweet.includes(:user).order("created_at DESC")
@@ -33,12 +34,17 @@ class TweetsController < ApplicationController
 
   def show
     @tweet = Tweet.find(params[:id])
-    
     @comments = @tweet.comments.includes(:user)
     @comment = Comment.new
   end
 
   private
+
+  def confirmation  #ログインしていない場合ははユーザー登録に移動
+    unless user_signed_in?
+      redirect_to(user_session_path)
+    end
+  end
 
   def tweet_params
     params.require(:tweet).permit(:image, :text).merge(user_id: current_user.id)
