@@ -1,5 +1,6 @@
 class MessagesController < ApplicationController
   before_action :set_group
+  before_action :confirmation
 
   def index
     @message = Message.new
@@ -21,6 +22,12 @@ class MessagesController < ApplicationController
   end
 
   private
+  
+  def confirmation  #ログインしていない場合ははユーザー登録に移動
+    unless user_signed_in?
+      redirect_to(user_session_path)
+    end
+  end
 
   def message_params
     params.require(:message).permit(:content, :image).merge(user_id: current_user.id)
