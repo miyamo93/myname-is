@@ -1,0 +1,92 @@
+
+// レスポンシブ対応mixin///////////////////////////////////////
+$breakpoints: (
+  'sm': 'screen and (max-width: 559px)',
+  'md': 'screen and (max-width: 959px)',
+) !default;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+
+/* IEハック用mixin *//////////////////////////////////////////
+@mixin iehack($IE-ver: null) {
+  @if $IE-ver == 'lteIE8' { // IE8以下
+    @media \0screen\,screen\9 {
+      @content;
+    }
+  }
+  @else if $IE-ver == 'gteIE9' { // IE9以上
+    @media screen and (min-width:0\0) {
+      @content;
+    }
+  }
+  @else if $IE-ver == 'gteIE10' { // IE10以上
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      @content;
+    }
+  }
+  @else if $IE-ver == 'gteIE11' { // IE11以上
+    @at-root _:-ms-fullscreen,:root & {
+      @content;
+    }
+  }
+  @else if $IE-ver == 'notIE8' { // IE8じゃないとき(他のブラウザも含める)
+    @media all and (min-width: 0) {
+      @content;
+    }
+  }
+}
+// Microsoft Edge hack用mixin////////////////////////////////////
+@mixin edghack {
+  @supports (-ms-ime-align: auto) {
+      @content;
+  }
+}
+// firefox hack用mixin////////////////////////////////////
+@mixin ffhack {
+  @-moz-document url-prefix() {
+      @content;
+  }
+}
+// safari hack用mixin////////////////////////////////////
+@mixin sfrhack{
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    @content;
+  }
+}
+
+// 矢印用 mixin----------------------------------------------------------
+@mixin arrow($width, $bold, $color, $deg) {
+  @include icon-ini;
+
+  border-color: $color;
+  border-style: solid;
+  border-width: 0 #{$bold}px #{$bold}px 0;
+  height: #{$width}px;
+  vertical-align: middle;
+  width: #{$width}px;
+  //角度
+  @if ($deg == 'left') {
+      transform: rotate(135deg);
+  }
+
+  @else if ($deg == 'top') {
+        transform: rotate(225deg);
+    }
+
+  @else if ($deg == 'right') {
+        transform: rotate(-45deg);
+    }
+
+  @else if ($deg == 'bottom') {
+        transform: rotate(45deg);
+    }
+
+    @include ie11only() {
+        margin-bottom: 1px !important;
+    }
+}

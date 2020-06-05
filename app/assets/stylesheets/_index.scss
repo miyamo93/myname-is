@@ -64,6 +64,7 @@
     text-align: center;
     border: solid 3px $navy1;
     border-radius: 50px;
+    
     &__header{
       position: relative;
       color: $white1;
@@ -71,6 +72,9 @@
       height: 20vh;
       background: $red1;
       box-sizing: border-box;
+      @include mq(){
+        display: none;
+      }
       &--up{
         position:absolute;
         font-size: 7vw;
